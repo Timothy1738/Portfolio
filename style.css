@@ -1150,10 +1150,6 @@ footer .footer-section .rigts-reserved {
         margin-left: 1rem;
     }
 
-    nav .container #nav-links a.active {
-        background: none;
-    }
-
     nav .container #toggle {
         width: 50px;
         height: 50px;
