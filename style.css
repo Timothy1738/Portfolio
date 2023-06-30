@@ -229,6 +229,7 @@ section.about .me .intro-text .intro-text-right  {
 
 section.about .me .intro-text .intro-text-right img {
     margin: 4rem 2rem 2rem 2rem;
+    position: relative;
 }
 
 section.about .me .intro-text .intro-text-left {
@@ -1151,7 +1152,8 @@ footer .footer-section .rigts-reserved {
     .hero-section .hello .hello-content {
         padding: 2rem 0 5rem;
         justify-content: center;
-        margin-right: 40px;
+        position: relative;
+        right: 13px;
     }
 
     section.about .container .me .intro-text {
@@ -1161,10 +1163,13 @@ footer .footer-section .rigts-reserved {
     }
 
     section.about .container .me .intro-text .intro-text-right {
-        margin: 0 auto;
         width: 100%;
         justify-content: center;
-        margin-right: 2rem;
+    }
+
+    section.about .container .me .intro-text .intro-text-right img {
+        right: 32px;
+        top: 0;
     }
 
     section.about .container .me .intro-text .intro-text-left {
@@ -1180,6 +1185,7 @@ footer .footer-section .rigts-reserved {
     section.about .container .me .intro-text .intro-text-left .content .download {
         margin: 1rem auto;
         justify-content: center;
+        display: flex;
     }
 
     section.about .container .me .intro-text .intro-text-left .content .download button {
