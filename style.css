@@ -272,6 +272,7 @@ section.skills {
 }
 section.skills .container {
     width: 50%;
+    margin: 2rem auto;
 }
 
 section.skills .skill {
@@ -303,14 +304,10 @@ section.skills .skill .head .left {
     gap: 1rem;
 }
 
-section.skills .skill .items {
-    display: none;
-}
-
-/*for javascript show/hide items*/
-section.skills .container .skill .items.show-items {
+/*for sake of js*/  
+section.skills .skill .item.show {
     display: block;
-}
+  }  
 
 section.skills .skill .item {
     display: flex;
@@ -393,7 +390,6 @@ section.skills .item .progress-bar .progress8 {
     width: 95%;
     background: var(--color-primary);
 }
-
 /*=============CONTACT ME SECTION===============*/
 
 .overlay {
@@ -726,7 +722,14 @@ footer .footer-section .rigts-reserved {
     text-align: center;
 }
 
+
+
+
+
+
+/*==============================*/
 /*========MEDIA QUERIES========*/
+/*==============================*/
 @media (max-width: 1200px) {
     nav {
         width: 100%;
@@ -1081,8 +1084,8 @@ footer .footer-section .rigts-reserved {
     /*for javascript toggle*/
     nav .container #nav-links.active {
         display: block;
-        top: 5rem;
-        height: 60vh;
+        top: 7rem;
+        height: 70vh;
         overflow: hidden;
         left: 0;
         width: 100%;
@@ -1359,6 +1362,26 @@ footer .footer-section .rigts-reserved {
         width: 60%;
         border: 0.2px solid var(--color-light);
     }
+}
+
+@media (max-width: 950.98px) and (min-width: 620px) {
+    nav {
+        background: red;
+    }
+
+    .hero-section .hello .hello-content {
+        background-color: #0A66C2;
+        padding-bottom: 3rem;
+    }
+
+    .hero-section .hero-img {
+        background: #bfceeb;
+    }
+
+    .hero-section .hero-img img {
+        margin-bottom: -10rem;
+    }
 
 
+    
 }

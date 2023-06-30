@@ -29,26 +29,39 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', changeActiveLink);
 });
 
-// Get all the head elements
-const headElements = document.querySelectorAll('.head');
+// Get all the 'head' elements
+const headElements = document.querySelectorAll('.skill .head');
 
-// Add click event listener to each head element
-headElements.forEach(function(head) {
-    head.addEventListener('click', function() {
-        // Get the corresponding items element
-        const items = this.nextElementSibling;
+// Attach a click event listener to each 'head' element
+headElements.forEach((head) => {
+    head.addEventListener('click', () => {
+        // Get the skill section (parent of the clicked head)
+        const skillSection = head.parentElement;
 
-        // Toggle the display of the items element
-        if (items.style.display === 'none') {
-            items.style.display = 'block';
-        } else {
-            items.style.display = 'none';
-        }
+        // Get all the 'item' elements within the skill section
+        const items = skillSection.querySelectorAll('.item');
+
+        // Toggle the display of all 'item' elements
+        items.forEach((item) => {
+            item.style.display = item.style.display === 'none' ? 'block' : 'none';
+        });
     });
 });
 
-const scrollToTopButton = document.querySelector('.scroll-to-top');
 
+document.addEventListener('DOMContentLoaded', function() {
+    const skillHeads = document.querySelectorAll('.skill .head');
+  
+    skillHeads.forEach(function(head) {
+      head.addEventListener('click', function() {
+        const item = this.nextElementSibling;
+        item.classList.toggle('show');
+      });
+    });
+  });
+  
+
+const scrollToTopButton = document.querySelector('.scroll-to-top');
 // Add click event listener to scroll-to-top button
 scrollToTopButton.addEventListener('click', function() {
     // Scroll to the top of the page
