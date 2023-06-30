@@ -1312,7 +1312,8 @@ footer .footer-section .rigts-reserved {
     footer .footer-section .quick-links .nav-links {
         display: flex;
         justify-content: space-between;
-        margin: 1rem auto;    
+        margin: 1rem auto;
+        width: 100%;  
     }
 
     footer .footer-section .quick-links .nav-links a {
