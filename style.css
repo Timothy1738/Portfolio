@@ -1,0 +1,1384 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+
+:root {
+    --color-primary: #7380ec;
+    --color-light: #FCFCFC;
+    --color-white: #FFFF;
+    --color-info-light: #e6ebf5;
+    --color-info-light2: #bfceeb;
+    --color-info-light3:  #f5f7fa;
+    --color-info-light4: #eaf0f8;
+    --color-facebook: #1877F2;
+    --color-twitter: #1D9BF0;
+    --color-linkedin: #0A66C2;
+    --color-info-dark: #2C3A3D;
+    --transition: all 300ms ease;
+    --box-shadow: 0 1rem 3rem rgba(51, 52, 56, 0.18);
+    --color-black: rgb(2, 2, 2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    overflow-x: hidden;
+    max-width: 100vw;
+    padding: 10rem 0 7rem;
+}
+
+.home {
+    background: url(./img/wp7453677.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10rem 0 0;
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    height: 7rem;
+    background: var(--color-info-dark);
+    display: flex;
+    border-bottom: 1px solid var(--color-light) ;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 95%;
+}
+
+nav .container .logo{
+    margin-left: 1rem;
+}   
+
+nav .container .logo h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+}
+
+nav .container #nav-links {
+    display: flex;
+    justify-content: center;
+    height: 100%
+}
+
+nav .container #nav-links a {
+    width: 7rem;
+    height: 100%;
+    color: var(--color-light);
+    transform: var(--transition);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    justify-content: center;
+}
+
+nav .container #nav-links a:hover {
+    color: var(--color-primary);
+}
+
+
+nav .container #nav-links a.active {
+    background: var(--color-primary);
+    color: var(--color-light);
+}
+
+
+nav .container #toggle {
+    display: none;
+}
+/*====HERO SECTION====*/
+
+.hero-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hero-section .hello {
+    padding-left: 3rem;
+    position: relative;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 20vh;
+    width: 800px;
+    text-align: center;
+}
+
+.hero-section .hello p {
+    color: var(--color-light);
+    font-size: 1rem;
+}
+
+.hero-section .hello .btn-primary {
+    margin-top: 0.8rem;
+}
+
+.hero-section .hello .btn-primary button {
+    padding: 1.2rem;
+    background: var(--color-primary);
+    color: var(--color-light);
+    font-size: 1rem;
+    transition: var(--transition);
+    border: none;
+}
+
+.hero-section .hello .btn-primary button:hover {
+    background: var(--color-light);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.hero-section .hello .hello-content h3 {
+    line-height: 2;
+    font-size: 2rem;
+    color: var(--color-light);
+}
+
+.hero-section .hello .hello-content {
+    position: relative;
+}
+
+.hero-section .hello .hello-content h1 {
+    font-size: 3.5rem;
+    color: var(--color-primary);
+}
+
+.hero-section .hero-img {
+    margin-right: 3rem;
+    margin-top: -2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-section .hero-img img {
+    height: 600px;
+    margin-bottom: -4px;
+    position: relative;
+}
+/*================END OF HOME===============*/
+
+/*================ABOUT================*/
+section.about {
+    background: var(--color-info-light3);
+}
+
+section.about .container {
+    width: 80%;
+}
+
+section.about .me {
+    margin: 0 auto;
+    margin-top: -3rem;
+}
+
+section.about .me h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+section.about .me .intro-text {
+    background: var(--color-info-light);
+    display: flex;
+    gap: 2rem;
+}
+
+section.about .me .intro-text .intro-text-right  {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+section.about .me .intro-text .intro-text-right img {
+    margin: 4rem 2rem 2rem 2rem;
+}
+
+section.about .me .intro-text .intro-text-left {
+    width: 45%;
+    position: relative;
+}
+
+section.about .me .intro-text .intro-text-left .content {
+    margin: 4rem 2rem 2rem 2rem;
+}
+
+section.about .me .intro-text .intro-text-left .content .download {
+    position: relative;
+    margin: 2rem auto 2rem 2rem;
+}
+
+section.about .me .intro-text .intro-text-left .content .download button {
+    padding: 1.2rem;
+    background: var(--color-primary);
+    color: var(--color-light);
+    font-size: 1rem;
+    transition: var(--transition);
+    border: none;
+}
+
+section.about .me .intro-text .intro-text-left .content .download button:hover {
+    background: var(--color-light);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+/*=====SKILLS SECTION======*/
+section.skills h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+section.skills {
+    background: var(--color-info-light4);
+}
+section.skills .container {
+    width: 50%;
+}
+
+section.skills .skill {
+    margin-bottom: 1rem;
+}
+
+section.skills .skill .head {
+    background: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-light);
+    padding: 1.6rem;
+    cursor: pointer;
+}
+
+section.skills .skill .head .left .iconify {
+    font-size: 2rem;
+}
+
+
+section.skills .skill .head h4 {
+    color: var(--color-white);
+}
+
+section.skills .skill .head .left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.skills .skill .items {
+    display: none;
+}
+
+/*for javascript show/hide items*/
+section.skills .container .skill .items.show-items {
+    display: block;
+}
+
+section.skills .skill .item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 1.6rem;
+    background: var(--color-info-light);
+    margin-bottom: 0.3rem;
+    transition: var(--transition);
+}
+
+section.skills .skill .item:hover {
+    background: var(--color-light);
+}
+
+section.skills .skill .progress-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.skills .item .progress-bar {
+    width: 100%;
+    height: 1rem;
+    background: var(--color-info-light2);
+}
+
+section.skills .item .progress-bar .progress {
+    height: 100%;
+    width: 80%;
+    background: var(--color-primary);
+}
+
+section.skills .item .progress-bar .progress1 {
+    height: 100%;
+    width: 95%;
+    background: var(--color-primary);
+}
+
+section.skills .item .progress-bar .progress2 {
+    height: 100%;
+    width: 70%;
+    background: var(--color-primary);
+}
+
+section.skills .item .progress-bar .progress3 {
+    height: 100%;
+    width: 60%;
+    background: var(--color-primary);
+}
+
+section.skills .item .progress-bar .progress4 {
+    height: 100%;
+    width: 50%;
+    background: var(--color-primary);
+}
+
+section.skills .item .progress-bar .progress5 {
+    height: 100%;
+    width: 35%;
+    background: var(--color-primary);
+}
+
+section.skills .item .progress-bar .progress6 {
+    height: 100%;
+    width: 80%;
+    background: var(--color-primary);
+}
+
+section.skills .item .progress-bar .progress7 {
+    height: 100%;
+    width: 85%;
+    background: var(--color-primary);
+}
+
+section.skills .item .progress-bar .progress8 {
+    height: 100%;
+    width: 95%;
+    background: var(--color-primary);
+}
+
+/*=============CONTACT ME SECTION===============*/
+
+.overlay {
+    background: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+                                                                      
+section.contact {
+    width: 100%;
+    background-image: url(./img/contact-me.jpg);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+}
+
+section.contact .contact-us h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+section.contact .contact-us form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+
+section.contact .contact-us form p {
+    color: var(--color-light);
+    line-height: 2;
+}
+
+section.contact .contact-us form input[type=text],
+section.contact .contact-us form input[type=submit],
+section.contact .contact-us form textarea,
+section.contact .contact-us form input[type=email] {
+    width: 100%;
+    background: transparent;
+    display: block;
+    border: 2px solid var(--color-light);
+    padding: 1.6rem;
+    margin: 5px 0 22px 0;
+    transition: var(--transition);
+    color: var(--color-light);
+}
+
+section.contact .contact-us form input[type=text]:focus,
+section.contact .contact-us form textarea:focus,
+section.contact .contact-us form input[type=email]:focus {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+section.contact .contact-us form input[type=submit] {
+    margin-top: 3rem;
+    width: 14rem;
+    margin: 2rem auto 0;
+    background-color: var(--color-primary);
+    border: none;
+    transition: var(--transition);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+section.contact .contact-us form input[type=submit]:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-light);
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+/*======services=======*/
+section.services {
+    background: var(--color-info-light3);
+}
+
+section.services h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+section.services .service {
+    display: flex;
+    flex-direction: column;
+}
+
+section.services .service .service-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-content: center;
+}
+
+section.services .service .service-top .card {
+    background: var(--color-info-light);
+    box-shadow: var(--box-shadow);
+    width: 35%;
+    border-radius: 1rem;
+}
+
+section.services .service .service-top .card .iconify {
+    background: var(--color-primary);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--color-light);
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+
+}
+
+section.services .service .service-top .card p {
+    margin: 0 0.8rem 0.8rem 0.8rem;
+}
+
+section.services .service .service-top .card h4 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+section.services .service .service-top .card:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+/*cards-bottom*/
+
+section.services .service .service-bottom {
+    display: flex;
+    gap: 2rem;
+    align-content: center;
+    margin: 5rem auto;
+    justify-content: center;
+}
+
+section.services .service .service-bottom .card {
+    background: var(--color-info-light);
+    box-shadow: var(--box-shadow);
+    width: 35%;
+    border-radius: 1rem;
+}
+
+section.services .service .service-bottom .card .iconify {
+    background: var(--color-primary);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--color-light);
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+    text-align: center;
+
+}
+
+section.services .service .service-bottom .card p {
+    margin: 0 0.8rem 0.8rem 0.8rem;
+}
+
+section.services .service .service-bottom .card h4 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+section.services .service .service-bottom .card:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+section.services .service .lets-talk{
+    display: flex;
+    justify-content: center;
+}
+
+section.services .service .lets-talk button {
+    padding: 1.2rem;
+    background: var(--color-primary);
+    color: var(--color-light);
+    font-size: 1rem;
+    transition: var(--transition);
+    border: none;
+}
+
+section.services .service .lets-talk button:hover {
+    background: var(--color-light);
+    cursor: pointer;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+/*=====SCROLL TO TOP====*/
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px;
+    background: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    transition: var(--transition);
+}
+
+.scroll-to-top span {
+    font-size: 2rem;
+}
+
+.scroll-to-top:hover {
+    background: var(--color-light);
+    color: var(--color-primary);
+    box-shadow: var(--box-shadow);
+}
+
+
+
+
+/*======FO0TER======*/
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0 1rem;
+    background: var(--color-primary);
+    color: var(--color-light);
+    place-content: center;
+}
+
+footer .footer-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 1px auto;
+    place-content: center;
+}
+
+
+footer .footer-section .quick-links {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-content: center;
+    margin: 1px auto 0 auto;
+}
+
+footer .footer-section .quick-links h4 {
+    text-decoration: underline;
+}
+
+footer .footer-section .quick-links .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+footer .footer-section .quick-links .nav-links a {
+    color: var(--color-light);
+}
+
+footer .footer-section .quick-links .nav-links a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-section .quick-links .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+footer .footer-section .quick-links .icons .iconify {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+footer .footer-section .address {
+    display: flex;
+    margin: 3rem auto;
+    width: 60%;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .footer-section .address p {
+    line-height: 2;
+}
+
+footer .footer-section .address .left {
+    display: block;
+}
+
+footer .footer-section .address .right {
+    display: block;
+}
+
+footer .footer-section .address .left .locate {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+footer .footer-section .address .left .locate .iconify {
+    font-size: 2rem;
+}
+
+footer .footer-section .address .line {
+    border: 0.2px solid var(--color-light);
+}
+
+footer .footer-section .line2 {
+    border: 1px solid var(--color-light);
+    width: 80%;
+    margin: 1px auto;
+}
+
+footer .footer-section .rigts-reserved {
+    margin: 1rem auto;
+    width: 80%;
+    text-align: center;
+}
+
+/*========MEDIA QUERIES========*/
+@media (max-width: 1200px) {
+    nav {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+        padding: 8rem 0 5rem;
+    }
+
+    section.home {
+        margin: 0 auto;
+    }
+
+    section.home .hello .hello-content h1 {
+        font-size: 2.5rem;
+    }
+
+    section.home .hello {
+        max-width: 600px;
+    }
+
+    section.home .hero-section .hero-img img {
+        height: 500px;
+    }
+
+    /*===ABOUT SECTION====*/
+    section.about .container .me h2 {
+        font-size: 2rem;
+    }
+
+    section.about .container {
+        display: block;
+    }
+
+    /*====SERVICES SECTION====*/
+
+    section.services .service .service-bottom .card {
+        width: 30%;
+    }
+
+    section.services .service .service-bottom {
+        gap: 1rem;
+    }
+    section.services .service .service-top {
+        gap: 1rem;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+    }
+
+        
+    /*====Hero section=====*/
+    section.home .hero-section .hello .hello-content h1 {
+        font-size: 2rem;
+    }
+
+    section.home .hero-section .hello .hello-content h3 {
+        font-size: 1rem;
+    }
+
+    section.home .hero-section .hello .hello-content {
+        margin: 0 2rem 2rem 2rem;
+    }
+
+    section.home .hero-section .hello .hello-content p {
+        font-size: 15px;
+    }
+    /*===ABOUT====*/
+
+    section.about .container .me h2 {
+        font-size: 2rem;
+    }
+    section.about .container .me .intro-text {
+        display: block;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    section.about .container .me .intro-text .intro-text-right {
+        margin: 0 auto;
+        width: 90%;
+        justify-content: center;
+        margin-right: 2rem;
+    }
+
+    section.about .container .me .intro-text .intro-text-left {
+        margin: -3rem auto;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    section.about .container .me .intro-text .intro-text-left p {
+        font-size: 12px;
+    }
+
+    section.about .container .me .intro-text .intro-text-left .content .download {
+        margin: 1rem auto;
+        justify-content: center;
+    }
+
+    /*=====SKILLS SECTION=====*/
+    section.skills .skill .head {
+        padding: 1rem;
+    }
+
+    section.skills .skill .head span {
+        font-size: 1rem;
+    }
+
+    section.skills h4 {
+        font-size: 10px;
+    }
+
+    section.skills h2 {
+        font-size: 2rem;
+    }
+
+    section.skills h5 {
+        font-size: 10px;
+    }
+
+    section.skills .skill .head .left .iconify {
+        font-size: 1rem;
+    }
+
+    /*======SERVICES======*/
+
+    section.services h2 {
+        font-size: 2rem;
+    }
+
+    section.services .service .service-bottom {
+        display: block;
+    }
+
+    section.services .service .service-top {
+        display: block;
+    }
+
+    section.services .service .service-top .card {
+        margin: 1rem auto;
+        width: 80%;
+    }
+
+    section.services .service .service-bottom .card {
+        margin: 1rem auto;
+        width: 80%;
+    }
+
+    section.services .service .service-top .card .iconify {
+        margin-top: 2rem auto;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    section.services .service .service-bottom .card .iconify {
+        margin: 2rem auto;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    section.services .service .service-top .card p {
+        font-size: 14px;
+    }
+
+    section.services .service .service-bottom .card p {
+        font-size: 14px;
+    }
+
+    /*=====CONTACT US SECTION====*/
+
+    section.contact .container .contact-us h2 {
+        font-size: 2rem;
+    }
+
+    section.contact .container .contact-us form p {
+        font-size: 14px;
+    }
+
+    section.contact .contact-us form input[type=text],
+    section.contact .contact-us form input[type=submit],
+    section.contact .contact-us form textarea,
+    section.contact .contact-us form input[type=email] {
+        padding: 1rem;
+    }
+
+    section.contact .contact-us form input[type=submit] {
+        font-size: 1rem;
+    }
+
+    /*footer*/
+    footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer .footer-section {
+        display: block;
+        margin: 0 auto;
+        width: 99%;
+    }
+
+    footer .footer-section .quick-links h4 {
+        font-size: 15px;
+    }
+
+    footer .footer-section .quick-links .nav-links {
+        width: 50%;
+        display: flex;
+        gap: 0.8rem;
+        justify-content: space-between;
+    }
+
+    footer .footer-section .quick-links .nav-links a {
+        font-size: 10px;
+    }
+
+    footer .footer-section .quick-links .icons .iconify {
+        font-size: 10px;
+    }
+
+    footer .footer-section .address p{
+        font-size: 12px;
+    }
+
+    footer .footer-section .address {
+        width: 100%;
+    }
+
+    footer .footer-section .address .left .locate .iconify {
+        font-size: 12px;
+    }
+
+    .scroll-to-top {
+        padding: 5px;
+    }
+
+    .scroll-to-top span {
+        font-size: 20px;
+    }
+    footer .footer-section .rigts-reserved p{
+        font-size: 12px;
+    }
+
+}
+@media only screen and (max-width: 500px) {
+    section.home {
+        padding: 10rem 0 2rem;
+        justify-content: center;
+    }
+    
+    section.home .hero-section {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    section.home .hero-section .hello .hello-content h1 {
+        font-size: 2rem;
+    }
+
+    section.home .hero-section .hello .hello-content h3 {
+        font-size: 1.2rem;
+    }
+
+    section.home .hero-section .hello .hello-content {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    section.home .hero-section .hello .hello-content p {
+        font-size: 10px;
+    }
+    section.home .hero-section .hero-img {
+        display: none;
+    }
+
+    .hero-section .hello .btn-primary button {
+        padding: 1rem;
+        background: var(--color-primary);
+        color: var(--color-light);
+        font-size: 15pxrem;
+        transition: var(--transition);
+        border: none;
+    }
+
+    footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer .footer-section {
+        display: block;
+        margin: 0 auto;
+        width: 99%;
+    }
+
+
+    footer .footer-section .quick-links {
+        gap: 1rem;
+    }
+
+    footer .footer-section .quick-links h4 {
+        width: 25vw;
+    }
+
+    footer .footer-section .quick-links .nav-links {
+        width:90%;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    footer .footer-section .quick-links .nav-links a {
+        font-size: 2px;
+    }
+
+    footer .footer-section .quick-links .icons {
+        display: grid;
+        margin-left: 1rem;
+    }
+    footer .footer-section .quick-links .icons .iconify {
+        font-size: 13px;
+    }
+
+    footer .footer-section .address p{
+        font-size: 12px;
+    }
+
+    footer .footer-section .address {
+        width: 100%;
+    }
+
+    footer .footer-section .address .left .locate .iconify {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .section.home {
+        padding-top: 60px;
+    }
+    .section.home .hero-section {
+        padding: 0 15px;
+    }
+    
+    .section.home .hero-section .hello .hello-content p {
+        font-size: 20px;
+    }
+    
+    .section.home .hero-section .hello .hello-content h1 {
+        font-size: 45px;
+    }
+    
+    .section.home .hero-section .hello .hello-content h3 {
+        font-size: 25px;
+        height: 25px;
+    }
+    
+}
+
+@media (max-width: 575.98px) {
+    .hero .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero .hero-text h1 {
+        font-size: 30px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 18px;
+        height: 18px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 8px 10px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    section.about .container .intro-text .me .intro-text-left {
+        padding: 45px 15px 10px 15px;
+    }
+    
+    nav {
+        border: none;
+    }
+
+    nav .container #nav-links {
+        display: none;
+    }
+
+    /*for javascript toggle*/
+    nav .container #nav-links.active {
+        display: block;
+        top: 5rem;
+        height: 60vh;
+        overflow: hidden;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        background: var(--color-info-dark);
+        align-items: center;
+        justify-content: center;
+        transition: 50000ms ease-out;
+    }
+
+    nav .container #nav-links a {
+        padding: 1.6rem;
+        height: 3rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    nav .container #nav-links a.active {
+        background: none;
+    }
+
+    nav .container #toggle {
+        width: 50px;
+        height: 50px;
+        background: var(--color-primary);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav .container #toggle::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background: var(--color-light);
+        transform: translateY(-5px);
+        transition: 0.2s;
+    }
+    
+    nav .container #toggle::after {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background: var(--color-light);
+        transform: translateY(5px);
+        transition: 0.2s;
+    }
+    
+    nav .container #toggle.active::before {
+        transform: translateY(0px) rotate(45deg);
+    }
+    
+    nav .container #toggle.active::after {
+        transform: translateY(0px) rotate(-45deg);
+    }
+
+}
+
+@media screen and (max-width: 614px) {
+
+    section.home .hero-section .hero-img {
+        display: none;
+    }
+
+    .hero-section .hello {
+        margin: 0 auto;
+    }
+
+    .hero-section .hello .hello-content {
+        padding: 2rem 0 5rem;
+        justify-content: center;
+        margin-right: 40px;
+    }
+
+    section.about .container .me .intro-text {
+        display: block;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    section.about .container .me .intro-text .intro-text-right {
+        margin: 0 auto;
+        width: 100%;
+        justify-content: center;
+        margin-right: 2rem;
+    }
+
+    section.about .container .me .intro-text .intro-text-left {
+        margin: -3rem auto;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    section.about .container .me .intro-text .intro-text-left p {
+        font-size: 12px;
+    }
+
+    section.about .container .me .intro-text .intro-text-left .content .download {
+        margin: 1rem auto;
+        justify-content: center;
+    }
+
+    section.about .container .me .intro-text .intro-text-left .content .download button {
+        padding: 1rem;
+    }
+
+
+    /*=====SKILLS======*/
+    section.skills .skill .head {
+        padding: 1.8rem;
+    }
+
+    section.skills .skill .head span {
+        font-size: 1.2rem;
+    }
+
+    section.skills h4 {
+        font-size: 15px;
+    }
+
+    section.skills h2 {
+        font-size: 2rem;
+    }
+
+    section.skills h5 {
+        font-size: 10px;
+    }
+
+    section.skills .skill .head .left .iconify {
+        font-size: 1.2rem;
+    }
+
+    /*======SERVICES======*/
+
+    section.services h2 {
+        font-size: 2rem;
+    }
+
+    section.services .service .service-bottom {
+        display: block;
+    }
+
+    section.services .service .service-top {
+        display: block;
+    }
+
+    section.services .service .service-top .card {
+        margin: 1rem auto;
+        width: 80%;
+    }
+
+    section.services .service .service-bottom .card {
+        margin: 1rem auto;
+        width: 80%;
+    }
+
+    section.services .service .service-top .card .iconify {
+        margin-top: 2rem auto;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    section.services .service .service-bottom .card .iconify {
+        margin: 2rem auto;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    section.services .service .service-top .card p {
+        font-size: 14px;
+    }
+
+    section.services .service .service-bottom .card p {
+        font-size: 14px;
+    }
+
+    /*=====CONTACT US SECTION====*/
+
+    section.contact .container .contact-us h2 {
+        font-size: 2rem;
+    }
+
+    section.contact .container .contact-us form p {
+        font-size: 14px;
+    }
+
+    section.contact .contact-us form input[type=text],
+    section.contact .contact-us form input[type=submit],
+    section.contact .contact-us form textarea,
+    section.contact .contact-us form input[type=email] {
+        padding: 1.8rem;
+    }
+
+    section.contact .contact-us form input[type=submit] {
+        font-size: 1rem;
+    }
+
+    /*footer*/
+    footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer .footer-section {
+        display: block;
+        margin: 0 auto;
+        width: 99%;
+        gap: 1px;
+    }
+
+    footer .footer-section .quick-links h4 {
+        font-size: 15px;
+    }
+
+    footer .footer-section .quick-links .nav-links {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .footer-section .quick-links .nav-links a {
+        font-size: 12px;
+    }
+
+    footer .footer-section .quick-links .icons {
+        gap: 5px;
+        width: 12.5vw;
+    }
+    footer .footer-section .quick-links .icons .iconify {
+        font-size: 13px;
+    }
+
+    footer .footer-section .address p{
+        font-size: 12px;
+    }
+
+    footer .footer-section .address {
+        width: 100%;
+    }
+
+    footer .footer-section .address .left .locate .iconify {
+        font-size: 12px;
+    }
+
+
+}
