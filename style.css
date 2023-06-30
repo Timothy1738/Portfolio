@@ -486,6 +486,7 @@ section.services .service .service-top {
     justify-content: space-between;
     gap: 2rem;
     align-content: center;
+    position: relative;
 }
 
 section.services .service .service-top .card {
@@ -493,6 +494,7 @@ section.services .service .service-top .card {
     box-shadow: var(--box-shadow);
     width: 35%;
     border-radius: 1rem;
+    position: relative;
 }
 
 section.services .service .service-top .card .iconify {
@@ -511,15 +513,18 @@ section.services .service .service-top .card .iconify {
 
 section.services .service .service-top .card p {
     margin: 0 0.8rem 0.8rem 0.8rem;
+    position: relative;
 }
 
 section.services .service .service-top .card h4 {
     margin-bottom: 2rem;
     text-align: center;
+    position: relative;
 }
 section.services .service .service-top .card:hover {
     cursor: pointer;
     box-shadow: none;
+    position: relative;
 }
 
 /*cards-bottom*/
@@ -530,6 +535,7 @@ section.services .service .service-bottom {
     align-content: center;
     margin: 5rem auto;
     justify-content: center;
+    position: relative;
 }
 
 section.services .service .service-bottom .card {
@@ -537,12 +543,14 @@ section.services .service .service-bottom .card {
     box-shadow: var(--box-shadow);
     width: 35%;
     border-radius: 1rem;
+    position: relative;
 }
 
 section.services .service .service-bottom .card .iconify {
     background: var(--color-primary);
     border-radius: 50%;
     width: 2.5rem;
+    position: relative;
     height: 2.5rem;
     color: var(--color-light);
     display: flex;
@@ -554,11 +562,13 @@ section.services .service .service-bottom .card .iconify {
 
 section.services .service .service-bottom .card p {
     margin: 0 0.8rem 0.8rem 0.8rem;
+    position: relative;
 }
 
 section.services .service .service-bottom .card h4 {
     margin-bottom: 2rem;
     text-align: center;
+    position: relative;
 }
 section.services .service .service-bottom .card:hover {
     cursor: pointer;
@@ -985,7 +995,7 @@ footer .footer-section .rigts-reserved {
         padding: 10rem 0 2rem;
         justify-content: center;
     }
-    
+
     section.home .hero-section {
         margin: 0 auto;
         justify-content: center;
@@ -1009,9 +1019,6 @@ footer .footer-section .rigts-reserved {
 
     section.home .hero-section .hello .hello-content p {
         font-size: 10px;
-    }
-    section.home .hero-section .hero-img {
-        display: none;
     }
 
     .hero-section .hello .btn-primary button {
@@ -1060,11 +1067,6 @@ footer .footer-section .rigts-reserved {
     .hero .hero-text h2 {
         font-size: 18px;
         height: 18px;
-    }
-    
-    .hero .hero-btn .btn {
-        padding: 8px 10px;
-        letter-spacing: 0;
     }
 }
 
@@ -1364,24 +1366,130 @@ footer .footer-section .rigts-reserved {
     }
 }
 
-@media (max-width: 950.98px) and (min-width: 620px) {
-    nav {
-        background: red;
-    }
+@media (max-width: 950.98px) and (min-width: 614px) {
 
     .hero-section .hello .hello-content {
-        background-color: #0A66C2;
-        padding-bottom: 3rem;
+        margin-top: -5rem;
     }
 
-    .hero-section .hero-img {
-        background: #bfceeb;
+    section.home .hero-section .hero-img img {
+        width: 100%;
     }
-
-    .hero-section .hero-img img {
-        margin-bottom: -10rem;
-    }
-
-
     
+    /*SERVICES SECTION*/
+
+    section.services .service .service-bottom {
+        display: block;
+    }
+
+    section.services .service .service-top {
+        display: block;
+    }
+
+    section.services .service .service-top .card {
+        margin: 1rem auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    section.services .service .service-bottom .card {
+        margin: 1rem auto;
+        width: 80%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.services .service .service-top .card .iconify {
+        margin-top: 3rem;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+    }
+
+    section.services .service .service-bottom .card .iconify {
+        margin-top: 3rem;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+    }
+
+    section.services .service .service-top .card p {
+        font-size: 20px;
+    }
+
+    section.services .service .service-bottom .card p {
+        font-size: 20px;
+    }
+
+    section.services .service .service-top .card h4 {
+        font-size: 2rem;
+    }
+
+    section.services .service .service-bottom .card h4 {
+        font-size: 2rem;
+    }
+
+
+    /*FOOTER*/
+    footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer .footer-section {
+        display: block;
+        margin: 0 auto;
+        width: 99%;
+        gap: 1px;
+    }
+
+
+    footer .footer-section .quick-links {
+        display: block;
+    }
+
+    footer .footer-section .quick-links h4 {
+        text-align: center;
+    }
+
+    footer .footer-section .quick-links .nav-links {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem auto;
+        width: 100%;  
+    }
+
+
+    footer .footer-section .quick-links .icons {
+        margin: 1rem auto;
+        width: 45%;
+        gap: 2rem;
+    }
+    footer .footer-section .quick-links .icons .iconify {
+        font-size: 2rem;
+    }
+
+    footer .footer-section .address p{
+        font-size: 1rem;
+    }
+
+    footer .footer-section .address {
+        margin-top: 1rem;
+    }
+
+    footer .footer-section .address {
+        width: 100%;
+    }
+
+    footer .footer-section .address .left .locate .iconify {
+        font-size: 12px;
+    }
+
+    footer .footer-section .rigts-reserved p{
+        font-size: 1rem;
+    }
+
 }
