@@ -148,7 +148,10 @@ nav .container #toggle {
 }
 
 .hero-section .hello .btn-primary {
-    margin-top: 0.8rem;
+    margin: 0.8rem auto;
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-section .hello .btn-primary button {
@@ -158,6 +161,7 @@ nav .container #toggle {
     font-size: 1rem;
     transition: var(--transition);
     border: none;
+    width: 10rem;
 }
 
 .hero-section .hello .btn-primary button:hover {
@@ -789,12 +793,16 @@ footer .footer-section .rigts-reserved {
     }
 }
 
+/**************************************************/
+/**************************************************/
+/*************************600px*************************/
+/**************************************************/
+/**************************************************/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     nav {
         width: 100%;
     }
-
         
     /*====Hero section=====*/
     section.home .hero-section .hello .hello-content h1 {
@@ -990,6 +998,14 @@ footer .footer-section .rigts-reserved {
     }
 
 }
+
+
+
+/**************************************************/
+/**************************************************/
+/*********************500PX************************/
+/**************************************************/
+/**************************************************/
 @media only screen and (max-width: 500px) {
     section.home {
         padding: 10rem 0 2rem;
@@ -1007,14 +1023,15 @@ footer .footer-section .rigts-reserved {
 
     section.home .hero-section .hello .hello-content h3 {
         font-size: 1.2rem;
+        margin: 1rem auto 1rem auto;
     }
 
     section.home .hero-section .hello .hello-content {
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-right: 20px;
+        margin: 0 auto;
+        right: 25px;
     }
 
     section.home .hero-section .hello .hello-content p {
@@ -1033,22 +1050,26 @@ footer .footer-section .rigts-reserved {
 }
 
 @media (max-width: 991.98px) {
-    .section.home {
-        padding-top: 60px;
-    }
-    .section.home .hero-section {
-        padding: 0 15px;
+    section.home {
+        padding: 10rem 0 3rem;
     }
     
-    .section.home .hero-section .hello .hello-content p {
-        font-size: 20px;
+    
+    section.home .hero-section .hello .hello-content p {
+        font-size: 13px;
+        margin-top: 1rem;
     }
     
-    .section.home .hero-section .hello .hello-content h1 {
+    section.home .hero-section .hello .hello-content h1 {
         font-size: 45px;
     }
+
+    section.home .hero-section .hello .hello-content .btn-primary button {
+        font-size: 12px;
+        width: 8rem;
+    }
     
-    .section.home .hero-section .hello .hello-content h3 {
+    section.home .hero-section .hello .hello-content h3 {
         font-size: 25px;
         height: 25px;
     }
@@ -1150,6 +1171,13 @@ footer .footer-section .rigts-reserved {
     section.home .hero-section .hero-img {
         display: none;
     }
+
+    section.home {
+        background: url(./img/phone\ background.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
     .hero-section .hello {
         margin: 0 auto;
     }
@@ -1224,7 +1252,8 @@ footer .footer-section .rigts-reserved {
     }
 
     section.skills .container {
-        width: 80%;
+        width: 95%;
+        margin: 0 10px 0 10px;
     }
 
     /*======SERVICES======*/
@@ -1264,11 +1293,11 @@ footer .footer-section .rigts-reserved {
     }
 
     section.services .service .service-top .card p {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     section.services .service .service-bottom .card p {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     /*=====CONTACT US SECTION====*/
@@ -1282,7 +1311,7 @@ footer .footer-section .rigts-reserved {
     }
 
     section.contact .contact-us form {
-        width: 80%;
+        width: 100%;
     }
 
     section.contact .contact-us form input[type=text],
@@ -1366,6 +1395,14 @@ footer .footer-section .rigts-reserved {
     }
 }
 
+
+
+/**************************************************/
+/**************************************************/
+/*************950.98PX and 614PX******************/
+/**************************************************/
+/**************************************************/
+
 @media (max-width: 950.98px) and (min-width: 614px) {
 
     .hero-section .hello .hello-content {
@@ -1375,7 +1412,24 @@ footer .footer-section .rigts-reserved {
     section.home .hero-section .hero-img img {
         width: 100%;
     }
+    /**ABOUT SECTION**/
+
+    section.about .me .intro-text {
+        display: block;
+    }
+
+    section.about .me .intro-text .intro-text-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
     
+    section.about .me .intro-text .intro-text-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
     /*SERVICES SECTION*/
 
     section.services .service .service-bottom {
@@ -1388,7 +1442,7 @@ footer .footer-section .rigts-reserved {
 
     section.services .service .service-top .card {
         margin: 1rem auto;
-        width: 80%;
+        width: 60%;
         display: flex;
         flex-direction: column;
         height: 80vh;
@@ -1396,7 +1450,7 @@ footer .footer-section .rigts-reserved {
 
     section.services .service .service-bottom .card {
         margin: 1rem auto;
-        width: 80%;
+        width: 60%;
         height: 80vh;
         display: flex;
         flex-direction: column;
@@ -1417,21 +1471,31 @@ footer .footer-section .rigts-reserved {
     }
 
     section.services .service .service-top .card p {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     section.services .service .service-bottom .card p {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     section.services .service .service-top .card h4 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     section.services .service .service-bottom .card h4 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
+    /*SKILLS*/
+    section.skills .container {
+        width: 95%;
+        margin: 0 10px 0 10px;
+    }
+
+    /*contact us*/
+    section.contact .contact-us form {
+        width: 100%;
+    }
 
     /*FOOTER*/
     footer {
