@@ -12,9 +12,7 @@
     --color-info-light2: #bfceeb;
     --color-info-light3:  #f5f7fa;
     --color-info-light4: #eaf0f8;
-    --color-facebook: #1877F2;
-    --color-twitter: #1D9BF0;
-    --color-linkedin: #0A66C2;
+    --color-boxshadow: hsla(0, 0%, 0%, 0.12);
     --color-info-dark: #3e524e;
     --transition: all 300ms ease;
     --box-shadow: 0 1rem 3rem rgba(51, 52, 56, 0.18);
@@ -409,7 +407,7 @@ section.skills .item .progress-bar .progress {
     height: 100%;
     width: 80%;
     background: var(--color-primary);
-    animation: progress 1s;
+    animation: progress 2s;
 }
 
 @keyframes progress {
@@ -425,7 +423,7 @@ section.skills .item .progress-bar .progress1 {
     height: 100%;
     width: 95%;
     background: var(--color-primary);
-    animation: progress1 1s;
+    animation: progress1 2s;
 }
 
 @keyframes progress1 {
@@ -441,7 +439,7 @@ section.skills .item .progress-bar .progress2 {
     height: 100%;
     width: 70%;
     background: var(--color-primary);
-    animation: progress2 1s;
+    animation: progress2 2s;
 }
 
 @keyframes progress2 {
@@ -457,7 +455,7 @@ section.skills .item .progress-bar .progress3 {
     height: 100%;
     width: 60%;
     background: var(--color-primary);
-    animation: progress3 1s;
+    animation: progress3 2s;
 }
 
 @keyframes progress3 {
@@ -474,7 +472,7 @@ section.skills .item .progress-bar .progress4 {
     height: 100%;
     width: 50%;
     background: var(--color-primary);
-    animation: progress4 1s;
+    animation: progress4 2s;
 }
 
 @keyframes progress4 {
@@ -489,7 +487,7 @@ section.skills .item .progress-bar .progress5 {
     height: 100%;
     width: 35%;
     background: var(--color-primary);
-    animation: progress5 1s;
+    animation: progress5 2s;
 }
 
 @keyframes progress5 {
@@ -504,7 +502,7 @@ section.skills .item .progress-bar .progress6 {
     height: 100%;
     width: 80%;
     background: var(--color-primary);
-    animation: progress6 1s;
+    animation: progress6 2s;
 }
 
 @keyframes progress6 {
@@ -520,7 +518,7 @@ section.skills .item .progress-bar .progress7 {
     height: 100%;
     width: 85%;
     background: var(--color-primary);
-    animation: progress7 1s;
+    animation: progress7 2s;
 }
 
 @keyframes progress7 {
@@ -536,7 +534,7 @@ section.skills .item .progress-bar .progress8 {
     height: 100%;
     width: 95%;
     background: var(--color-primary);
-    animation: progress8 1s;
+    animation: progress8 2s;
 }
 
 @keyframes progress8 {
@@ -1172,12 +1170,64 @@ footer .footer-section .rigts-reserved {
 
 }
 
+
+/**************************************************/
+/**************************************************/
+/*********************500PX************************/
+/**************************************************/
+/**************************************************/
+@media only screen and (max-width: 500px) {
+    .home .hero-section {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .home {
+        justify-content: center;
+    }
+
+    .home .hero-section .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home .hero-section .hero-text h3 {
+        font-size: 1rem;
+
+    }
+
+    .home .hero-section .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .home .hero-section .hero-text p {
+        font-size: 10px;
+    }
+
+    .home .hero-section .hero-text .btn-primary button {
+        padding: 1rem;
+        background: var(--color-primary);
+        color: var(--color-light);
+        font-size: 15pxrem;
+        transition: var(--transition);
+        border: none;
+    }
+
+}
+
+
 /*******************************/
 /**********991.98px*****************/
 /*******************************/
 @media (max-width: 991.98px) {
     .home {
         padding: 10rem 0 3rem;
+    }
+
+    nav {
+        background: red;
     }
     
     
@@ -1243,26 +1293,27 @@ footer .footer-section .rigts-reserved {
     }
 
     nav .container #nav-links.active {
-        display: grid;
+        display: block;
         position: absolute;
-        grid-template-columns:repeat(5, 4.5rem);
         background: var(--color-info-dark);
         top: 5rem;
         left: -5rem;
-        height: 5rem;
-        width: 100%;
+        width: 10rem;
+        height: 80vh;
         align-items: center;
         justify-content: center;
+        box-shadow: 0 1rem 2rem var(--color-boxshadow);
     }
 
     nav .container #nav-links a {
         padding: 0.5rem;
         justify-content: center;
         display: flex;
+        gap: 2rem;
+        width: 100%;
         justify-content: space-between;
-        height: 3rem;
+        height: 7rem;
         color: var(--color-h3);
-        width: 5rem;
         font-size: 15px;
     }
 
