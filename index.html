@@ -6,53 +6,61 @@
     <!--GOOGLE ICONS-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
-    <style>
-        :root {
-            --color-light: #FCFCFC;
-        }
-    </style>
-    <title>HOME PAGE</title>
+    <title>TIMFOLIO</title>
 </head>
 <body>
 
     <nav>
         <div class="container">
-            <div class="logo">
-                <h2>TIM</h2>
-            </div>
+            <h2>TIM</h2>
             <div id="nav-links">
-                <a id="li" href="#home" class="active">Home</a>
-                <a id="li" href="#about">About</a>
-                <a id="li" href="#skills">Skills</a>
-                <a id="li" href="#services">Services</a>
-                <a id="li" href="#contact">Let's Talk</a>
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Let's Talk</a>
+            </div>
+            <div class="theme-toggler">
+                <span class="material-symbols-outlined active">brightness_5</span>
+                <span class="material-symbols-outlined">dark_mode</span>
             </div>
             <div id="toggle"></div>
         </div>
     </nav>
 
-    <section id="home" class="home">
+    <div id="home" class="home">
         <div class="hero-section">
-            <div class="hello">
-                <div class="hello-content">
-                    <h3>Hi, There</h3>
-                    <h1>I am ANGANYA TIMOTHY,</h1>
-                    <h3>A Web Developer</h3>
+            <div class="hero-text">
+                <h3 class="hi-there">Hi, There</h3>
+                <h1>I'm ANGANYA TIMOTHY,</h1>
+                <h3>A Web Developer</h3>
 
-                    <p>I can design a responsive website using HTML, CSS and JAVASCRIPT</p>
+                <p>I can design a responsive website using HTML, CSS and JAVASCRIPT</p>
 
-                    <div class="btn-primary">
-                        <a href="#contact"><button class="btn-primary">CONTACT ME</button></a>
-                        <a href="#about"><button class="btn-primary">HIRE ME</button></a>
-                    </div>
+                <div class="btn-primary">
+                    <a href="#contact"><button>CONTACT ME</button></a>
+                    <a href="#about"><button>HIRE ME</button></a>
                 </div>
             </div>
 
-            <div class="hero-img">
-                <img src="./img/Hero-img.png" alt="">
+            <div class="profile-area">
+                <div class="outer-circle">
+                    <span class="iconify" data-icon="material-symbols:design-services"></span>
+                    <span class="iconify" data-icon="ic:round-code"></span>
+                    <span class="iconify" data-icon="dashicons:editor-video"></span>
+                    <span class="iconify" data-icon="simple-icons:taichigraphics"></span>
+                </div>
+                <div class="inner-circle">
+                    <img src="./img/ONP_3749mdi ~2.jpg" alt="">
+                </div>
             </div>
         </div>
-    </section>
+
+        <div class="hero-img">
+            <img class="back-img" src="./img/rand-shape (1).png" alt="">
+            <img class="main-img" src="./img/Hero-img.png" alt="">
+        </div>
+    </div>
 
     <!--ABOUT-->
     <section id="about" class="about">
@@ -124,9 +132,7 @@
                         </div>
                     </div>
                     <!--END OF ITEM-->
-                </div>
 
-                <div class="items">
                     <div class="item">
                         <h5>CSS</h5>
                         <div class="progress-area">
@@ -137,9 +143,7 @@
                         </div>
                     </div>
                     <!--END OF ITEM-->
-                </div>
 
-                <div class="items">
                     <div class="item">
                         <h5>JavaScript</h5>
                         <div class="progress-area">
@@ -173,9 +177,7 @@
                         </div>
                     </div>
                     <!--END OF ITEM-->
-                </div>
 
-                <div class="items">
                     <div class="item">
                         <h5>Python</h5>
                         <div class="progress-area">
@@ -209,9 +211,7 @@
                         </div>
                     </div>
                     <!--END OF ITEM-->
-                </div>
 
-                <div class="items">
                     <div class="item">
                         <h5>Adobe Photoshop</h5>
                         <div class="progress-area">

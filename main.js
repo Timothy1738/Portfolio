@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('#nav-links a');
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section, #home');
 
     function changeActiveLink() {
         const scrollPosition = window.pageYOffset;
@@ -28,38 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for scroll events
         window.addEventListener('scroll', changeActiveLink);
 });
-
-// Get all the 'head' elements
-const headElements = document.querySelectorAll('.skill .head');
-
-// Attach a click event listener to each 'head' element
-headElements.forEach((head) => {
-    head.addEventListener('click', () => {
-        // Get the skill section (parent of the clicked head)
-        const skillSection = head.parentElement;
-
-        // Get all the 'item' elements within the skill section
-        const items = skillSection.querySelectorAll('.item');
-
-        // Toggle the display of all 'item' elements
-        items.forEach((item) => {
-            item.style.display = item.style.display === 'none' ? 'block' : 'none';
-        });
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const skillHeads = document.querySelectorAll('.skill .head');
-  
-    skillHeads.forEach(function(head) {
-      head.addEventListener('click', function() {
-        const item = this.nextElementSibling;
-        item.classList.toggle('show');
-      });
-    });
-  });
-  
 
 const scrollToTopButton = document.querySelector('.scroll-to-top');
 // Add click event listener to scroll-to-top button
@@ -94,3 +62,20 @@ toggle.onclick = function(){
     navDrop.classList.toggle('active');
 }
 
+// change theme
+const themeToggler = document.querySelector('.theme-toggler');
+
+themeToggler.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme-variables');
+    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
+    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
+})
+
+//show/hide skills items
+const skillItems = document.querySelectorAll('section.skills .skill');
+
+skillItems.forEach(skill => {
+    skill.querySelector('.head').addEventListener('click', () => {
+        skill.querySelector('.items').classList.toggle('show-items');
+    })
+})

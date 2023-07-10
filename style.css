@@ -4,7 +4,10 @@
 :root {
     --color-primary: #7380ec;
     --color-light: #FCFCFC;
+    --color-light2: #f4f4f4;
     --color-white: #FFFF;
+    --color-h3: #ffffff;
+    --color-hero-background: #edf2fc;
     --color-info-light: #e6ebf5;
     --color-info-light2: #bfceeb;
     --color-info-light3:  #f5f7fa;
@@ -12,10 +15,21 @@
     --color-facebook: #1877F2;
     --color-twitter: #1D9BF0;
     --color-linkedin: #0A66C2;
-    --color-info-dark: #2C3A3D;
+    --color-info-dark: #3e524e;
     --transition: all 300ms ease;
     --box-shadow: 0 1rem 3rem rgba(51, 52, 56, 0.18);
-    --color-black: rgb(2, 2, 2);
+    --color-black: #141415;
+}
+
+.dark-theme-variables {
+    --color-light: #1b1f22;
+    --color-light2: #1b1f22;
+    --color-info-light4: #1b1f22;
+    --color-info-light: #181a1e;
+    --color-info-light3: #202528;
+    --color-black: #ffff;
+    --background-color: #24282e;
+    --color-white: #1c1f24;
 }
 
 * {
@@ -51,21 +65,12 @@ section {
     padding: 10rem 0 7rem;
 }
 
-.home {
-    background: url(./img/wp7453677.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 10rem 0 0;
-    position: relative;
-}
-
 nav {
     position: fixed;
     top: 0;
-    height: 7rem;
-    background: var(--color-info-dark);
+    background: var(--color-light2);
     display: flex;
-    border-bottom: 1px solid var(--color-light) ;
+    border-bottom: 1px solid var(--color-info-dark) ;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -77,34 +82,32 @@ nav .container {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 95%;
+    width: 90%;
 }
 
-nav .container .logo{
-    margin-left: 1rem;
-}   
-
-nav .container .logo h2 {
+nav .container h2 {
     color: var(--color-primary);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 nav .container #nav-links {
     display: flex;
-    justify-content: center;
-    height: 100%
+    margin-left: 5rem;
+    justify-content: end;
+    position: relative;
 }
 
 nav .container #nav-links a {
     width: 7rem;
-    height: 100%;
-    color: var(--color-light);
-    transform: var(--transition);
+    height: 7rem;
+    color: var(--color-black);
+    transition: var(--transition);
     position: relative;
     display: flex;
     align-items: center;
     margin-right: 1rem;
     justify-content: center;
+    position: relative;
 }
 
 nav .container #nav-links a:hover {
@@ -121,40 +124,79 @@ nav .container #nav-links a.active {
 nav .container #toggle {
     display: none;
 }
-/*====HERO SECTION====*/
 
-.hero-section {
-    width: 100%;
+nav .container .theme-toggler {
+    background: var(--color-info-light3);
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: 5px;
     position: relative;
 }
-
-.hero-section .hello {
-    padding-left: 3rem;
+nav .container .theme-toggler span {
+    font-size: 1.2rem;
     position: relative;
-    align-content: center;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .container .theme-toggler span.active {
+    background: var(--color-primary);
+    color: white;
+    border-radius: 5px;
+}
+
+/*====HERO SECTION====*/
+
+.home {
+    background: var(--color-light2);
+    height: 119vh;
+}
+
+
+.home .hero-section {
+    position: relative;
+    width: 45%;
+    margin-left: 3rem;
+    padding-top: 25rem;
+    display: flex;
+    width: 100%;
+}
+
+.home .hero-section .hero-text {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    margin-top: 20vh;
-    width: 800px;
-    text-align: center;
 }
 
-.hero-section .hello p {
-    color: var(--color-light);
+
+.home .hero-section .hero-text p {
+    color: var(--color-black);
     font-size: 1rem;
 }
 
-.hero-section .hello .btn-primary {
-    margin: 0.8rem auto;
-    gap: 2rem;
-    display: flex;
-    justify-content: center;
+.home .hero-section .hero-text h3 {
+    font-size: 2rem;
+    color: var(--color-black);
 }
 
-.hero-section .hello .btn-primary button {
+.home .hero-section .hero-text h1 {
+    font-size: 3.1rem;
+    color: var(--color-primary);
+}
+
+.home .hero-section .hero-text .btn-primary {
+    margin-top: 0.8rem;
+    gap: 2rem;
+    display: flex;
+}
+
+.home .hero-section .hero-text .btn-primary button {
     padding: 1.2rem;
     background: var(--color-primary);
     color: var(--color-light);
@@ -164,39 +206,42 @@ nav .container #toggle {
     width: 10rem;
 }
 
-.hero-section .hello .btn-primary button:hover {
+.home .hero-section .hero-text .btn-primary button:hover {
     background: var(--color-light);
     color: var(--color-primary);
     cursor: pointer;
+    border: 1px solid var(--color-primary);
 }
 
-.hero-section .hello .hello-content h3 {
-    line-height: 2;
-    font-size: 2rem;
-    color: var(--color-light);
-}
-
-.hero-section .hello .hello-content {
-    position: relative;
-}
-
-.hero-section .hello .hello-content h1 {
-    font-size: 3.5rem;
-    color: var(--color-primary);
-}
-
-.hero-section .hero-img {
-    margin-right: 3rem;
-    margin-top: -2rem;
+.home .hero-img {
+    height: 100%;
+    width: 45%;
+    position: absolute;
+    bottom: -7.8rem;
+    right: 1rem;
     overflow: hidden;
-    position: relative;
+}
+.home .hero-img img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    transition: bottom 1s, left 1s;
 }
 
-.hero-section .hero-img img {
-    height: 600px;
-    margin-bottom: -4px;
-    position: relative;
+.home .hero-img:hover .back-img {
+    bottom: 1rem;
 }
+
+.home .hero-img:hover .main-img {
+    left: 45%;
+}
+
+.home .hero-section .profile-area {
+    display: none;
+}
+
 /*================END OF HOME===============*/
 
 /*================ABOUT================*/
@@ -217,6 +262,7 @@ section.about .me h2 {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 3rem;
+    color: var(--color-black)
 }
 
 section.about .me .intro-text {
@@ -245,6 +291,10 @@ section.about .me .intro-text .intro-text-left .content {
     margin: 4rem 2rem 2rem 2rem;
 }
 
+section.about .me .intro-text .intro-text-left .content p {
+    color: var(--color-black);
+}
+
 section.about .me .intro-text .intro-text-left .content .download {
     position: relative;
     margin: 2rem auto 2rem 2rem;
@@ -256,7 +306,7 @@ section.about .me .intro-text .intro-text-left .content .download button {
     color: var(--color-light);
     font-size: 1rem;
     transition: var(--transition);
-    border: none;
+    border: 1px solid var(--color-primary);
 }
 
 section.about .me .intro-text .intro-text-left .content .download button:hover {
@@ -270,7 +320,13 @@ section.skills h2 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
+    color: var(--color-black);
 }
+
+section.skills h5 {
+    color: var(--color-black);
+}
+
 section.skills {
     background: var(--color-info-light4);
 }
@@ -288,9 +344,14 @@ section.skills .skill .head {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--color-light);
+    color: var(--color-h3);
     padding: 1.6rem;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+section.skills .skill .head:hover {
+    background: #98a1f1;
 }
 
 section.skills .skill .head .left .iconify {
@@ -299,7 +360,7 @@ section.skills .skill .head .left .iconify {
 
 
 section.skills .skill .head h4 {
-    color: var(--color-white);
+    color: var(--color-h3);
 }
 
 section.skills .skill .head .left {
@@ -309,9 +370,14 @@ section.skills .skill .head .left {
 }
 
 /*for sake of js*/  
-section.skills .skill .item.show {
-    display: block;
+section.skills .skill .items {
+    display: none;
   }  
+
+section.skills .container .skill .items.show-items {
+    display: block;
+}
+/* end of for js sake*/
 
 section.skills .skill .item {
     display: flex;
@@ -322,10 +388,12 @@ section.skills .skill .item {
     background: var(--color-info-light);
     margin-bottom: 0.3rem;
     transition: var(--transition);
+    box-shadow: var(--box-shadow);
 }
 
 section.skills .skill .item:hover {
     background: var(--color-light);
+    box-shadow: none;
 }
 
 section.skills .skill .progress-area {
@@ -345,128 +413,143 @@ section.skills .item .progress-bar .progress {
     height: 100%;
     width: 80%;
     background: var(--color-primary);
+    animation: progress 1s;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
 }
 
 section.skills .item .progress-bar .progress1 {
     height: 100%;
     width: 95%;
     background: var(--color-primary);
+    animation: progress1 1s;
+}
+
+@keyframes progress1 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 95%;
+    }
 }
 
 section.skills .item .progress-bar .progress2 {
     height: 100%;
     width: 70%;
     background: var(--color-primary);
+    animation: progress2 1s;
+}
+
+@keyframes progress2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
 }
 
 section.skills .item .progress-bar .progress3 {
     height: 100%;
     width: 60%;
     background: var(--color-primary);
+    animation: progress3 1s;
 }
+
+@keyframes progress3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
 
 section.skills .item .progress-bar .progress4 {
     height: 100%;
     width: 50%;
     background: var(--color-primary);
+    animation: progress4 1s;
 }
 
+@keyframes progress4 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
 section.skills .item .progress-bar .progress5 {
     height: 100%;
     width: 35%;
     background: var(--color-primary);
+    animation: progress5 1s;
 }
 
+@keyframes progress5 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 35%;
+    }
+}
 section.skills .item .progress-bar .progress6 {
     height: 100%;
     width: 80%;
     background: var(--color-primary);
+    animation: progress6 1s;
+}
+
+@keyframes progress6 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
 }
 
 section.skills .item .progress-bar .progress7 {
     height: 100%;
     width: 85%;
     background: var(--color-primary);
+    animation: progress7 1s;
+}
+
+@keyframes progress7 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
 }
 
 section.skills .item .progress-bar .progress8 {
     height: 100%;
     width: 95%;
     background: var(--color-primary);
-}
-/*=============CONTACT ME SECTION===============*/
-
-.overlay {
-    background: rgb(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-}
-                                                                      
-section.contact {
-    width: 100%;
-    background-image: url(./img/contact-me.jpg);
-    background-size: cover;
-    background-repeat: none;
-    background-position: center;
+    animation: progress8 1s;
 }
 
-section.contact .contact-us h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: var(--color-primary);
-}
-
-section.contact .contact-us form {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 1rem auto;
-}
-
-section.contact .contact-us form p {
-    color: var(--color-light);
-    line-height: 2;
-}
-
-section.contact .contact-us form input[type=text],
-section.contact .contact-us form input[type=submit],
-section.contact .contact-us form textarea,
-section.contact .contact-us form input[type=email] {
-    width: 100%;
-    background: transparent;
-    display: block;
-    border: 2px solid var(--color-light);
-    padding: 1.6rem;
-    margin: 5px 0 22px 0;
-    transition: var(--transition);
-    color: var(--color-light);
-}
-
-section.contact .contact-us form input[type=text]:focus,
-section.contact .contact-us form textarea:focus,
-section.contact .contact-us form input[type=email]:focus {
-    background-color: var(--color-white);
-    color: var(--color-black);
-}
-
-section.contact .contact-us form input[type=submit] {
-    margin-top: 3rem;
-    width: 14rem;
-    margin: 2rem auto 0;
-    background-color: var(--color-primary);
-    border: none;
-    transition: var(--transition);
-    font-weight: bold;
-    font-size: 20px;
-}
-
-section.contact .contact-us form input[type=submit]:hover {
-    background-color: transparent;
-    border: 2px solid var(--color-light);
-    color: var(--color-light);
-    cursor: pointer;
+@keyframes progress8 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 95%;
+    }
 }
 
 /*======services=======*/
@@ -474,10 +557,15 @@ section.services {
     background: var(--color-info-light3);
 }
 
+section.services p, h4 {
+    color: var(--color-black);
+}
+
 section.services h2 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
+    color: var(--color-black);
 }
 
 section.services .service {
@@ -600,6 +688,81 @@ section.services .service .lets-talk button:hover {
     border: 1px solid var(--color-primary);
 }
 
+/*=============CONTACT ME SECTION===============*/
+
+.overlay {
+    background: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+                                                                      
+section.contact {
+    width: 100%;
+    background-image: url(./img/contact-me.jpg);
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+}
+
+section.contact .contact-us h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+section.contact .contact-us form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+
+section.contact .contact-us form p {
+    color: var(--color-h3);
+    line-height: 2;
+}
+
+section.contact .contact-us form input[type=text],
+section.contact .contact-us form input[type=submit],
+section.contact .contact-us form textarea,
+section.contact .contact-us form input[type=email] {
+    width: 100%;
+    background: transparent;
+    display: block;
+    border: 2px solid var(--color-h3);
+    padding: 1.6rem;
+    margin: 5px 0 22px 0;
+    transition: var(--transition);
+    color: var(--color-h3);
+}
+
+section.contact .contact-us form input[type=text]:focus,
+section.contact .contact-us form textarea:focus,
+section.contact .contact-us form input[type=email]:focus {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+section.contact .contact-us form input[type=submit] {
+    margin-top: 3rem;
+    width: 14rem;
+    margin: 2rem auto 0;
+    background-color: var(--color-primary);
+    border: none;
+    transition: var(--transition);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+section.contact .contact-us form input[type=submit]:hover {
+    background-color: transparent;
+    border: 2px solid var(--color-h3);
+    cursor: pointer;
+}
+
+
 /*=====SCROLL TO TOP====*/
 
 .scroll-to-top {
@@ -624,6 +787,7 @@ section.services .service .lets-talk button:hover {
     background: var(--color-light);
     color: var(--color-primary);
     box-shadow: var(--box-shadow);
+    border: 1px solid var(--color-primary);
 }
 
 
@@ -636,7 +800,7 @@ footer {
     margin: 0;
     padding: 1rem 0 1rem;
     background: var(--color-primary);
-    color: var(--color-light);
+    color: var(--color-h3);
     place-content: center;
 }
 
@@ -660,6 +824,7 @@ footer .footer-section .quick-links {
 
 footer .footer-section .quick-links h4 {
     text-decoration: underline;
+    color: var(--color-h3);
 }
 
 footer .footer-section .quick-links .nav-links {
@@ -669,7 +834,7 @@ footer .footer-section .quick-links .nav-links {
 }
 
 footer .footer-section .quick-links .nav-links a {
-    color: var(--color-light);
+    color: var(--color-h3);
 }
 
 footer .footer-section .quick-links .nav-links a:hover {
@@ -721,11 +886,11 @@ footer .footer-section .address .left .locate .iconify {
 }
 
 footer .footer-section .address .line {
-    border: 0.2px solid var(--color-light);
+    border: 0.2px solid var(--color-h3);
 }
 
 footer .footer-section .line2 {
-    border: 1px solid var(--color-light);
+    border: 1px solid var(--color-h3);
     width: 80%;
     margin: 1px auto;
 }
@@ -1007,26 +1172,26 @@ footer .footer-section .rigts-reserved {
 /**************************************************/
 /**************************************************/
 @media only screen and (max-width: 500px) {
-    section.home {
+    .home {
         padding: 10rem 0 2rem;
         justify-content: center;
     }
 
-    section.home .hero-section {
+    .home .hero-section {
         margin: 0 auto;
         justify-content: center;
     }
 
-    section.home .hero-section .hello .hello-content h1 {
+    .home .hero-section .hero-text h1 {
         font-size: 2rem;
     }
 
-    section.home .hero-section .hello .hello-content h3 {
+    .home .hero-section .hero-text h3 {
         font-size: 1.2rem;
-        margin: 1rem auto 1rem auto;
+
     }
 
-    section.home .hero-section .hello .hello-content {
+    .home .hero-section .hero-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1034,11 +1199,11 @@ footer .footer-section .rigts-reserved {
         right: 25px;
     }
 
-    section.home .hero-section .hello .hello-content p {
+    .home .hero-section .hero-text p {
         font-size: 10px;
     }
 
-    .hero-section .hello .btn-primary button {
+    .home .hero-section .hero-text .btn-primary button {
         padding: 1rem;
         background: var(--color-primary);
         color: var(--color-light);
@@ -1050,42 +1215,42 @@ footer .footer-section .rigts-reserved {
 }
 
 @media (max-width: 991.98px) {
-    section.home {
+    .home {
         padding: 10rem 0 3rem;
     }
     
     
-    section.home .hero-section .hello .hello-content p {
+    .home .hero-section .hero-text p {
         font-size: 13px;
         margin-top: 1rem;
     }
     
-    section.home .hero-section .hello .hello-content h1 {
-        font-size: 45px;
+    .home .hero-section .hero-text h1 {
+        font-size: 40px;
     }
 
-    section.home .hero-section .hello .hello-content .btn-primary button {
+    .home .hero-section .hero-text .btn-primary button {
         font-size: 12px;
         width: 8rem;
     }
     
-    section.home .hero-section .hello .hello-content h3 {
+    .home .hero-section .hero-text h3 {
         font-size: 25px;
-        height: 25px;
+        
     }
     
 }
 
 @media (max-width: 575.98px) {
-    .hero .hero-text p {
+    .home .hero-section .hero-text {
         font-size: 16px;
     }
 
-    .hero .hero-text h1 {
+    .home .hero-section .hero-text h1 {
         font-size: 30px;
     }
     
-    .hero .hero-text h2 {
+    .home .hero-section .hero-text h2 {
         font-size: 18px;
         height: 18px;
     }
@@ -1096,34 +1261,47 @@ footer .footer-section .rigts-reserved {
         padding: 45px 15px 10px 15px;
     }
     
+
     nav {
-        border: none;
+        height: 7rem;
+        background: var(--color-info-dark);
     }
 
+    nav .container h2 {
+        margin-left: 2rem;
+    }
+
+    
     nav .container #nav-links {
         display: none;
     }
-
+    
     /*for javascript toggle*/
-    nav .container #nav-links.active {
-        display: block;
-        top: 7rem;
-        height: 70vh;
-        overflow: hidden;
-        left: 0;
+    nav .container {
         width: 100%;
+    }
+
+    nav .container #nav-links.active {
+        display: grid;
         position: absolute;
+        grid-template-columns:repeat(5, 6rem);
         background: var(--color-info-dark);
+        top: 7rem;
+        left: -5rem;
+        height: 5rem;
+        width: 100%;
         align-items: center;
         justify-content: center;
-        transition: 50000ms ease-out;
     }
 
     nav .container #nav-links a {
         padding: 1.6rem;
+        justify-content: center;
+        display: flex;
+        justify-content: space-between;
         height: 3rem;
-        margin-top: 1rem;
-        margin-left: 1rem;
+        color: var(--color-h3);
+        width: 6rem;
     }
 
     nav .container #toggle {
@@ -1134,6 +1312,7 @@ footer .footer-section .rigts-reserved {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 2rem;
     }
     
     nav .container #toggle::before {
@@ -1166,28 +1345,127 @@ footer .footer-section .rigts-reserved {
 
 }
 
+/**************************************/
+/*********MOBILE I GUESS***************/
+/**************************************/
 @media screen and (max-width: 614px) {
 
-    section.home .hero-section .hero-img {
+    .home .hero-img {
         display: none;
     }
 
-    section.home {
-        background: url(./img/phone\ background.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100vh;
+    .home {
+        display: grid;
+        place-items: center;
+        height: 140vh;
     }
-    .hero-section .hello {
-        margin: 0 auto;
+    .home .hero-section {
+        display: grid;
+        grid-template-rows: 40% 50%;
+        place-items: center;
+        gap: 10rem;
     }
 
-    .hero-section .hello .hello-content {
-        padding: 2rem 0 5rem;
+    .home .hero-section .profile-area {
+        display: flex;
         justify-content: center;
+        align-items: center;
+        margin-top: -35rem;
         position: relative;
-        right: 13px;
+        right: 1.9rem;
     }
+    
+    .home .hero-section .profile-area .outer-circle {
+        width: 26rem;
+        height: 26rem;
+        border: 1px solid var(--color-primary);
+        border-radius: 50%;
+        position: relative;
+        animation: move 30s linear infinite;
+    }
+    
+    @keyframes move {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .home .hero-section .profile-area .outer-circle .iconify {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        position: absolute;
+        background: var(--color-info-light);
+        color: var(--color-primary);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        box-shadow: var(--box-shadow);
+    }
+    
+    .home .hero-section .profile-area .outer-circle .iconify:nth-child(1) {
+        left: calc(50% - 2rem);
+        top: -1rem;
+    }
+    
+    .home .hero-section .profile-area .outer-circle .iconify:nth-child(2) {
+        top: calc(50% - 2rem);
+        right: -1rem;
+    }
+    
+    .home .hero-section .profile-area .outer-circle .iconify:nth-child(3) {
+        top: calc(50% - 2rem);
+        left: -1rem;
+    }
+    
+    .home .hero-section .profile-area .outer-circle .iconify:nth-child(4) {
+        left: calc(50% - 2rem);
+        bottom: -1rem;
+    }
+    
+    
+    
+    .home .hero-section .profile-area .inner-circle {
+        position: absolute;
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .home .hero-section .profile-area {
+        grid-row: 1;
+    }
+
+    .home .hero-section .hero-text {
+        text-align: center;
+        margin-top: -17rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 90vw;
+        left: -2rem;
+        position: relative;
+    }
+
+    .home .hero-section .hero-text p {
+        color: var(--color-black);
+    }
+
+    .home .hero-section .hero-text h3 {
+        color: var(--color-black);
+        line-height: 2;
+    }
+    
+    .home .hero-section .hero-text .btn-primary {
+        display: flex;
+        justify-content: center;
+        margin: 1rem auto;
+    }
+
+    /*ABOUT*/
 
     section.about .container .me .intro-text {
         display: block;
@@ -1253,7 +1531,6 @@ footer .footer-section .rigts-reserved {
 
     section.skills .container {
         width: 95%;
-        margin: 0 10px 0 10px;
     }
 
     /*======SERVICES======*/
@@ -1405,11 +1682,11 @@ footer .footer-section .rigts-reserved {
 
 @media (max-width: 950.98px) and (min-width: 614px) {
 
-    .hero-section .hello .hello-content {
+    .home .hero-section .hero-text {
         margin-top: -5rem;
     }
 
-    section.home .hero-section .hero-img img {
+    .home .hero-img img {
         width: 100%;
     }
     /**ABOUT SECTION**/
