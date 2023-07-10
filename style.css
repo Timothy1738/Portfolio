@@ -913,19 +913,19 @@ footer .footer-section .rigts-reserved {
         padding: 8rem 0 5rem;
     }
 
-    section.home {
+    .home {
         margin: 0 auto;
     }
 
-    section.home .hello .hello-content h1 {
+    .home .hero-section .hero-text h1 {
         font-size: 2.5rem;
     }
 
-    section.home .hello {
+    .home .hero-section .hero-text {
         max-width: 600px;
     }
 
-    section.home .hero-section .hero-img img {
+    .home .hero-img img {
         height: 500px;
     }
 
@@ -1226,9 +1226,6 @@ footer .footer-section .rigts-reserved {
         padding: 10rem 0 3rem;
     }
 
-    nav {
-        background: red;
-    }
     
     
     .home .hero-section .hero-text p {
@@ -1278,9 +1275,6 @@ footer .footer-section .rigts-reserved {
         background: var(--color-info-dark);
     }
 
-    nav .container h2 {
-        margin-left: 2rem;
-    }
 
     
     nav .container #nav-links {
@@ -1382,7 +1376,6 @@ footer .footer-section .rigts-reserved {
         justify-content: center;
         align-content: center;
         position: relative;
-        right: 1rem;
     }
 
     .home {
