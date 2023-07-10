@@ -350,10 +350,6 @@ section.skills .skill .head {
     transition: var(--transition);
 }
 
-section.skills .skill .head:hover {
-    background: #98a1f1;
-}
-
 section.skills .skill .head .left .iconify {
     font-size: 2rem;
 }
@@ -968,21 +964,33 @@ footer .footer-section .rigts-reserved {
     nav {
         width: 100%;
     }
+
+    nav .container .h2 {
+        font-size: 10px;
+    }
+
+    nav .container .theme-toggler {
+        display: none;
+    }
         
     /*====Hero section=====*/
-    section.home .hero-section .hello .hello-content h1 {
+    .home .hero-section .hero-text h1 {
         font-size: 2rem;
     }
 
-    section.home .hero-section .hello .hello-content h3 {
+    .home .hero-section .hero-text h3 {
         font-size: 1rem;
     }
 
-    section.home .hero-section .hello .hello-content {
-        margin: 0 2rem 2rem 2rem;
+    .home .hero-section .hero-text {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin: 0 auto;
+        flex-direction: column;
     }
 
-    section.home .hero-section .hello .hello-content p {
+    .home .hero-section .hero-text p {
         font-size: 15px;
     }
     /*===ABOUT====*/
@@ -1164,56 +1172,9 @@ footer .footer-section .rigts-reserved {
 
 }
 
-
-
-/**************************************************/
-/**************************************************/
-/*********************500PX************************/
-/**************************************************/
-/**************************************************/
-@media only screen and (max-width: 500px) {
-    .home {
-        padding: 10rem 0 2rem;
-        justify-content: center;
-    }
-
-    .home .hero-section {
-        margin: 0 auto;
-        justify-content: center;
-    }
-
-    .home .hero-section .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .home .hero-section .hero-text h3 {
-        font-size: 1.2rem;
-
-    }
-
-    .home .hero-section .hero-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 auto;
-        right: 25px;
-    }
-
-    .home .hero-section .hero-text p {
-        font-size: 10px;
-    }
-
-    .home .hero-section .hero-text .btn-primary button {
-        padding: 1rem;
-        background: var(--color-primary);
-        color: var(--color-light);
-        font-size: 15pxrem;
-        transition: var(--transition);
-        border: none;
-    }
-
-}
-
+/*******************************/
+/**********991.98px*****************/
+/*******************************/
 @media (max-width: 991.98px) {
     .home {
         padding: 10rem 0 3rem;
@@ -1261,10 +1222,9 @@ footer .footer-section .rigts-reserved {
         padding: 45px 15px 10px 15px;
     }
     
-
     nav {
         width: 100%;
-        height: 7rem;
+        height: 5rem;
         background: var(--color-info-dark);
     }
 
@@ -1285,9 +1245,9 @@ footer .footer-section .rigts-reserved {
     nav .container #nav-links.active {
         display: grid;
         position: absolute;
-        grid-template-columns:repeat(5, 5rem);
+        grid-template-columns:repeat(5, 4.5rem);
         background: var(--color-info-dark);
-        top: 7rem;
+        top: 5rem;
         left: -5rem;
         height: 5rem;
         width: 100%;
@@ -1296,13 +1256,14 @@ footer .footer-section .rigts-reserved {
     }
 
     nav .container #nav-links a {
-        padding: 1.6rem;
+        padding: 0.5rem;
         justify-content: center;
         display: flex;
         justify-content: space-between;
         height: 3rem;
         color: var(--color-h3);
-        width: 6rem;
+        width: 5rem;
+        font-size: 15px;
     }
 
     nav .container #toggle {
@@ -1359,6 +1320,9 @@ footer .footer-section .rigts-reserved {
         grid-row: 1;
     }
 
+    nav .container .theme-toggler {
+        display: none;
+    }
     .home .hero-section .hero-text {
         text-align: center;
         margin-top: -17rem;
@@ -1366,8 +1330,8 @@ footer .footer-section .rigts-reserved {
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        width: 90vw;
         position: relative;
+        right: 1rem;
     }
 
     .home {
@@ -1407,8 +1371,8 @@ footer .footer-section .rigts-reserved {
     
     .home .hero-section .profile-area .outer-circle .iconify {
         display: block;
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
         border-radius: 50%;
         position: absolute;
         background: var(--color-info-light);
@@ -1421,22 +1385,22 @@ footer .footer-section .rigts-reserved {
     
     .home .hero-section .profile-area .outer-circle .iconify:nth-child(1) {
         left: calc(50% - 2rem);
-        top: -1rem;
+        top: -0.5rem;
     }
     
     .home .hero-section .profile-area .outer-circle .iconify:nth-child(2) {
         top: calc(50% - 2rem);
-        right: -1rem;
+        right: -0.5rem;
     }
     
     .home .hero-section .profile-area .outer-circle .iconify:nth-child(3) {
         top: calc(50% - 2rem);
-        left: -1rem;
+        left: -0.5rem;
     }
     
     .home .hero-section .profile-area .outer-circle .iconify:nth-child(4) {
         left: calc(50% - 2rem);
-        bottom: -1rem;
+        bottom: -0.5rem;
     }
     
     
