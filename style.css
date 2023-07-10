@@ -1263,6 +1263,7 @@ footer .footer-section .rigts-reserved {
     
 
     nav {
+        width: 100%;
         height: 7rem;
         background: var(--color-info-dark);
     }
@@ -1284,7 +1285,7 @@ footer .footer-section .rigts-reserved {
     nav .container #nav-links.active {
         display: grid;
         position: absolute;
-        grid-template-columns:repeat(5, 6rem);
+        grid-template-columns:repeat(5, 5rem);
         background: var(--color-info-dark);
         top: 7rem;
         left: -5rem;
@@ -1354,30 +1355,44 @@ footer .footer-section .rigts-reserved {
         display: none;
     }
 
+    .home .hero-section .profile-area {
+        grid-row: 1;
+    }
+
+    .home .hero-section .hero-text {
+        text-align: center;
+        margin-top: -17rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 90vw;
+        position: relative;
+    }
+
     .home {
         display: grid;
         place-items: center;
-        height: 140vh;
+        justify-content: center;
     }
     .home .hero-section {
         display: grid;
         grid-template-rows: 40% 50%;
         place-items: center;
-        gap: 10rem;
+        gap: 2rem;
     }
 
     .home .hero-section .profile-area {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -35rem;
+        margin-top: -45rem;
         position: relative;
-        right: 1.9rem;
     }
     
     .home .hero-section .profile-area .outer-circle {
-        width: 26rem;
-        height: 26rem;
+        width: 16rem;
+        height: 16rem;
         border: 1px solid var(--color-primary);
         border-radius: 50%;
         position: relative;
@@ -1428,27 +1443,12 @@ footer .footer-section .rigts-reserved {
     
     .home .hero-section .profile-area .inner-circle {
         position: absolute;
-        width: 18rem;
-        height: 18rem;
+        width: 10rem;
+        height: 10rem;
         border-radius: 50%;
         overflow: hidden;
     }
     
-    .home .hero-section .profile-area {
-        grid-row: 1;
-    }
-
-    .home .hero-section .hero-text {
-        text-align: center;
-        margin-top: -17rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        width: 90vw;
-        left: -2rem;
-        position: relative;
-    }
 
     .home .hero-section .hero-text p {
         color: var(--color-black);
