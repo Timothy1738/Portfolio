@@ -166,8 +166,9 @@ nav .container .theme-toggler span.active {
 
 .home .hero-section {
     position: relative;
-    margin-left: 4rem;
     display: flex;
+    justify-content: space-between;
+    width: 90%;
 }
 
 .home .hero-section .hero-text {
@@ -175,6 +176,7 @@ nav .container .theme-toggler span.active {
     flex-direction: column;
     align-content: center;
     position: relative;
+    margin-left: 2rem;
     align-content: center;
     position: relative;
     padding-top: 10rem;
@@ -192,7 +194,7 @@ nav .container .theme-toggler span.active {
 }
 
 .home .hero-section .hero-text h1 {
-    font-size: 3.1rem;
+    font-size: 4rem;
     color: var(--color-primary);
 }
 
@@ -219,24 +221,76 @@ nav .container .theme-toggler span.active {
     border: 1px solid var(--color-primary);
 }
 
-.home .hero-img {
-    height: 80vh;
-    right: 4rem;
-    position: relative;
-    display: flex;
-    transition: var(--transition);
-}
-
-.home .hero-img:hover {
-    transform: scale(1.1);
-}
-.home .hero-img img {
-    height: 100%;
-}
 
 .home .hero-section .profile-area {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 1rem;
+    margin-right: -5rem;
 }
+
+.home .hero-section .profile-area .outer-circle {
+    width: 30rem;
+    height: 30rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    position: relative;
+    animation: move 30s linear infinite;
+}
+
+@keyframes move {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.home .hero-section .profile-area .outer-circle .iconify {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--color-info-light);
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    box-shadow: var(--box-shadow);
+}
+
+.home .hero-section .profile-area .outer-circle .iconify:nth-child(1) {
+    left: calc(50% - 2rem);
+    top: -1rem;
+}
+
+.home .hero-section .profile-area .outer-circle .iconify:nth-child(2) {
+    top: calc(50% - 2rem);
+    right: -1rem;
+}
+
+.home .hero-section .profile-area .outer-circle .iconify:nth-child(3) {
+    top: calc(50% - 2rem);
+    left: -1rem;
+}
+
+.home .hero-section .profile-area .outer-circle .iconify:nth-child(4) {
+    left: calc(50% - 2rem);
+    bottom: -1rem;
+}
+
+
+
+.home .hero-section .profile-area .inner-circle {
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
 
 /*================END OF HOME===============*/
 
@@ -1258,6 +1312,31 @@ footer .footer-section .rigts-reserved {
     section.about .container .intro-text .me .intro-text-left {
         padding: 45px 15px 10px 15px;
     }
+
+    .home {
+        width: 100%;
+    }
+    .home .hero-section {
+        width: 90%;
+    }
+    .home .hero-section .hero-text {
+        margin-top: -5.5rem;
+    }
+
+    .home .hero-section .profile-area {
+        margin-right: -2rem;
+    }
+
+    .home .hero-section .profile-area .outer-circle {
+        width: 21rem;
+        height: 21rem;
+    }
+
+    .home .hero-section .profile-area .inner-circle {
+        width: 17rem;
+        height: 17rem;
+    }
+
     
     nav {
         width: 100%;
@@ -1265,7 +1344,16 @@ footer .footer-section .rigts-reserved {
         background: var(--color-info-dark);
     }
 
+    nav .container h2 {
+        margin-left: 2rem;
+    }
 
+    nav .container .theme-toggler {
+        margin-left: 20rem;
+        width: 3rem;
+        height: 2rem;
+        position: relative;
+    }
     
     nav .container #nav-links {
         display: none;
@@ -1283,7 +1371,7 @@ footer .footer-section .rigts-reserved {
         top: 5rem;
         left: -5rem;
         width: 10rem;
-        height: 80vh;
+        
         align-items: center;
         justify-content: center;
         box-shadow: 0 1rem 2rem var(--color-boxshadow);
@@ -1293,18 +1381,16 @@ footer .footer-section .rigts-reserved {
         padding: 0.5rem;
         justify-content: center;
         display: flex;
-        gap: 2rem;
         width: 100%;
         justify-content: space-between;
-        height: 7rem;
+        height: 6.7rem;
         color: var(--color-h3);
         font-size: 15px;
     }
 
     nav .container #toggle {
-        width: 50px;
-        height: 50px;
-        background: var(--color-primary);
+        padding: 1.5rem;
+        background:  var(--color-primary);
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -1347,21 +1433,22 @@ footer .footer-section .rigts-reserved {
 /**************************************/
 @media screen and (max-width: 614px) {
 
-    .home .hero-img {
-        display: none;
+    .home {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
     }
 
     .home .hero-section .profile-area {
         grid-row: 1;
     }
 
-    nav .container h2 {
-        margin-left: ;
-    }
-
     nav .container .theme-toggler {
         display: none;
     }
+
     .home .hero-section .hero-text {
         text-align: center;
         display: flex;
@@ -1375,48 +1462,24 @@ footer .footer-section .rigts-reserved {
         display: grid;
         place-items: center;
         justify-content: center;
-        padding-bottom:1rem ;
+
     }
     .home .hero-section {
         display: grid;
         grid-template-rows: 30% 40%;
         place-items: center;
+        gap: 3.5rem;
     }
 
-    .home .hero-section .profile-area {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
     
     .home .hero-section .profile-area .outer-circle {
         width: 16rem;
         height: 16rem;
-        border: 1px solid var(--color-primary);
-        border-radius: 50%;
-        position: relative;
-        animation: move 30s linear infinite;
-    }
-    
-    @keyframes move {
-        to {
-            transform: rotate(360deg);
-        }
     }
     
     .home .hero-section .profile-area .outer-circle .iconify {
-        display: block;
         width: 1.5rem;
         height: 1.5rem;
-        border-radius: 50%;
-        position: absolute;
-        background: var(--color-info-light);
-        color: var(--color-primary);
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        box-shadow: var(--box-shadow);
     }
     
     .home .hero-section .profile-area .outer-circle .iconify:nth-child(1) {
@@ -1439,14 +1502,9 @@ footer .footer-section .rigts-reserved {
         bottom: -0.5rem;
     }
     
-    
-    
     .home .hero-section .profile-area .inner-circle {
-        position: absolute;
         width: 12rem;
         height: 12rem;
-        border-radius: 50%;
-        overflow: hidden;
     }
     
 
@@ -1682,12 +1740,56 @@ footer .footer-section .rigts-reserved {
 
 @media (max-width: 950.98px) and (min-width: 614px) {
 
-    .home .hero-section .hero-text {
-        margin-top: -5rem;
+    section {
+        width: 100%;
     }
 
-    .home .hero-img img {
+    .home {
+        padding: 7rem 0 5rem;
+        align-content: center;
+        align-items: center;
         width: 100%;
+    }
+    .home .hero-section {
+        width: 90%;
+    }
+    .home .hero-section .hero-text {
+        align-content: center;
+        margin-top: -5rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: 1rem;
+    }
+
+    .home .hero-section .hero-text p {
+        font-size: 12px;
+    }
+    .home .hero-section .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .home .hero-section .hero-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .home .hero-section .profile-area {
+        margin-right: -2rem;
+    }
+
+    .home .hero-section .profile-area .outer-circle {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .home .hero-section .profile-area .inner-circle {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .home .hero-section .hero-text .btn-primary button {
+        padding: 1rem;
+        width: 7rem;
     }
     /**ABOUT SECTION**/
 
