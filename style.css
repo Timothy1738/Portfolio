@@ -1220,9 +1220,14 @@ footer .footer-section .rigts-reserved {
     .home .container .hero-text p {
         font-size: 13px;
     }
+
+    .home .container .hero-text {
+        margin-top: -4rem;
+        margin-left: -1rem;
+    }
     
     .home .container .hero-text h1 {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     .home .container .hero-text .btn-primary button {
@@ -1232,6 +1237,10 @@ footer .footer-section .rigts-reserved {
     .home .container .hero-text h3 {
         font-size: 25px;
         
+    }
+
+    .home .container .profile-area {
+        margin-right: -1rem;
     }
 
     .home .container .profile-area .outer-circle {
@@ -1362,7 +1371,7 @@ footer .footer-section .rigts-reserved {
         grid-template-columns: 1fr;
         grid-template-rows: 30% 30%;
         place-items: center;
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .home .container .profile-area {
@@ -1646,6 +1655,10 @@ footer .footer-section .rigts-reserved {
         font-size: 1.8rem;
     }
 
+    .home .container .hero-text {
+        margin-left: -3rem;
+    }
+    
     .home .container .hero-text h3 {
         font-size: 1.5rem;
     }
@@ -1812,13 +1825,57 @@ footer .footer-section .rigts-reserved {
 }
 
 
-/***************************************************************
+/***************************************************************/
+/***************************************************************/
+/**************************300px********************************/
+/***************************************************************/
+/***************************************************************/
 
-@media (max-width: 280px) {
+@media (max-width: 300px) {
+    .home .container .hero-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .home .container .hero-text h3 {
+        font-size: 1rem;
+    }
+
+    .home .hero-text .btn-primary button {
+        width: 7rem;
+        padding: 0.8rem;
+    }
+
+    .home {
+        margin-bottom: -5rem;
+    }
+
     nav {
         background: red;
-        max-width: 120vw;
     }
 }
 
-******************************************************************/
+/***************************************************************/
+/***************************************************************/
+/**************************300px********************************/
+/***************************************************************/
+/***************************************************************/
+
+@media (max-width: 500px) and (min-width: 300px) {
+    .home .container .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .home .container .hero-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .home .hero-text .btn-primary button {
+        width: 7rem;
+        padding: 1rem;
+    }
+
+    .home {
+        margin-bottom: -5rem;
+    }
+
+}
