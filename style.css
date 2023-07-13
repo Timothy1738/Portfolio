@@ -191,12 +191,12 @@ nav .container .theme-toggler span.active {
 }
 
 .home .hero-text h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--color-black);
 }
 
 .home .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: var(--color-primary);
 }
 
@@ -210,10 +210,12 @@ nav .container .theme-toggler span.active {
     padding: 1.2rem;
     background: var(--color-primary);
     color: var(--color-light);
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: var(--transition);
+    justify-content: center;
+    align-items: center;
     border: none;
-    width: 10rem;
+    width: 8rem;
 }
 
 .home .hero-text .btn-primary button:hover {
@@ -232,8 +234,8 @@ nav .container .theme-toggler span.active {
 }
 
 .home .profile-area .outer-circle {
-    width: 30rem;
-    height: 30rem;
+    width: 28rem;
+    height: 28rem;
     border: 1px solid var(--color-primary);
     border-radius: 50%;
     position: relative;
@@ -284,8 +286,8 @@ nav .container .theme-toggler span.active {
 
 .home .profile-area .inner-circle {
     position: absolute;
-    width: 25rem;
-    height: 25rem;
+    width: 23rem;
+    height: 23rem;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -459,7 +461,7 @@ section.skills .item .progress-bar .progress {
     height: 100%;
     width: 80%;
     background: var(--color-primary);
-    animation: progress 2s;
+    animation: progress 1s;
 }
 
 @keyframes progress {
@@ -475,7 +477,7 @@ section.skills .item .progress-bar .progress1 {
     height: 100%;
     width: 95%;
     background: var(--color-primary);
-    animation: progress1 2s;
+    animation: progress1 1s;
 }
 
 @keyframes progress1 {
@@ -491,7 +493,7 @@ section.skills .item .progress-bar .progress2 {
     height: 100%;
     width: 70%;
     background: var(--color-primary);
-    animation: progress2 2s;
+    animation: progress2 1s;
 }
 
 @keyframes progress2 {
@@ -507,7 +509,7 @@ section.skills .item .progress-bar .progress3 {
     height: 100%;
     width: 60%;
     background: var(--color-primary);
-    animation: progress3 2s;
+    animation: progress3 1s;
 }
 
 @keyframes progress3 {
@@ -524,7 +526,7 @@ section.skills .item .progress-bar .progress4 {
     height: 100%;
     width: 50%;
     background: var(--color-primary);
-    animation: progress4 2s;
+    animation: progress4 1s;
 }
 
 @keyframes progress4 {
@@ -539,7 +541,7 @@ section.skills .item .progress-bar .progress5 {
     height: 100%;
     width: 35%;
     background: var(--color-primary);
-    animation: progress5 2s;
+    animation: progress5 1s;
 }
 
 @keyframes progress5 {
@@ -554,7 +556,7 @@ section.skills .item .progress-bar .progress6 {
     height: 100%;
     width: 80%;
     background: var(--color-primary);
-    animation: progress6 2s;
+    animation: progress6 1s;
 }
 
 @keyframes progress6 {
@@ -570,7 +572,7 @@ section.skills .item .progress-bar .progress7 {
     height: 100%;
     width: 85%;
     background: var(--color-primary);
-    animation: progress7 2s;
+    animation: progress7 1s;
 }
 
 @keyframes progress7 {
@@ -586,7 +588,7 @@ section.skills .item .progress-bar .progress8 {
     height: 100%;
     width: 95%;
     background: var(--color-primary);
-    animation: progress8 2s;
+    animation: progress8 1s;
 }
 
 @keyframes progress8 {
