@@ -158,54 +158,55 @@ nav .container .theme-toggler span.active {
 .home {
     background: var(--color-light2);
     padding: 10rem 0 7rem;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    display: grid;
+    place-items: center;
+    max-width: 100vw;
     border-bottom: 1px solid var(--color-homeborder);
 }
 
 
-.home .hero-section {
+.home .container {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
+    display: grid;
+    margin: 0 auto;
+    gap: 4rem;
+    justify-content: center;
+    grid-template-columns: auto auto;
 }
 
-.home .hero-section .hero-text {
+.home .hero-text {
     display: flex;
     flex-direction: column;
     align-content: center;
     position: relative;
-    margin-left: 2rem;
     align-content: center;
     position: relative;
-    padding-top: 10rem;
+    padding-top: 7rem;
 }
 
 
-.home .hero-section .hero-text p {
+.home .hero-text p {
     color: var(--color-black);
     font-size: 1rem;
 }
 
-.home .hero-section .hero-text h3 {
+.home .hero-text h3 {
     font-size: 2rem;
     color: var(--color-black);
 }
 
-.home .hero-section .hero-text h1 {
-    font-size: 4rem;
+.home .hero-text h1 {
+    font-size: 3.5rem;
     color: var(--color-primary);
 }
 
-.home .hero-section .hero-text .btn-primary {
+.home .hero-text .btn-primary {
     margin-top: 0.8rem;
     gap: 2rem;
     display: flex;
 }
 
-.home .hero-section .hero-text .btn-primary button {
+.home .hero-text .btn-primary button {
     padding: 1.2rem;
     background: var(--color-primary);
     color: var(--color-light);
@@ -215,7 +216,7 @@ nav .container .theme-toggler span.active {
     width: 10rem;
 }
 
-.home .hero-section .hero-text .btn-primary button:hover {
+.home .hero-text .btn-primary button:hover {
     background: var(--color-light);
     color: var(--color-primary);
     cursor: pointer;
@@ -223,16 +224,14 @@ nav .container .theme-toggler span.active {
 }
 
 
-.home .hero-section .profile-area {
+.home .profile-area {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-top: 1rem;
-    margin-right: -5rem;
 }
 
-.home .hero-section .profile-area .outer-circle {
+.home .profile-area .outer-circle {
     width: 30rem;
     height: 30rem;
     border: 1px solid var(--color-primary);
@@ -247,7 +246,7 @@ nav .container .theme-toggler span.active {
     }
 }
 
-.home .hero-section .profile-area .outer-circle .iconify {
+.home .profile-area .outer-circle .iconify {
     display: block;
     width: 2rem;
     height: 2rem;
@@ -261,29 +260,29 @@ nav .container .theme-toggler span.active {
     box-shadow: var(--box-shadow);
 }
 
-.home .hero-section .profile-area .outer-circle .iconify:nth-child(1) {
+.home .profile-area .outer-circle .iconify:nth-child(1) {
     left: calc(50% - 2rem);
     top: -1rem;
 }
 
-.home .hero-section .profile-area .outer-circle .iconify:nth-child(2) {
+.home .profile-area .outer-circle .iconify:nth-child(2) {
     top: calc(50% - 2rem);
     right: -1rem;
 }
 
-.home .hero-section .profile-area .outer-circle .iconify:nth-child(3) {
+.home .profile-area .outer-circle .iconify:nth-child(3) {
     top: calc(50% - 2rem);
     left: -1rem;
 }
 
-.home .hero-section .profile-area .outer-circle .iconify:nth-child(4) {
+.home .profile-area .outer-circle .iconify:nth-child(4) {
     left: calc(50% - 2rem);
     bottom: -1rem;
 }
 
 
 
-.home .hero-section .profile-area .inner-circle {
+.home .profile-area .inner-circle {
     position: absolute;
     width: 25rem;
     height: 25rem;
@@ -957,22 +956,24 @@ footer .footer-section .rigts-reserved {
 /*========MEDIA QUERIES========*/
 /*==============================*/
 @media (max-width: 1200px) {
-    nav {
-        width: 100%;
-    }
-
-    .home .hero-section .hero-text h1 {
+    .home .hero-text h1 {
         font-size: 2.5rem;
     }
 
-    .home .hero-section .hero-text {
-        max-width: 600px;
+
+    .home .hero-text {
+        margin-top: -1rem;
     }
 
-    .home .hero-img img {
-        height: 500px;
+    .home .profile-area .outer-circle {
+        height: 28rem;
+        width: 28rem;
     }
 
+    .home .profile-area .inner-circle {
+        height: 20rem;
+        width: 20rem;
+    }
     /*===ABOUT SECTION====*/
     section.about .container .me h2 {
         font-size: 2rem;
@@ -1003,34 +1004,24 @@ footer .footer-section .rigts-reserved {
 /**************************************************/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    nav {
-        width: 100%;
+    nav .container h2 {
+        font-size: 2rem;
     }
+    
 
-    nav .container .h2 {
-        font-size: 10px;
-    }
-        
     /*====Hero section=====*/
-    .home .hero-section .hero-text h1 {
+    .home .hero-text h1 {
         font-size: 2rem;
     }
 
-    .home .hero-section .hero-text h3 {
+    .home .hero-text h3 {
         font-size: 1rem;
     }
 
-    .home .hero-section .hero-text {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        margin: 0 auto;
-        flex-direction: column;
-    }
-
-    .home .hero-section .hero-text p {
+    .home .hero-text p {
         font-size: 15px;
     }
+
     /*===ABOUT====*/
 
     section.about .container .me h2 {
@@ -1211,137 +1202,49 @@ footer .footer-section .rigts-reserved {
 }
 
 
-/**************************************************/
-/**************************************************/
-/*********************500PX************************/
-/**************************************************/
-/**************************************************/
-@media only screen and (max-width: 500px) {
-    .home .hero-section {
-        margin: 0 auto;
-        justify-content: center;
-    }
-
-    .home {
-        justify-content: center;
-    }
-
-    .home .hero-section .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .home .hero-section .hero-text h3 {
-        font-size: 1rem;
-
-    }
-
-    .home .hero-section .hero-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    .home .hero-section .hero-text p {
-        font-size: 10px;
-    }
-
-    .home .hero-section .hero-text .btn-primary button {
-        padding: 1rem;
-        background: var(--color-primary);
-        color: var(--color-light);
-        font-size: 15pxrem;
-        transition: var(--transition);
-        border: none;
-    }
-
-}
 
 
-/*******************************/
-/**********991.98px*****************/
-/*******************************/
+/**************************************************************/
+/**************************************************************/
+/************************991.98********************************/
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+
 @media (max-width: 991.98px) {
-    .home .hero-section .hero-text p {
+    /**HOME***/
+
+    .home .container .hero-text p {
         font-size: 13px;
     }
-
-    .home .hero-section {
-        margin-left: 1rem;
-    }
-
-    .home {
-        padding-bottom: 1rem;
-    }
     
-    .home .hero-section .hero-text h1 {
+    .home .container .hero-text h1 {
         font-size: 40px;
     }
 
-    .home .hero-section .hero-text .btn-primary button {
+    .home .container .hero-text .btn-primary button {
         font-size: 12px;
-        width: 8rem;
     }
     
-    .home .hero-section .hero-text h3 {
+    .home .container .hero-text h3 {
         font-size: 25px;
         
     }
 
-    .home .hero-img {
-        right: 1rem;
-    }
-    
-}
-
-@media (max-width: 575.98px) {
-    .home .hero-section .hero-text {
-        font-size: 16px;
-    }
-
-    .home .hero-section .hero-text h1 {
-        font-size: 30px;
-    }
-    
-    .home .hero-section .hero-text h2 {
-        font-size: 18px;
-        height: 18px;
-    }
-}
-
-@media (max-width: 991.98px) {
-    section.about .container .intro-text .me .intro-text-left {
-        padding: 45px 15px 10px 15px;
-    }
-
-    .home {
-        width: 100%;
-    }
-    .home .hero-section {
-        width: 90%;
-    }
-    .home .hero-section .hero-text {
-        margin-top: -5.5rem;
-    }
-
-    .home .hero-section .profile-area {
-        margin-right: -2rem;
-    }
-
-    .home .hero-section .profile-area .outer-circle {
+    .home .container .profile-area .outer-circle {
         width: 21rem;
         height: 21rem;
     }
 
-    .home .hero-section .profile-area .inner-circle {
+    .home .container .profile-area .inner-circle {
         width: 17rem;
         height: 17rem;
     }
 
     
     nav {
-        width: 100%;
         height: 5rem;
+        max-width: 100vw;
         background: var(--color-info-dark);
     }
 
@@ -1350,10 +1253,8 @@ footer .footer-section .rigts-reserved {
     }
 
     nav .container .theme-toggler {
-        margin-left: 20rem;
         width: 3rem;
         height: 2rem;
-        position: relative;
     }
     
     nav .container #nav-links {
@@ -1427,6 +1328,12 @@ footer .footer-section .rigts-reserved {
         transform: translateY(0px) rotate(-45deg);
     }
 
+    /*******************ABOUT****************************/
+    section.about .container .intro-text .me .intro-text-left {
+        padding: 45px 15px 10px 15px;
+    }
+
+
 }
 
 /**************************************/
@@ -1434,91 +1341,78 @@ footer .footer-section .rigts-reserved {
 /**************************************/
 @media screen and (max-width: 614px) {
 
-    .home {
-        width: 100%;
-    }
-
-    section {
-        width: 100%;
-    }
-
-    .home .hero-section .profile-area {
-        grid-row: 1;
-    }
-
     nav .container .theme-toggler {
         display: none;
     }
 
-    .home .hero-section .hero-text {
+    .home .container .hero-text {
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        position: relative;
     }
 
-    .home {
-        display: grid;
-        place-items: center;
-        justify-content: center;
 
-    }
-    .home .hero-section {
+    .home .container {
         display: grid;
-        grid-template-rows: 30% 40%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 30%;
         place-items: center;
-        gap: 3.5rem;
+        gap: 2rem;
+    }
+
+    .home .container .profile-area {
+        grid-row: 1;
     }
 
     
-    .home .hero-section .profile-area .outer-circle {
+    .home .container .profile-area .outer-circle {
         width: 16rem;
         height: 16rem;
     }
     
-    .home .hero-section .profile-area .outer-circle .iconify {
+    .home .container .profile-area .outer-circle .iconify {
         width: 1.5rem;
         height: 1.5rem;
     }
     
-    .home .hero-section .profile-area .outer-circle .iconify:nth-child(1) {
+    .home .container .profile-area .outer-circle .iconify:nth-child(1) {
         left: calc(50% - 2rem);
         top: -0.5rem;
     }
     
-    .home .hero-section .profile-area .outer-circle .iconify:nth-child(2) {
+    .home .container .profile-area .outer-circle .iconify:nth-child(2) {
         top: calc(50% - 2rem);
         right: -0.5rem;
     }
     
-    .home .hero-section .profile-area .outer-circle .iconify:nth-child(3) {
+    .home .container .profile-area .outer-circle .iconify:nth-child(3) {
         top: calc(50% - 2rem);
         left: -0.5rem;
     }
     
-    .home .hero-section .profile-area .outer-circle .iconify:nth-child(4) {
+    .home .container .profile-area .outer-circle .iconify:nth-child(4) {
         left: calc(50% - 2rem);
         bottom: -0.5rem;
     }
     
-    .home .hero-section .profile-area .inner-circle {
+    .home .container .profile-area .inner-circle {
         width: 12rem;
         height: 12rem;
     }
     
 
-    .home .hero-section .hero-text p {
+    .home .container .hero-text p {
         color: var(--color-black);
     }
 
-    .home .hero-section .hero-text h3 {
+    .home .container .hero-text h3 {
         color: var(--color-black);
         line-height: 2;
     }
     
-    .home .hero-section .hero-text .btn-primary {
+    .home .container .hero-text .btn-primary {
         display: flex;
         justify-content: center;
         margin: 1rem auto;
@@ -1741,54 +1635,30 @@ footer .footer-section .rigts-reserved {
 
 @media (max-width: 950.98px) and (min-width: 614px) {
 
-    section {
-        width: 100%;
-    }
-
-    .home {
-        padding: 7rem 0 5rem;
-        align-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    .home .hero-section {
-        width: 90%;
-    }
-    .home .hero-section .hero-text {
-        align-content: center;
-        margin-top: -5rem;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin-left: 1rem;
-    }
-
-    .home .hero-section .hero-text p {
+    .home .container .hero-text p {
         font-size: 12px;
     }
-    .home .hero-section .hero-text h1 {
+
+    .home .container .hero-text h1 {
         font-size: 2rem;
     }
 
-    .home .hero-section .hero-text h3 {
+    .home .container .hero-text h3 {
         font-size: 1.5rem;
     }
 
-    .home .hero-section .profile-area {
-        margin-right: -2rem;
-    }
 
-    .home .hero-section .profile-area .outer-circle {
+    .home .container .profile-area .outer-circle {
         width: 18rem;
         height: 18rem;
     }
 
-    .home .hero-section .profile-area .inner-circle {
+    .home .container .profile-area .inner-circle {
         width: 15rem;
         height: 15rem;
     }
 
-    .home .hero-section .hero-text .btn-primary button {
+    .home .container .hero-text .btn-primary button {
         padding: 1rem;
         width: 7rem;
     }
@@ -1822,16 +1692,16 @@ footer .footer-section .rigts-reserved {
 
     section.services .service .service-top .card {
         margin: 1rem auto;
-        width: 60%;
+        width: 50vw;
+        height: 40vh;
         display: flex;
         flex-direction: column;
-        height: 80vh;
     }
 
     section.services .service .service-bottom .card {
         margin: 1rem auto;
-        width: 60%;
-        height: 80vh;
+        width: 50vw;
+        height: 40vh;
         display: flex;
         flex-direction: column;
     }
@@ -1874,7 +1744,7 @@ footer .footer-section .rigts-reserved {
 
     /*contact us*/
     section.contact .contact-us form {
-        width: 100%;
+        width: 90%;
     }
 
     /*FOOTER*/
@@ -1937,3 +1807,15 @@ footer .footer-section .rigts-reserved {
     }
 
 }
+
+
+/***************************************************************
+
+@media (max-width: 280px) {
+    nav {
+        background: red;
+        max-width: 120vw;
+    }
+}
+
+******************************************************************/
