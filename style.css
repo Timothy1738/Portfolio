@@ -68,13 +68,14 @@ section {
 nav {
     position: fixed;
     top: 0;
-    background: var(--color-light2);
+    background: transparent;
     display: flex;
     border-bottom: 1px solid var(--color-info-dark) ;
     width: 100%;
     align-items: center;
     justify-content: center;
     z-index: 2;
+    transition: background-color 0.3s ease;
 }
 
 nav .container {
