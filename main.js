@@ -79,18 +79,3 @@ skillItems.forEach(skill => {
         skill.querySelector('.items').classList.toggle('show-items');
     })
 })
-
-window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('navbar');
-    var currentPosition = window.pageYOffset || document.documentElement.scrollTop;
-  
-    // Set the scroll position when the background color should change
-    var scrollPosition = 300; // Adjust this value to your needs
-  
-    if (currentPosition >= scrollPosition) {
-      navbar.style.backgroundColor = 'var(--color-light2)'; // Change to your desired color
-    } else {
-      navbar.style.backgroundColor = 'transparent'; // Change to your initial color
-    }
-  });
-  

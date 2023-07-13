@@ -68,7 +68,7 @@ section {
 nav {
     position: fixed;
     top: 0;
-    background: transparent;
+    background: var(--color-light2);
     display: flex;
     border-bottom: 1px solid var(--color-info-dark) ;
     width: 100%;
