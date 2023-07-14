@@ -56,7 +56,7 @@ img {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -303,6 +303,26 @@ section.about {
     background: var(--color-info-light3);
 }
 
+section.about h2::before {
+    content: '';
+    height: 3px;
+    background: var(--color-primary);
+    width: 60px;
+    position: absolute;
+    margin-top: 3.8rem;
+}
+
+section.about h2::after {
+    content: '';
+    position: absolute;
+    background: var(--color-primary);
+    height: 3px;
+    width: 5px;
+    margin-top: 3.8rem;
+    margin-left: -13rem;
+}
+
+
 section.about .container {
     width: 80%;
 }
@@ -343,6 +363,7 @@ section.about .me .intro-text .intro-text-left {
 
 section.about .me .intro-text .intro-text-left .content {
     margin: 4rem 2rem 2rem 2rem;
+    overflow-x: hidden;
 }
 
 section.about .me .intro-text .intro-text-left .content p {
@@ -375,6 +396,25 @@ section.skills h2 {
     font-size: 3rem;
     margin-bottom: 2rem;
     color: var(--color-black);
+}
+
+section.skills h2::before {
+    content: '';
+    height: 3px;
+    background: var(--color-primary);
+    width: 60px;
+    position: absolute;
+    margin-top: 3.8rem;
+}
+
+section.skills h2::after {
+    content: '';
+    position: absolute;
+    background: var(--color-primary);
+    height: 3px;
+    width: 5px;
+    margin-top: 3.8rem;
+    margin-left: -6.5rem;
 }
 
 section.skills h5 {
@@ -607,6 +647,26 @@ section.services {
     background: var(--color-info-light3);
 }
 
+section.services h2::before {
+    content: '';
+    height: 3px;
+    background: var(--color-primary);
+    width: 60px;
+    position: absolute;
+    margin-top: 3.8rem;
+}
+
+section.services h2::after {
+    content: '';
+    position: absolute;
+    background: var(--color-primary);
+    height: 3px;
+    width: 5px;
+    margin-top: 3.8rem;
+    margin-left: -11.3rem;
+}
+
+
 section.services p, h4 {
     color: var(--color-black);
 }
@@ -745,6 +805,26 @@ section.services .service .lets-talk button:hover {
     width: 100%;
     height: 100%;
 }
+
+section.contact h2::before {
+    content: '';
+    height: 3px;
+    background: var(--color-primary);
+    width: 60px;
+    position: absolute;
+    margin-top: 3.8rem;
+}
+
+section.contact h2::after {
+    content: '';
+    position: absolute;
+    background: var(--color-primary);
+    height: 3px;
+    width: 5px;
+    margin-top: 3.8rem;
+    margin-left: -13rem;
+}
+
                                                                       
 section.contact {
     width: 100%;
@@ -897,11 +977,23 @@ footer .footer-section .quick-links .icons {
     width: 20vw;
     overflow: hidden;
     gap: 2rem;
+    align-content: center;
 }
 
 footer .footer-section .quick-links .icons .iconify {
     font-size: 1.5rem;
     cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+footer .footer-section .quick-links .icons .iconify:hover {
+    background: var(--color-info-light);
 }
 
 footer .footer-section .address {
@@ -1010,6 +1102,10 @@ footer .footer-section .rigts-reserved {
     nav .container h2 {
         font-size: 2rem;
     }
+
+    h2 {
+        font-size: 2rem;
+    }
     
 
     /*====Hero section=====*/
@@ -1059,6 +1155,20 @@ footer .footer-section .rigts-reserved {
     }
 
     /*=====SKILLS SECTION=====*/
+
+    section.skills h2::before {
+        margin-top: 2.5rem;
+    }
+
+    section.skills h2 {
+        font-size: 2rem;
+    }
+    
+    section.skills h2::after {
+        margin-top: 2.5rem;
+        margin-left: -3rem;
+    }
+    
     section.skills .skill .head {
         padding: 1rem;
     }
@@ -1071,10 +1181,6 @@ footer .footer-section .rigts-reserved {
         font-size: 10px;
     }
 
-    section.skills h2 {
-        font-size: 2rem;
-    }
-
     section.skills h5 {
         font-size: 10px;
     }
@@ -1085,10 +1191,15 @@ footer .footer-section .rigts-reserved {
 
     /*======SERVICES======*/
 
-    section.services h2 {
-        font-size: 2rem;
+    section.services h2::before {
+        margin-top: 2.5rem;
     }
-
+    
+    section.services h2::after {
+        margin-top: 2.5rem;
+        margin-left: -6rem;
+    }
+    
     section.services .service .service-bottom {
         display: block;
     }
@@ -1114,7 +1225,7 @@ footer .footer-section .rigts-reserved {
     }
 
     section.services .service .service-bottom .card .iconify {
-        margin: 2rem auto;
+        margin: 0 auto;
         width: 1.8rem;
         height: 1.8rem;
     }
@@ -1128,6 +1239,15 @@ footer .footer-section .rigts-reserved {
     }
 
     /*=====CONTACT US SECTION====*/
+
+    section.contact h2::before {
+        margin-top: 2.5rem;
+    }
+    
+    section.contact h2::after {
+        margin-top: 2.5rem;
+        margin-left: -7.5rem;
+    }
 
     section.contact .container .contact-us h2 {
         font-size: 2rem;
@@ -1345,6 +1465,16 @@ footer .footer-section .rigts-reserved {
         padding: 45px 15px 10px 15px;
     }
 
+    section.about h2::before {
+        margin-top: 2.5rem;
+    }
+    
+    section.about h2::after {
+        margin-top: 2.5rem;
+        margin-left: -7rem;
+    }
+    
+
 
 }
 
@@ -1371,7 +1501,7 @@ footer .footer-section .rigts-reserved {
         grid-template-columns: 1fr;
         grid-template-rows: 30% 30%;
         place-items: center;
-        gap: 3rem;
+        gap: 4rem;
     }
 
     .home .container .profile-area {
@@ -1480,10 +1610,6 @@ footer .footer-section .rigts-reserved {
 
     section.skills h4 {
         font-size: 13px;
-    }
-
-    section.skills h2 {
-        font-size: 1rem;
     }
 
     section.skills h5 {
@@ -1610,6 +1736,7 @@ footer .footer-section .rigts-reserved {
     footer .footer-section .quick-links .icons .iconify {
         font-size: 1rem;
     }
+
 
     footer .footer-section .address p{
         font-size: 10px;
@@ -1847,10 +1974,6 @@ footer .footer-section .rigts-reserved {
 
     .home {
         margin-bottom: -5rem;
-    }
-
-    nav {
-        background: red;
     }
 }
 
