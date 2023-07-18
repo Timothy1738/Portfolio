@@ -71,10 +71,13 @@ themeToggler.addEventListener('click', () => {
 })
 
 //media screen theme toggler
+const body = document.querySelector('body');
 const theme = document.getElementById('theme');
 theme.onclick = function() {
-    theme.classList.toggle('active'); 
+    theme.classList.toggle('active');
+    body.classList.toggle('active');
 }
+
 
 //show/hide skills items
 const skillItems = document.querySelectorAll('section.skills .skill');

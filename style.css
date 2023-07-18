@@ -1398,18 +1398,15 @@ footer .footer-section .rigts-reserved {
 
     nav .container #theme {
         position: absolute;
+        overflow: hidden;
         display: block;
         right: 6rem;
         width: 60px;
         height: 30px;
         border-radius: 20px;
         cursor: pointer;
-        border: 2px soild var(--color-h3);
-        background: #222;
+        border: 1px solid var(--color-homeborder);
         transition: var(--transition);
-        box-shadow: inset 0 4px 30px rgba(0, 0, 0, 0.1),
-                    inset 0 4px 4px rgba(0, 0, 0, 0.1),
-                    inset 0 -2px -2px rgba(0, 0, 0, 0.1);
     }
 
     nav .container #theme .indicator {
@@ -1418,20 +1415,37 @@ footer .footer-section .rigts-reserved {
         left: 0;
         width: 30px;
         height: 30px;
-        border-radius: 50%;
+        align-content: center;
+        overflow-x: hidden;
+        height: 30px;
+        border-radius: 20px;
         background: var(--color-info-light2);
-        transform: scale(0.9);
+        transform: scale(1);
         box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0, -4px, 4px, rgba(255, 255, 255, 0.2), inset 0, -4px 4px rgba(255, 255, 255, 0.2);
         transition: var(--transition);
     }
 
     nav .container #theme.active .indicator {
         left: 30px;
+        background: linear-gradient(to bottom, #444, #222);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0, -4px, 4px, rgba(255, 255, 255, 0.2), inset 0, -4px 4px rgba(255, 255, 255, 0.2);
     }
 
     nav .container #nav-links.active {
         top: 5rem;
         transition: var(--transition);
+    }
+
+    body.active {
+        --color-light: #1b1f22;
+        --color-light2: #1b1f22;
+        --color-info-light4: #1b1f22;
+        --color-info-light: #181a1e;
+        --color-info-light3: #202528;
+        --color-black: #ffff;
+        --background-color: #24282e;
+        --color-white: #1c1f24;
+        --color-homeborder: rgb(32, 29, 29);
     }
     
     nav .container #nav-links {
@@ -1525,15 +1539,10 @@ footer .footer-section .rigts-reserved {
         display: none;
     }
 
-    nav .container #theme .indicator {
-        width: 25px;
-        height: 25px;
+    nav .container #theme {
+        transform: scale(0.8);
     }
 
-    nav .container #theme {
-        height: 25px;
-        width: 50px;
-    }
 
     nav .container #nav-links a {
         font-size: 13px;
