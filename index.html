@@ -24,6 +24,9 @@
                 <span class="material-symbols-outlined active">brightness_5</span>
                 <span class="material-symbols-outlined">dark_mode</span>
             </div>
+            <div id="theme">
+                <i class="indicator"></i>
+            </div>
             <div id="toggle"></div>
         </div>
     </nav>
@@ -97,7 +100,7 @@
                         <span class="iconify" data-icon="material-symbols:design-services"></span>
                         <h4>UI/UX Design</h4>
                     </div>
-                    <span class="material-symbols-outlined">expand_more</span>
+                    <span id ="rotate" class="material-symbols-outlined">expand_more</span>
                 </div>
 
                 <div class="items">
@@ -307,10 +310,10 @@
                 <form action="">
                     <P>Having inquiries? Want to reach out? I am an email away, always online to attend to all your queries and needs. Dont Hesitate to reach out anytime.
                     </P>
-                    <input type="text" required name="name" value="Enter Your Name">
-                    <input type="email" required name="email" value="Enter Your Email">
-                    <input type="text" required name="subject" value="Subject">
-                    <textarea name="comments" required rows="4" cols="36">Message</textarea>
+                    <input type="text" required name="name" value="Enter Your Name" onclick="removePlaceholder(this)" onblur="restorePlaceholder(this)">
+                    <input type="email" required name="email" value="Enter Your Email" onclick="removePlaceholder(this)" onblur="restorePlaceholder(this)">
+                    <input type="text" required name="subject" value="Subject" onclick="removePlaceholder(this)" onblur="restorePlaceholder(this)">
+                    <textarea name="comments" required rows="4" cols="36" onclick="removePlaceholder(this)" onblur="restorePlaceholder(this)">Message</textarea>
                     <input type="submit" value="submit" class="submit-btn">
                 </form>
             </div>
