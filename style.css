@@ -687,9 +687,10 @@ section.services .service {
 
 section.services .service .service-top {
     display: flex;
-    justify-content: space-between;
     gap: 2rem;
     align-content: center;
+    margin: 5rem auto;
+    justify-content: center;
     position: relative;
 }
 
@@ -697,7 +698,6 @@ section.services .service .service-top .card {
     background: var(--color-info-light);
     box-shadow: var(--box-shadow);
     width: 35%;
-    border-radius: 1rem;
     position: relative;
 }
 
@@ -716,14 +716,19 @@ section.services .service .service-top .card .iconify {
 }
 
 section.services .service .service-top .card p {
-    margin: 0 0.8rem 0.8rem 0.8rem;
+    margin: 0 1rem 2rem 1rem;
     position: relative;
 }
 
 section.services .service .service-top .card h4 {
     margin-bottom: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     position: relative;
+}
+
+section.services .service .service-top .card:nth-child(3) h4 {
+    margin: 0 5px 0 5px;
 }
 section.services .service .service-top .card:hover {
     cursor: pointer;
@@ -737,7 +742,7 @@ section.services .service .service-bottom {
     display: flex;
     gap: 2rem;
     align-content: center;
-    margin: 5rem auto;
+    margin: 0 auto;
     justify-content: center;
     position: relative;
 }
@@ -746,7 +751,6 @@ section.services .service .service-bottom .card {
     background: var(--color-info-light);
     box-shadow: var(--box-shadow);
     width: 35%;
-    border-radius: 1rem;
     position: relative;
 }
 
@@ -765,7 +769,7 @@ section.services .service .service-bottom .card .iconify {
 }
 
 section.services .service .service-bottom .card p {
-    margin: 0 0.8rem 0.8rem 0.8rem;
+    margin: 0 1rem 2rem 1rem;
     position: relative;
 }
 
@@ -773,6 +777,7 @@ section.services .service .service-bottom .card h4 {
     margin-bottom: 2rem;
     text-align: center;
     position: relative;
+    font-size: 1.5rem;
 }
 section.services .service .service-bottom .card:hover {
     cursor: pointer;
@@ -782,6 +787,7 @@ section.services .service .service-bottom .card:hover {
 section.services .service .lets-talk{
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 section.services .service .lets-talk button {
@@ -1227,13 +1233,11 @@ footer .footer-section .rigts-reserved {
     }
 
     section.services .service .service-top .card .iconify {
-        margin-top: 2rem auto;
         width: 1.8rem;
         height: 1.8rem;
     }
 
     section.services .service .service-bottom .card .iconify {
-        margin: 0 auto;
         width: 1.8rem;
         height: 1.8rem;
     }
@@ -1396,12 +1400,17 @@ footer .footer-section .rigts-reserved {
         display: none;
     }
 
+    nav .container #theme.active {
+        border: none;
+        background: #222;
+    }
+    
     nav .container #theme {
         position: absolute;
         overflow: hidden;
         display: block;
-        right: 6rem;
         width: 60px;
+        right: 6rem;
         height: 30px;
         border-radius: 20px;
         cursor: pointer;
@@ -1420,7 +1429,7 @@ footer .footer-section .rigts-reserved {
         height: 30px;
         border-radius: 20px;
         background: var(--color-info-light2);
-        transform: scale(1);
+        transform: scale(0.9);
         box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0, -4px, 4px, rgba(255, 255, 255, 0.2), inset 0, -4px 4px rgba(255, 255, 255, 0.2);
         transition: var(--transition);
     }
@@ -1535,12 +1544,21 @@ footer .footer-section .rigts-reserved {
 /**************************************/
 @media screen and (max-width: 614px) {
 
-    nav .container .theme-toggler {
-        display: none;
-    }
-
     nav .container #theme {
         transform: scale(0.8);
+        height: 25px;
+    }
+
+    nav .container #theme .indicator {
+        height: 25px;
+        width: 25px;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+    }
+
+    nav .container #theme.active .indicator {
+        left: 34px;
     }
 
 
@@ -1634,12 +1652,12 @@ footer .footer-section .rigts-reserved {
 
     section.about .container .me .intro-text .intro-text-right {
         width: 100%;
+        display: flex;
         justify-content: center;
     }
 
     section.about .container .me .intro-text .intro-text-right img {
-        right: 32px;
-        top: 0;
+        margin-top: -1rem;
     }
 
     section.about .container .me .intro-text .intro-text-left {
@@ -1649,7 +1667,7 @@ footer .footer-section .rigts-reserved {
     }
 
     section.about .container .me .intro-text .intro-text-left p {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     section.about .container .me .intro-text .intro-text-left .content .download {
@@ -1696,6 +1714,8 @@ footer .footer-section .rigts-reserved {
 
     section.services .service .service-bottom {
         display: block;
+        margin-top: -6rem;
+        position: relative;
     }
 
     section.services .service .service-top {
@@ -1703,23 +1723,29 @@ footer .footer-section .rigts-reserved {
     }
 
     section.services .service .service-top .card {
-        margin: 1rem auto;
         width: 80%;
+        display: flex;
+        flex-direction: column;
     }
 
     section.services .service .service-bottom .card {
-        margin: 1rem auto;
         width: 80%;
+        display: flex;
+        flex-direction: column;
     }
 
     section.services .service .service-top .card .iconify {
         margin-top: 2rem auto;
         width: 1.8rem;
         height: 1.8rem;
+        display: flex;
+        position: relative;
     }
 
     section.services .service .service-bottom .card .iconify {
         margin: 2rem auto;
+        position: relative;
+        display: flex;
         width: 1.8rem;
         height: 1.8rem;
     }
@@ -1824,7 +1850,7 @@ footer .footer-section .rigts-reserved {
 
     footer .footer-section .line2 {
         width: 60%;
-        border: 0.2px solid var(--color-light);
+        border: 0.2px solid var(--color-h3);
     }
 }
 
@@ -1880,6 +1906,10 @@ footer .footer-section .rigts-reserved {
         display: flex;
         justify-content: center;
     }
+
+    section.about .me .intro-text .intro-text-right img {
+        margin-top: -1rem;
+    }
     
     section.about .me .intro-text .intro-text-left {
         display: flex;
@@ -1887,10 +1917,17 @@ footer .footer-section .rigts-reserved {
         justify-content: center;
         width: 100%;
     }
+
+    section.about .container .me .intro-text .intro-text-left .content .download {
+        margin: 1rem auto;
+        justify-content: center;
+        display: flex;
+    }
     /*SERVICES SECTION*/
 
     section.services .service .service-bottom {
         display: block;
+        margin-top: -6rem;
     }
 
     section.services .service .service-top {
@@ -1915,15 +1952,15 @@ footer .footer-section .rigts-reserved {
 
     section.services .service .service-top .card .iconify {
         margin-top: 3rem;
-        width: 4rem;
-        height: 4rem;
+        width: 2.5rem;
+        height: 2.5rem;
         display: flex;
     }
 
     section.services .service .service-bottom .card .iconify {
         margin-top: 3rem;
-        width: 4rem;
-        height: 4rem;
+        width: 2.5rem;
+        height: 2.5rem;
         display: flex;
     }
 
