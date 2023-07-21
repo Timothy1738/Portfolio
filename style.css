@@ -4,9 +4,10 @@
 :root {
     --color-primary: #7380ec;
     --color-light: #FCFCFC;
-    --color-light2: #f4f4f4;
+    --color-light2: hsl(250, 60%, 99%);;
     --color-white: #FFFF;
     --color-h3: #ffffff;
+    --body-color: hsl(250, 60%, 99%);
     --color-hero-background: #edf2fc;
     --color-info-light: #e6ebf5;
     --color-info-light2: #bfceeb;
@@ -22,7 +23,7 @@
 
 .dark-theme-variables {
     --color-light: #1b1f22;
-    --color-light2: #1b1f22;
+    --color-light2: #202528;
     --color-info-light4: #1b1f22;
     --color-info-light: #181a1e;
     --color-info-light3: #202528;
@@ -64,6 +65,7 @@ section {
     overflow-x: hidden;
     max-width: 100vw;
     padding: 10rem 0 7rem;
+    border: none;
 }
 
 nav {
@@ -71,12 +73,12 @@ nav {
     top: 0;
     background: var(--color-light2);
     display: flex;
-    border-bottom: 1px solid var(--color-info-dark) ;
     width: 100%;
     align-items: center;
     justify-content: center;
     z-index: 2;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 
 nav .container {
@@ -94,14 +96,14 @@ nav .container h2 {
 
 nav .container #nav-links {
     display: flex;
-    margin-left: 5rem;
     justify-content: end;
     position: relative;
+    align-items: center;
 }
 
 nav .container #nav-links a {
-    width: 7rem;
-    height: 7rem;
+    width: 6rem;
+    height: 5rem;
     color: var(--color-black);
     transition: var(--transition);
     position: relative;
@@ -127,7 +129,11 @@ nav .container #toggle {
     display: none;
 }
 
-nav .container .theme-toggler {
+nav .container #theme {
+    display: none;
+}
+
+nav .container #nav-links .theme-toggler {
     background: var(--color-info-light3);
     display: flex;
     justify-content: space-between;
@@ -157,12 +163,11 @@ nav .container .theme-toggler span.active {
 /*====HERO SECTION====*/
 
 .home {
-    background: var(--color-light2);
+    background: var(--color-info-light3);
     padding: 10rem 0 7rem;
     display: grid;
     place-items: center;
     max-width: 100vw;
-    border-bottom: 1px solid var(--color-homeborder);
     overflow-x: hidden;
 }
 
@@ -298,6 +303,78 @@ nav .container .theme-toggler span.active {
 
 /*================END OF HOME===============*/
 
+
+/*=======BANNER=====*/
+section.banner {
+    background: var(--color-info-light3);
+    padding: 2rem 0 2rem;
+    border-top: none;
+}
+
+section.banner .container {
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-primary);
+    border-radius: 1rem;
+    color: var(--color-h3);
+    align-content: center;
+    gap: 1rem;
+}
+
+section.banner .container .content-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.banner .container .content-left h3 {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: 2.5rem;
+}
+
+section.banner .container .content-left p {
+    margin-left: 1rem;
+    line-height: 2;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+}
+
+section.banner .container .content-left button {
+    display: flex;
+    align-content: center;
+    gap: 3px;
+    margin-left: 1rem;
+    justify-content: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    width: 12rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    color: var(--color-primary);
+    transition: 0.5s ease;
+}
+
+section.banner .container .content-left button:hover {
+    background: var(--color-primary);
+    border-color: var(--color-h3);
+    color: var(--color-h3);
+}
+
+section.banner .container .content-right {
+    width: 60%;
+    margin: 2rem 2rem 2rem 2rem;
+    overflow: hidden;
+}
+
+section.banner .container .content-right img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
 /*================ABOUT================*/
 section.about {
     background: var(--color-info-light3);
@@ -366,13 +443,33 @@ section.about .me .intro-text .intro-text-left .content {
     overflow-x: hidden;
 }
 
+section.about .me .intro-text .intro-text-left .content .read-more-content {
+    display: none;
+}
+
+/*for sake of js*/
+section.about .me .intro-text .intro-text-left .content .read-more-content.show-about {
+    display: block;
+}
+
+section.about .me .intro-text .intro-text-left .content .read-more {
+    cursor: pointer;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+
+section.about .me .intro-text .intro-text-left .content .read-more:hover {
+    text-decoration: underline;
+}
+
 section.about .me .intro-text .intro-text-left .content p {
     color: var(--color-black);
 }
 
 section.about .me .intro-text .intro-text-left .content .download {
     position: relative;
-    margin: 2rem auto 2rem 2rem;
+    margin: 2rem auto 2rem 0;
 }
 
 section.about .me .intro-text .intro-text-left .content .download button {
@@ -422,7 +519,7 @@ section.skills h5 {
 }
 
 section.skills {
-    background: var(--color-info-light4);
+    background: var(--color-info-light3);
 }
 section.skills .container {
     width: 50%;
@@ -441,7 +538,14 @@ section.skills .skill .head {
     color: var(--color-h3);
     padding: 1.6rem;
     cursor: pointer;
+}
+
+section.skills .skill .head span {
     transition: var(--transition);
+}
+
+section.skills .skill .head span.active {
+    transform: rotate(-180deg);
 }
 
 section.skills .skill .head .left .iconify {
@@ -696,9 +800,29 @@ section.services .service .service-top {
 
 section.services .service .service-top .card {
     background: var(--color-info-light);
-    box-shadow: var(--box-shadow);
     width: 35%;
     position: relative;
+    box-shadow: inset 0 0 0 0 transparent;
+    transition: ease-out 0.5s;
+    border-radius: 1rem;
+}
+
+section.services .service .service-top .card:hover {
+    cursor: pointer;
+    box-shadow: inset 700px 0 0 0 var(--color-primary);
+}
+section.services .service .service-top .card:hover p
+{
+    color: var(--color-h3);
+}
+
+section.services .service .service-top .card:hover h4 {
+    color: var(--color-h3);
+}
+
+section.services .service .service-top .card:hover .iconify {
+    background: var(--color-h3);
+    color: var(--color-primary);
 }
 
 section.services .service .service-top .card .iconify {
@@ -718,6 +842,7 @@ section.services .service .service-top .card .iconify {
 section.services .service .service-top .card p {
     margin: 0 1rem 2rem 1rem;
     position: relative;
+    transition: var(--transition);
 }
 
 section.services .service .service-top .card h4 {
@@ -725,16 +850,13 @@ section.services .service .service-top .card h4 {
     font-size: 1.5rem;
     text-align: center;
     position: relative;
+    transition: var(--transition);
 }
 
 section.services .service .service-top .card:nth-child(3) h4 {
     margin: 0 5px 0 5px;
 }
-section.services .service .service-top .card:hover {
-    cursor: pointer;
-    box-shadow: none;
-    position: relative;
-}
+
 
 /*cards-bottom*/
 
@@ -749,12 +871,32 @@ section.services .service .service-bottom {
 
 section.services .service .service-bottom .card {
     background: var(--color-info-light);
-    box-shadow: var(--box-shadow);
     width: 35%;
     position: relative;
+    box-shadow: inset 0 0 0 0 transparent;
+    transition: ease-out 0.5s;
+    border-radius: 1rem;
 }
 
-section.services .service .service-bottom .card .iconify {
+section.services .service .service-bottom .card:hover {
+    cursor: pointer;
+    box-shadow: inset 0 800px 0 0 var(--color-primary);
+}
+section.services .service .service-bottom .card:hover p
+{
+    color: var(--color-h3);
+}
+
+section.services .service .service-bottom .card:hover h4 {
+    color: var(--color-h3);
+}
+
+section.services .service .service-bottom .card:nth-child(1):hover .iconify {
+    background: var(--color-h3);
+    color: var(--color-primary);
+}
+
+section.services .service .service-bottom .card:nth-child(1) .iconify {
     background: var(--color-primary);
     border-radius: 50%;
     width: 2.5rem;
@@ -763,25 +905,46 @@ section.services .service .service-bottom .card .iconify {
     color: var(--color-light);
     display: flex;
     margin: 2rem auto;
+    transition: var(--transition);
     justify-content: center;
     text-align: center;
 
 }
 
+section.services .service .service-bottom .card:nth-child(2) .iconify {
+    background: var(--color-primary);
+    border-radius: 50%;
+    width: 2.5rem;
+    position: relative;
+    height: 2.5rem;
+    color: var(--color-light);
+    display: flex;
+    margin: 2rem auto;
+    transition: var(--transition);
+    justify-content: center;
+    text-align: center;
+
+}
+
+section.services .service .service-bottom .card:nth-child(2):hover .iconify {
+    background: var(--color-h3);
+    color: var(--color-primary);
+}
+
+
+
 section.services .service .service-bottom .card p {
     margin: 0 1rem 2rem 1rem;
     position: relative;
+    transition: var(--transition);
 }
 
 section.services .service .service-bottom .card h4 {
     margin-bottom: 2rem;
+    transition: var(--transition);
     text-align: center;
     position: relative;
     font-size: 1.5rem;
-}
-section.services .service .service-bottom .card:hover {
-    cursor: pointer;
-    box-shadow: none;
 }
 
 section.services .service .lets-talk{
@@ -807,12 +970,6 @@ section.services .service .lets-talk button:hover {
 }
 
 /*=============CONTACT ME SECTION===============*/
-
-.overlay {
-    background: rgb(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-}
 
 section.contact h2::before {
     content: '';
@@ -913,7 +1070,7 @@ section.contact .contact-us form input[type=submit]:hover {
     color: var(--color-light);
     border: none;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 9;
     transition: var(--transition);
 }
 
@@ -958,6 +1115,7 @@ footer .footer-section .quick-links {
     justify-content: space-between;
     align-content: center;
     margin: 1px auto 0 auto;
+    align-items: center;
 }
 
 footer .footer-section .quick-links h4 {
@@ -991,8 +1149,8 @@ footer .footer-section .quick-links .icons {
 footer .footer-section .quick-links .icons .iconify {
     font-size: 1.5rem;
     cursor: pointer;
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     display: flex;
     border-radius: 50%;
     justify-content: center;
@@ -1001,7 +1159,7 @@ footer .footer-section .quick-links .icons .iconify {
 }
 
 footer .footer-section .quick-links .icons .iconify:hover {
-    background: var(--color-info-light);
+    background: var(--color-h3);
 }
 
 footer .footer-section .address {
@@ -1076,6 +1234,12 @@ footer .footer-section .rigts-reserved {
     .home .profile-area .inner-circle {
         height: 20rem;
         width: 20rem;
+    }
+
+    /*========BANNER=====*/
+
+    section.banner .container .content-left .quick-message {
+        padding-bottom: 1rem;
     }
     /*===ABOUT SECTION====*/
     section.about .container .me h2 {
@@ -1396,7 +1560,7 @@ footer .footer-section .rigts-reserved {
         margin-left: 2rem;
     }
 
-    nav .container .theme-toggler {
+    nav .container #nav-links .theme-toggler {
         display: none;
     }
 
@@ -1461,7 +1625,6 @@ footer .footer-section .rigts-reserved {
         position: absolute;
         background: var(--color-info-dark);
         top: -5rem;
-        left: -5rem;
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -1640,6 +1803,31 @@ footer .footer-section .rigts-reserved {
         display: flex;
         justify-content: center;
         margin: 1rem auto;
+    }
+
+    /*=======banner======*/
+    section.banner .container {
+        display: grid;
+    }
+
+    section.banner .container .content-right {
+        width: 100%;
+        display: flex;
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    section.banner .container .content-left {
+        width: 100%;
+    }
+
+    section.banner .container .content-left p{
+        margin: 1rem 1rem 1rem 1rem;
+    }
+
+    section.banner .container .content-left .quick-message {
+        display: flex;
+        justify-content: center;
     }
 
     /*ABOUT*/
@@ -1895,6 +2083,40 @@ footer .footer-section .rigts-reserved {
         padding: 1rem;
         width: 7rem;
     }
+
+    /*======BANNER======*/
+    section.banner .container{
+        display: grid;
+    }
+
+    section.banner .container .content-left {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    section.banner .container .content-left .quick-message {
+        justify-content: center;
+        display: flex;
+    }
+
+    section.banner .container .content-left p {
+        text-align: center;
+        margin: 1rem 1rem 1rem 1rem;
+    }
+
+    section.banner .container .content-right {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin: 1rem auto;
+    }
+
+    section.banner .container .content-right img {
+        margin: 0 1rem 1rem 1rem;
+    }
+
     /**ABOUT SECTION**/
 
     section.about .me .intro-text {

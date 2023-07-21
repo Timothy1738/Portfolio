@@ -81,14 +81,14 @@ theme.onclick = function() {
 
 //show/hide skills items
 const skillItems = document.querySelectorAll('section.skills .skill');
+const rotateIcon = document.getElementById('icon');
 
 skillItems.forEach(skill => {
     skill.querySelector('.head').addEventListener('click', () => {
         skill.querySelector('.items').classList.toggle('show-items');
+        skill.querySelector('span').classList.toggle('active');
     })
 })
-
-
 
 
 //Form action
@@ -103,3 +103,17 @@ function restorePlaceholder(element) {
       element.value = element.defaultValue;
     }
   }
+
+//read more about
+const readMoreBtn = document.querySelector('.read-more');
+const readMoreContent = document.querySelector('.read-more-content');
+
+readMoreBtn.addEventListener('click', () => {
+    readMoreContent.classList.toggle('show-about');
+    if(readMoreContent.classList.contains('show-about')) {
+        readMoreBtn.textContent = "Show Less";
+    }
+    else {
+        readMoreBtn.textContent = "Show More";
+    }
+})
