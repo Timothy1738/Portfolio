@@ -58,9 +58,10 @@
 
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=100075832546427"><iconify-icon class="iconify"icon="logos:facebook"></iconify-icon></a>
-                    <a href="https://twitter.com/anganya1738"><iconify-icon class="iconify" icon="skill-icons:twitter"></iconify-icon></a>
+                    <a href="https://twitter.com/anganya1738"><iconify-icon class="iconify" icon="simple-icons:x"></iconify-icon></a>
                     <a href="https://www.linkedin.com/in/anganya-timothy-70bb85236/"><iconify-icon class="iconify" icon="skill-icons:linkedin"></iconify-icon></a>
                     <a href="https://github.com/Timothy1738"><iconify-icon class="iconify" icon="devicon:github"></iconify-icon></a>
+                    <a href="https://wa.me/0778907657"><iconify-icon class="iconify" icon="logos:whatsapp-icon"></iconify-icon></a>
                 </div>
             </div>
 
@@ -457,7 +458,6 @@
                 </div>
                 <!--END OF TESTIMONIAL-->
             </div>
-            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -495,30 +495,25 @@
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
                     <a href="#services">Services</a>
+                    <a href="#testimonials">Testimonial</a>
                     <a href="#contact">Let's Talk</a>
                 </div>
 
                 <div class="icons">
-                    <a href="https://www.facebook.com/profile.php?id=100075832546427"><iconify-icon class="iconify"
-                            icon="logos:facebook"></iconify-icon></a>
-                    <a href="https://twitter.com/anganya1738"><iconify-icon class="iconify"
-                            icon="skill-icons:twitter"></iconify-icon></a>
-                    <a href="https://www.linkedin.com/in/anganya-timothy-70bb85236/"><iconify-icon class="iconify"
-                            icon="skill-icons:linkedin"></iconify-icon></a>
-                    <a href="https://github.com/Timothy1738"><iconify-icon class="iconify"
-                            icon="devicon:github"></iconify-icon></a>
+                    <a href="https://www.facebook.com/profile.php?id=100075832546427"><iconify-icon class="iconify" icon="logos:facebook"></iconify-icon></a>
+                    <a href="https://twitter.com/anganya1738"><iconify-icon class="iconify" icon="simple-icons:x"></iconify-icon></a>
+                    <a href="https://www.linkedin.com/in/anganya-timothy-70bb85236/"><iconify-icon class="iconify" icon="skill-icons:linkedin"></iconify-icon></a>
+                    <a href="https://github.com/Timothy1738"><iconify-icon class="iconify" icon="devicon:github"></iconify-icon></a>
+                    <a href="https://wa.me/0778907657"><iconify-icon class="iconify" icon="logos:whatsapp-icon"></iconify-icon></a>
                 </div>
             </div>
 
             <div class="address">
-                <div class="left">
-                    <p>Anganya Timothy</p>
-                    <p class=locate><iconify-icon class="iconify" icon="gis:location-poi"></iconify-icon>Lira City</p>
-                </div>
-                <hr class="line">
-                <div class="right">
-                    <p>anganyatimothy1738@gmail.com</p>
-                    <p>+256 783375451 / +256 742504308</p>
+                <h4>Address</h4>
+                <div class="add-details">
+                    <p class=locate><iconify-icon class="iconify" icon="gis:location-poi"></iconify-icon> Lira City</p>
+                    <p class="locate"><iconify-icon class="iconify" icon="gis:location-poi"></iconify-icon> anganyatimothy1738@gmail.com</p>
+                    <p class="locate"><iconify-icon class="iconify" icon="gis:location-poi"></iconify-icon> +256 783375451 / +256 742504308</p>
                 </div>
             </div>
             <hr class="line2">
@@ -539,13 +534,11 @@
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+            grabCursor: true,
+            speed: 1000,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
             },
         });
     </script>

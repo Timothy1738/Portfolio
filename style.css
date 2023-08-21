@@ -213,6 +213,14 @@ nav .container .theme-toggler span.active {
     background-color: var(--color-primary);
 }
 
+.home .hero-text .social-links .iconify:nth-child(1) {
+    color: var(--color-h3);
+}
+
+.home .hero-text .social-links .iconify:nth-child(1):hover {
+    color: #000;
+}
+
 .home .hero-text .social-links .iconify:hover {
     border: 1px solid var(--color-primary);
     background: none;
@@ -364,25 +372,6 @@ section.about {
     background: var(--color-info-light3);
 }
 
-section.about h2::before {
-    content: '';
-    height: 4px;
-    background: var(--color-primary);
-    width: 60px;
-    position: absolute;
-    margin-top: 3.8rem;
-}
-
-section.about h2::after {
-    content: '';
-    position: absolute;
-    background: var(--color-primary);
-    height: 4px;
-    width: 5px;
-    margin-top: 3.8rem;
-    margin-left: -11.5rem;
-}
-
 section.about .me {
     margin: 0 auto;
 }
@@ -460,24 +449,6 @@ section.about .me .intro-text .intro-text-left .content .download button:hover {
 
 /*=====SKILLS SECTION======*/
 
-section.skills h2::before {
-    content: '';
-    height: 4px;
-    background: var(--color-primary);
-    width: 60px;
-    position: absolute;
-    margin-top: 3.8rem;
-}
-
-section h2::after {
-    content: '';
-    position: absolute;
-    background: var(--color-primary);
-    height: 4px;
-    width: 5px;
-    margin-top: 3.8rem;
-    margin-left: -6.5rem;
-}
 section.skills h5 {
     color: var(--color-black);
 }
@@ -713,24 +684,6 @@ section.skills .item .progress-bar .progress8 {
 
 /*======services=======*/
 
-section.services h2::before {
-    content: '';
-    height: 4px;
-    background: var(--color-primary);
-    width: 60px;
-    position: absolute;
-    margin-top: 3.8rem;
-}
-
-section.services h2::after {
-    content: '';
-    position: absolute;
-    background: var(--color-primary);
-    height: 4px;
-    width: 5px;
-    margin-top: 3.8rem;
-    margin-left: -11rem;
-}
 section.services {
     background: var(--color-info-light3);
 }
@@ -924,24 +877,6 @@ section.services .service .lets-talk button:hover {
 
 /*==============TESTIMONIALS===========*/
 
-section.testimonials h2::before {
-    content: '';
-    height: 4px;
-    background: var(--color-primary);
-    width: 60px;
-    position: absolute;
-    margin-top: 3.8rem;
-}
-
-section.testimonials h2::after {
-    content: '';
-    position: absolute;
-    background: var(--color-primary);
-    height: 4px;
-    width: 5px;
-    margin-top: 3.8rem;
-    margin-left: -18.5rem;
-}
 section.testimonials {
     background-color: var(--color-info-light3);
 }
@@ -959,6 +894,7 @@ section.testimonials .carousel {
 section.testimonials .testimonial {
     background-color: var(--color-info-light);
     padding: 2rem;
+    color: var(--color-black);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -981,6 +917,7 @@ section.testimonials .testimonial .head .quote {
 
 section.testimonials .testimonial .head .quote .iconify {
     font-size: 2.5rem;
+    color: var(--color-black);
 }
 
 section.testimonials .testimonial .head .head-profile {
@@ -998,25 +935,6 @@ section.testimonials .testimonial .head .head-profile .avatar {
 
 
 /*=============CONTACT ME SECTION===============*/
-
-section.contact h2::before {
-    content: '';
-    height: 4px;
-    background: var(--color-primary);
-    width: 60px;
-    position: absolute;
-    margin-top: 3.8rem;
-}
-
-section.contact h2::after {
-    content: '';
-    position: absolute;
-    background: var(--color-primary);
-    height: 4px;
-    width: 5px;
-    margin-top: 3.8rem;
-    margin-left: -12.5rem;
-}
 
 section.contact {
     width: 100%;
@@ -1135,7 +1053,7 @@ footer .footer-section {
 
 footer .footer-section .quick-links {
     display: flex;
-    width: 80%;
+    width: 90%;
     justify-content: space-between;
     align-content: center;
     margin: 1px auto 0 auto;
@@ -1164,7 +1082,7 @@ footer .footer-section .quick-links .nav-links a:hover {
 footer .footer-section .quick-links .icons {
     display: flex;
     justify-content: space-between;
-    width: 20vw;
+    width: 30vw;
     overflow: hidden;
     gap: 2rem;
     align-content: center;
@@ -1188,22 +1106,23 @@ footer .footer-section .quick-links .icons .iconify:hover {
 
 footer .footer-section .address {
     display: flex;
+    flex-direction: column;
     margin: 3rem auto;
+    align-items: center;
     width: 60%;
+    text-align: center;
     justify-content: center;
     gap: 1rem;
 }
 
+
+footer .footer-section .address h4 {
+    color: var(--color-h3);
+    text-decoration: underline;
+}
+
 footer .footer-section .address p {
     line-height: 2;
-}
-
-footer .footer-section .address .left {
-    display: block;
-}
-
-footer .footer-section .address .right {
-    display: block;
 }
 
 footer .footer-section .address .left .locate {
@@ -1215,10 +1134,6 @@ footer .footer-section .address .left .locate {
 
 footer .footer-section .address .left .locate .iconify {
     font-size: 2rem;
-}
-
-footer .footer-section .address .line {
-    border: 0.2px solid var(--color-h3);
 }
 
 footer .footer-section .line2 {
@@ -1293,380 +1208,12 @@ footer .footer-section .rigts-reserved {
 /**************************************************/
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
-    nav .container #nav-links a {
-        font-size: 10px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    nav .container h2 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    /*===ABOUT====*/
-
-    section.about .container .me h2 {
-        font-size: 2rem;
-    }
-    section.about .container .me .intro-text {
-        display: block;
-        margin: 0 auto;
-        justify-content: center;
-    }
-
-    section.about .container .me .intro-text .intro-text-right {
-        margin: 0 auto;
-        width: 90%;
-        justify-content: center;
-        margin-right: 2rem;
-    }
-
-    section.about .container .me .intro-text .intro-text-left {
-        margin: -3rem auto;
-        width: 100%;
-        padding-bottom: 10px;
-    }
-
-    section.about .container .me .intro-text .intro-text-left p {
-        font-size: 12px;
-    }
-
-    section.about .container .me .intro-text .intro-text-left .content .download {
-        margin: 1rem auto;
-        justify-content: center;
-    }
-
-    /*=====SKILLS SECTION=====*/
-
-    section.skills h2::before {
-        margin-top: 2.5rem;
-    }
-
-    section.skills h2 {
-        font-size: 2rem;
-    }
-    
-    section.skills h2::after {
-        margin-top: 2.5rem;
-        margin-left: -3rem;
-    }
-    
-    section.skills .skill .head {
-        padding: 1rem;
-    }
-
-    section.skills .skill .head span {
-        font-size: 1rem;
-    }
-
-    section.skills h4 {
-        font-size: 10px;
-    }
-
-    section.skills h5 {
-        font-size: 10px;
-    }
-
-    section.skills .skill .head .left .iconify {
-        font-size: 1rem;
-    }
-
-    /*======SERVICES======*/
-
-    section.services h2::before {
-        margin-top: 2.5rem;
-    }
-    
-    section.services h2::after {
-        margin-top: 2.5rem;
-        margin-left: -6rem;
-    }
-    
-    section.services .service .service-bottom {
-        display: block;
-    }
-
-    section.services .service .service-top {
-        display: block;
-    }
-
-    section.services .service .service-top .card {
-        margin: 1rem auto;
-        width: 80%;
-    }
-
-    section.services .service .service-bottom .card {
-        margin: 1rem auto;
-        width: 80%;
-    }
-
-    section.services .service .service-top .card .iconify {
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-
-    section.services .service .service-bottom .card .iconify {
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-
-    section.services .service .service-top .card p {
-        font-size: 14px;
-    }
-
-    section.services .service .service-bottom .card p {
-        font-size: 14px;
-    }
-
-    /*=====CONTACT US SECTION====*/
-
-    section.contact h2::before {
-        margin-top: 2.5rem;
-    }
-    
-    section.contact h2::after {
-        margin-top: 2.5rem;
-        margin-left: -7.5rem;
-    }
-
-    section.contact .container .contact-us h2 {
-        font-size: 2rem;
-    }
-
-    section.contact .container .contact-us form p {
-        font-size: 14px;
-    }
-
-    section.contact .contact-us form input[type=text],
-    section.contact .contact-us form input[type=submit],
-    section.contact .contact-us form textarea,
-    section.contact .contact-us form input[type=email] {
-        padding: 1rem;
-    }
-
-    section.contact .contact-us form input[type=submit] {
-        font-size: 1rem;
-    }
-
-    /*footer*/
-    footer {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    footer .footer-section {
-        display: block;
-        margin: 0 auto;
-        width: 99%;
-    }
-
-    footer .footer-section .quick-links h4 {
-        font-size: 15px;
-    }
-
-    footer .footer-section .quick-links .nav-links {
-        width: 50%;
-        display: flex;
-        gap: 0.8rem;
-        justify-content: space-between;
-    }
-
-    footer .footer-section .quick-links .nav-links a {
-        font-size: 10px;
-    }
-
-    footer .footer-section .quick-links .icons .iconify {
-        font-size: 10px;
-    }
-
-    footer .footer-section .address p{
-        font-size: 12px;
-    }
-
-    footer .footer-section .address {
-        width: 100%;
-    }
-
-    footer .footer-section .address .left .locate .iconify {
-        font-size: 12px;
-    }
-
-    .scroll-to-top {
-        padding: 5px;
-    }
-
-    .scroll-to-top span {
-        font-size: 20px;
-    }
-    footer .footer-section .rigts-reserved p{
-        font-size: 12px;
-    }
-
-}
-
-
-
-
-/**************************************************************/
-/**************************************************************/
-/************************991.98********************************/
-/**************************************************************/
-/**************************************************************/
-/**************************************************************/
-
-@media (max-width: 991.98px) {
-    /**HOME***/
-
-    .home .container .hero-text p {
-        font-size: 13px;
-    }
-
-    .home .hero-text .name {
-        width: 70%;
-    }
-
-    .home .container .hero-text .btn-primary button {
-        font-size: 12px;
-    }
-    
-    nav {
-        padding: 10px 0 10px;
-        max-width: 100vw;
-        box-shadow: none;
-    }
-
-    nav .container h2 {
-        margin-left: 2rem;
-    }
-
-    nav .container #nav-links .theme-toggler {
-        display: none;
-    }
-    
-    nav .container #theme {
-        position: absolute;
-        display: block;
-        width: 50px;
-        right: 6rem;
-        cursor: pointer;
-        transition: var(--transition);
-    }
-
-    nav .container #nav-links.active {
-        transition: var(--transition);
-        left: 0;
-    }
-    
-    nav .container #nav-links {
-        position: absolute;
-        display: flex;
-        top: 70px;
-        width: 150px;
-        left: -150px;
-        row-gap: 2px;
-        flex-direction: column;
-        background: var(--color-info-dark);
-        align-self: center;
-        justify-content: center;
-        transition: 0.5s ease;
-    }
-    
-    /*for javascript toggle*/
-    nav .container {
-        width: 100%;
-    }
-
-
-    nav .container #nav-links a {
-        display: flex;
-        width: 100%;
-        margin-right: 0;
-        align-content: center;
-        justify-content: center;
-        color: var(--color-h3);
-        font-size: 18px;
-        transition: 0.5s ease;
-    }
-
-    nav .container #nav-links a:hover {
-        padding-left: 2rem;
-    }
-
-    nav .container #toggle {
-        padding: 1.5rem;
-        border: 1px solid var(--color-primary);
-        border-radius: 10px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 2rem;
-    }
-    
-    nav .container #toggle::before {
-        content: '';
-        position: absolute;
-        width: 28px;
-        height: 2px;
-        background: var(--color-primary);
-        transform: translateY(-5px);
-        transition: 0.2s;
-    }
-    
-    nav .container #toggle::after {
-        content: '';
-        position: absolute;
-        width: 28px;
-        height: 2px;
-        background: var(--color-primary);
-        transform: translateY(5px);
-        transition: 0.2s;
-    }
-    
-    nav .container #toggle.active::before {
-        transform: translateY(0px) rotate(45deg);
-    }
-    
-    nav .container #toggle.active::after {
-        transform: translateY(0px) rotate(-45deg);
-    }
-
-    /*******************ABOUT****************************/
-    section.about .container .intro-text .me .intro-text-left {
-        padding: 45px 15px 10px 15px;
-    }
-
-    section.about h2::before {
-        margin-top: 2.5rem;
-    }
-    
-    section.about h2::after {
-        margin-top: 2.5rem;
-        margin-left: -7rem;
-    }
-    
-
-
-}
-
-/**************************************/
-/*********MOBILE I GUESS***************/
-/**************************************/
-@media screen and (max-width: 614px) {
-
     nav .container #theme {
         transform: scale(0.6);
     }
 
     nav .container #nav-links a {
         font-size: 13px;
-    }
-    nav .container #nav-links a:last-child {
-        right: -15px;
     }
 
     .home .container .hero-img {
@@ -1751,10 +1298,19 @@ footer .footer-section .rigts-reserved {
     
     .home .hero-text {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .home .hero-text h1 {
         text-align: center;
+        font-size: 3rem;
+    }
+
+    .home .hero-text .social-links {
+        margin: 1rem auto;
     }
 
     .home .hero-text .name {
@@ -1794,6 +1350,10 @@ footer .footer-section .rigts-reserved {
 
     /*ABOUT*/
 
+    section.about h2 {
+        font-size: 2rem;
+    }
+
     section.about .container .me .intro-text {
         display: block;
         margin: 0 auto;
@@ -1832,6 +1392,11 @@ footer .footer-section .rigts-reserved {
 
 
     /*=====SKILLS======*/
+
+    section.skills h2 {
+        font-size: 2rem;
+    }
+
     section.skills .skill .head {
         padding: 1rem;
     }
@@ -1869,13 +1434,24 @@ footer .footer-section .rigts-reserved {
     }
 
     section.services .service .service-top {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     section.services .service .service-top .card {
         width: 80%;
         display: flex;
         flex-direction: column;
+    }
+
+    section.services .service .service-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1px;
     }
 
     section.services .service .service-bottom .card {
@@ -1908,7 +1484,31 @@ footer .footer-section .rigts-reserved {
         font-size: 15px;
     }
 
+    /*=====TESTIMONIALS======*/
+    section.testimonials h2 {
+        font-size: 2rem;
+    }
+
+    section.testimonials .container {
+        grid-template-columns: 1fr;
+        width: 94vw;
+    }
+
+    section.testimonials .testimonial .head .head-profile .avatar {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    section.testimonials .testimonial .head .quote .iconify {
+        font-size: 2rem;
+    }
+    
+
     /*=====CONTACT US SECTION====*/
+
+    section.contact h2 {
+        font-size: 2rem;
+    }
 
     section.contact .container .contact-us h2 {
         font-size: 2rem;
@@ -1931,7 +1531,10 @@ footer .footer-section .rigts-reserved {
 
     section.contact .contact-us form input[type=submit] {
         font-size: 1rem;
-        width: 5rem;
+        width: 8rem;
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
 
     /*footer*/
@@ -1943,13 +1546,14 @@ footer .footer-section .rigts-reserved {
     footer .footer-section {
         display: block;
         margin: 0 auto;
-        width: 99%;
+        width: 100%;
         gap: 1px;
     }
 
 
     footer .footer-section .quick-links {
         display: block;
+        width: 100%;
     }
 
     footer .footer-section .quick-links h4 {
@@ -1965,21 +1569,20 @@ footer .footer-section .rigts-reserved {
     }
 
     footer .footer-section .quick-links .nav-links a {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     footer .footer-section .quick-links .icons {
         margin: 1rem auto;
         width: 80%;
-        gap: 2rem;
     }
     footer .footer-section .quick-links .icons .iconify {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
 
     footer .footer-section .address p{
-        font-size: 10px;
+        font-size: 15px;
     }
 
     footer .footer-section .address {
@@ -2002,17 +1605,150 @@ footer .footer-section .rigts-reserved {
         width: 60%;
         border: 0.2px solid var(--color-h3);
     }
+
 }
 
 
 
+
+/**************************************************************/
+/**************************************************************/
+/************************991.98********************************/
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+
+@media (max-width: 991.98px) {
+    /**HOME***/
+
+    .home .container .hero-text p {
+        font-size: 13px;
+    }
+
+    .home .hero-text .name {
+        width: 70%;
+    }
+
+    .home .container .hero-text .btn-primary button {
+        font-size: 12px;
+    }
+    
+    nav {
+        padding: 10px 0 10px;
+        max-width: 100vw;
+        box-shadow: none;
+    }
+
+    nav .container h2 {
+        margin-left: 2rem;
+    }
+
+    nav .container #nav-links .theme-toggler {
+        display: none;
+    }
+    
+    nav .container #theme {
+        position: absolute;
+        display: block;
+        width: 50px;
+        right: 6rem;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    nav .container #nav-links.active {
+        transition: var(--transition);
+        left: 0;
+    }
+    
+    nav .container #nav-links {
+        position: absolute;
+        display: flex;
+        top: 75px;
+        width: 100%;
+        left: -100%;
+        row-gap: 2px;
+        flex-direction: column;
+        background: var(--color-info-dark);
+        align-self: center;
+        justify-content: center;
+        transition: 0.5s ease;
+    }
+    
+    /*for javascript toggle*/
+    nav .container {
+        width: 100%;
+    }
+
+
+    nav .container #nav-links a {
+        display: flex;
+        width: 100%;
+        margin-right: 0;
+        align-content: center;
+        justify-content: center;
+        color: var(--color-h3);
+        font-size: 18px;
+        transition: 0.5s ease;
+    }
+
+    nav .container #nav-links a:hover {
+        padding-left: 2rem;
+    }
+
+    nav .container #toggle {
+        padding: 1.5rem;
+        border: 1px solid var(--color-primary);
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+    }
+    
+    nav .container #toggle::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background: var(--color-primary);
+        transform: translateY(-5px);
+        transition: 0.2s;
+    }
+    
+    nav .container #toggle::after {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background: var(--color-primary);
+        transform: translateY(5px);
+        transition: 0.2s;
+    }
+    
+    nav .container #toggle.active::before {
+        transform: translateY(0px) rotate(45deg);
+    }
+    
+    nav .container #toggle.active::after {
+        transform: translateY(0px) rotate(-45deg);
+    }
+
+    /*******************ABOUT****************************/
+    section.about .container .intro-text .me .intro-text-left {
+        padding: 45px 15px 10px 15px;
+    }
+
+}
+
 /**************************************************/
 /**************************************************/
-/*************950.98PX and 614PX******************/
+/*************950.98PX and 600PX******************/
 /**************************************************/
 /**************************************************/
 
-@media (max-width: 950.98px) and (min-width: 614px) {
+@media (max-width: 950.98px) and (min-width: 600px) {
 
     .home .container .hero-text p {
         font-size: 15px;
@@ -2103,11 +1839,12 @@ footer .footer-section .rigts-reserved {
         justify-content: center;
         display: flex;
     }
-    /*SERVICES SECTION*/
 
+    
+    /*SERVICES SECTION*/
     section.services .service .service-bottom {
         display: block;
-        margin-top: -6rem;
+        margin-top: -5rem;
     }
 
     section.services .service .service-top {
@@ -2115,17 +1852,19 @@ footer .footer-section .rigts-reserved {
     }
 
     section.services .service .service-top .card {
-        margin: 1rem auto;
+        margin: 0rem auto;
         width: 50vw;
-        height: 40vh;
         display: flex;
         flex-direction: column;
+    }
+
+    section.services .service .service-top .card:nth-child(2) {
+        margin-top: 1rem;
     }
 
     section.services .service .service-bottom .card {
         margin: 1rem auto;
         width: 50vw;
-        height: 40vh;
         display: flex;
         flex-direction: column;
     }
@@ -2202,9 +1941,8 @@ footer .footer-section .rigts-reserved {
 
 
     footer .footer-section .quick-links .icons {
-        margin: 1rem auto;
-        width: 45%;
-        gap: 2rem;
+        margin: 2rem auto;
+        width: 100%;
     }
     footer .footer-section .quick-links .icons .iconify {
         font-size: 2rem;
@@ -2246,6 +1984,10 @@ footer .footer-section .rigts-reserved {
     .home .container .hero-text h3 {
         font-size: 1rem;
     }
+
+    .home .hero-text .name {
+        width: 100%;
+    }
     
     .home .container .hero-text p {
         font-size: 15px;
@@ -2279,6 +2021,10 @@ footer .footer-section .rigts-reserved {
 
     .home .container .hero-text p {
         font-size: 15px;
+    }
+
+    .home .hero-text .name {
+        width: 100%;
     }
 
     .home .hero-text .btn-primary button {
