@@ -1100,6 +1100,14 @@ footer .footer-section .quick-links .icons .iconify {
     transition: var(--transition);
 }
 
+footer .footer-section .quick-links .icons .iconify:nth-child(1) {
+    color: var(--color-h3);
+}
+
+footer .footer-section .quick-links .icons .iconify:nth-child(1):hover {
+    color: #000;
+}
+
 footer .footer-section .quick-links .icons .iconify:hover {
     background: var(--color-h3);
 }
@@ -1226,7 +1234,7 @@ footer .footer-section .rigts-reserved {
         grid-template-columns: 1fr;
         grid-template-rows: 30% 30%;
         place-items: center;
-        gap: 7rem;
+        gap: 10rem;
     }
 
     .home .container .profile-area {
@@ -1302,6 +1310,7 @@ footer .footer-section .rigts-reserved {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
     }
 
     .home .hero-text h1 {
@@ -1313,8 +1322,14 @@ footer .footer-section .rigts-reserved {
         margin: 1rem auto;
     }
 
+    .home .hero-text .social-links .iconify {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
     .home .hero-text .name {
         width: 100%;
+        margin: 1 auto;
     }
 
     .home .container .hero-text .btn-primary {
@@ -1569,15 +1584,17 @@ footer .footer-section .rigts-reserved {
     }
 
     footer .footer-section .quick-links .nav-links a {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     footer .footer-section .quick-links .icons {
         margin: 1rem auto;
-        width: 80%;
+        width: 100%;
+        display: flex;
+        gap: 10px;
     }
     footer .footer-section .quick-links .icons .iconify {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
 
