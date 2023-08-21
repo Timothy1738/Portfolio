@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--SWIPER JS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
     <!--GOOGLE ICONS-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <title>TIMFOLIO</title>
 </head>
+
 <body>
 
     <nav id="navbar">
@@ -18,6 +25,7 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#services">Services</a>
+                <a href="#testimonials">Testimonial</a>
                 <a href="#contact">Let's Talk</a>
                 <div class="theme-toggler" id="theme-toggler">
                     <span class="material-symbols-outlined active">brightness_5</span>
@@ -25,7 +33,8 @@
                 </div>
             </div>
             <div id="theme">
-                <i class="indicator"></i>
+                <!--<i class="indicator"></i>-->
+                <img src="./img/dark theme icon/moon.png" id="icon" alt="">
             </div>
             <div id="toggle"></div>
         </div>
@@ -34,15 +43,24 @@
     <div id="home" class="home">
         <div class="container">
             <div class="hero-text">
-                <h3 class="hi-there">Hi, There</h3>
-                <h1>I'm ANGANYA TIMOTHY,</h1>
-                <h3>A Web Developer</h3>
-
-                <p>I can design a responsive website using HTML, CSS and JAVASCRIPT</p>
+                <h1>Web Developer</h1>
+                <div class="name">
+                    <h3>Hello, I'm Anganya Timothy</h3>
+                </div>
+                <p>Freelance Web Developer based in Lira City, Uganda with over two years of hand-on experience in
+                    designing responsive visually stunning and user-friendly websites. Check out my portfolio, feel free
+                    to reach out to me and let's develop an amazing website together that satisfies your needs as a
+                    client. <!--I can design a responsive website using HTML, CSS and JAVASCRIPT-->.</p>
 
                 <div class="btn-primary">
                     <a href="#contact"><button>CONTACT ME</button></a>
-                    <a href="#about"><button>HIRE ME</button></a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100075832546427"><iconify-icon class="iconify"icon="logos:facebook"></iconify-icon></a>
+                    <a href="https://twitter.com/anganya1738"><iconify-icon class="iconify" icon="skill-icons:twitter"></iconify-icon></a>
+                    <a href="https://www.linkedin.com/in/anganya-timothy-70bb85236/"><iconify-icon class="iconify" icon="skill-icons:linkedin"></iconify-icon></a>
+                    <a href="https://github.com/Timothy1738"><iconify-icon class="iconify" icon="devicon:github"></iconify-icon></a>
                 </div>
             </div>
 
@@ -57,14 +75,18 @@
                     <img src="./img/ONP_3749mdi ~2.jpg" alt="">
                 </div>
             </div>
+
+            <div class="hero-img">
+                <img src="./img/Hero-img.png" alt="">
+            </div>
         </div>
     </div>
 
     <!--ABOUT-->
     <section id="about" class="about">
+        <h2>ABOUT ME</h2>
         <div class="container">
             <div class="me">
-                <h2>ABOUT ME</h2>
                 <div class="intro-text">
                     <div class="intro-text-right">
                         <img src="./img/about.jpg" alt="">
@@ -73,16 +95,41 @@
                     <div class="intro-text-left">
                         <div class="content">
                             <p>
-                                Hi there, I am Anganya Timothy, a passionate web and software developer with 2+ years of hand-on experience in designing responsive visually stunning and user-friendly websites. I have honed my skills in front-end and back-end development, allowing me to create dynamic and functional online experiences.<br><br>
-                                My Journey as a web developer started way back in my childhood, I’ve always loved technology, innovation and was intrigued by the way technology made a difference in the world every day. I decided to follow the path of being a web developer when I joined Gulu University for my Bachelor’s degree where I was offered B. of Information and Communication Technology. I got familiar with coding, learning high level languages like HTML, CSS, Java, JavaScript, Python, and gained several other skills along the way as you can see in the <a href="#skills">skills section.</a> I got the opportunity to do my internship at Kakebe Technologies, one of the leading tech companies in Uganda, where I got lots of hands-on experience in web and software development and contributed to several corporate projects being worked on at the time at Kakebe Technologies.<br><br>
-                                I have dedicated myself to continuous learning and staying up-to-date with the latest web technologies, ensuring that I can provide cutting-edge solutions for my clients. I specialize in developing websites for small businesses and start-ups, providing them with a strong online presence and helping them reach their target audience effectively.<br><br>
+                                Hi there, I am Anganya Timothy, a passionate web and software developer with 2+ years of
+                                hand-on experience in designing responsive visually stunning and user-friendly websites.
+                                I have honed my skills in front-end and back-end development, allowing me to create
+                                dynamic and functional online experiences.<br><br>
+                                My Journey as a web developer started way back in my childhood, I’ve always loved
+                                technology, innovation and was intrigued by the way technology made a difference in the
+                                world every day. I decided to follow the path of being a web developer when I joined
+                                Gulu University for my Bachelor’s degree where I was offered B. of Information and
+                                Communication Technology. I got familiar with coding, learning high level languages like
+                                HTML, CSS, Java, JavaScript, Python, and gained several other skills along the way as
+                                you can see in the <a href="#skills">skills section.</a> I got the opportunity to do my
+                                internship at Kakebe Technologies, one of the leading tech companies in Uganda, where I
+                                got lots of hands-on experience in web and software development and contributed to
+                                several corporate projects being worked on at the time at Kakebe Technologies.<br><br>
+                                I have dedicated myself to continuous learning and staying up-to-date with the latest
+                                web technologies, ensuring that I can provide cutting-edge solutions for my clients. I
+                                specialize in developing websites for small businesses and start-ups, providing them
+                                with a strong online presence and helping them reach their target audience
+                                effectively.<br><br>
                             </p>
 
                             <div class="read-more-content">
                                 <p>
-                                    My approach to web development is rooted in problem-solving. I thrive on challenges and find creative solutions to overcome any obstacles that come my way. I take pride in my attention to detail and my commitment to delivering high-quality websites that exceed expectations.<br><br>
-                                Beyond coding, I enjoy staying up-to-date with industry trends, attending tech conferences, and collaborating with other developers. When I'm not at my computer, you'll find me exploring the great outdoors, adventuring off somewhere or watching a movie or two. I also play a games like football, chess, badminton, volleyball and jogging around. Keeps me relaxed and productive 24/7.<br><br>
-                                I would love to hear about your upcoming project! Whether you're a business owner looking for a website or a fellow developer interested in collaborating, feel free to reach out to me. Let's create something amazing together!<br><br>
+                                    My approach to web development is rooted in problem-solving. I thrive on challenges
+                                    and find creative solutions to overcome any obstacles that come my way. I take pride
+                                    in my attention to detail and my commitment to delivering high-quality websites that
+                                    exceed expectations.<br><br>
+                                    Beyond coding, I enjoy staying up-to-date with industry trends, attending tech
+                                    conferences, and collaborating with other developers. When I'm not at my computer,
+                                    you'll find me exploring the great outdoors, adventuring off somewhere or watching a
+                                    movie or two. I also play a games like football, chess, badminton, volleyball and
+                                    jogging around. Keeps me relaxed and productive 24/7.<br><br>
+                                    I would love to hear about your upcoming project! Whether you're a business owner
+                                    looking for a website or a fellow developer interested in collaborating, feel free
+                                    to reach out to me. Let's create something amazing together!<br><br>
                                 </p>
                             </div>
 
@@ -90,7 +137,7 @@
                             <div class="download">
                                 <button><iconify-icon icon="tabler:download"></iconify-icon> Download CV</button>
                             </div>
-                        </div>      
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,7 +148,8 @@
         <div class="container">
             <div class="content-left">
                 <h3>Do You have a new Project?</h3>
-                <p>I would love to hear about your upcoming project! Feel free to reach out to me. Let's create something amazing together!</p>
+                <p>I would love to hear about your upcoming project! Feel free to reach out to me. Let's create
+                    something amazing together!</p>
 
                 <div class="quick-message">
                     <button>
@@ -126,7 +174,7 @@
                         <span class="iconify" data-icon="material-symbols:design-services"></span>
                         <h4>UI/UX Design</h4>
                     </div>
-                    <span id ="icon" class="material-symbols-outlined">expand_more</span>
+                    <span id="icon" class="material-symbols-outlined">expand_more</span>
                 </div>
 
                 <div class="items">
@@ -191,7 +239,8 @@
             <div class="skill">
                 <div class="head" id="head">
                     <div class="left">
-                        <span class="iconify" data-icon="streamline:programming-browser-build-build-website-development-window-code-programming-web-backend-browser-dev"></span>
+                        <span class="iconify"
+                            data-icon="streamline:programming-browser-build-build-website-development-window-code-programming-web-backend-browser-dev"></span>
                         <h4>Backend Development</h4>
                     </div>
                     <span id="icon" class="material-symbols-outlined">expand_more</span>
@@ -282,21 +331,24 @@
     </section>
 
     <section id="services" class="services">
+        <h2>SERVICES</h2>
         <div class="container">
-            <h2>SERVICES</h2>
             <div class="service">
                 <div class="service-top">
                     <div class="card">
                         <span class="iconify" data-icon="material-symbols:design-services"></span>
                         <h4>UI/UX Design</h4>
-                        <p>Crafting captivating user experiences is essential for success. With my expertise in UI/UX design, I'll use Figma to create visually stunning interfaces that engage and delight. Let's collaborate to deliver an intuitive design that captivates your users.</p>
+                        <p>Crafting captivating user experiences is essential for success. With my expertise in UI/UX
+                            design, I'll use Figma to create visually stunning interfaces that engage and delight. Let's
+                            collaborate to deliver an intuitive design that captivates your users.</p>
                     </div>
-    
+
                     <div class="card">
                         <span class="iconify" data-icon="ic:round-code"></span>
                         <h4>Website & Web App Development</h4>
                         <p>
-                            Crafting captivating online experiences, from websites to web apps. Frontend expertise combined with backend collaboration for efficiency. Let's bring your vision to life online.
+                            Crafting captivating online experiences, from websites to web apps. Frontend expertise
+                            combined with backend collaboration for efficiency. Let's bring your vision to life online.
                         </p>
                     </div>
                 </div>
@@ -305,13 +357,18 @@
                     <div class="card">
                         <span class="iconify" data-icon="dashicons:editor-video"></span>
                         <h4>Video Editing</h4>
-                        <p>In the era of video content, captivating and professionally edited videos are essential. From trimming and arranging clips to adding transitions, effects, and soundtracks, I'll create visually stunning videos that elevate your brand and captivate viewers.</p>
+                        <p>In the era of video content, captivating and professionally edited videos are essential. From
+                            trimming and arranging clips to adding transitions, effects, and soundtracks, I'll create
+                            visually stunning videos that elevate your brand and captivate viewers.</p>
                     </div>
 
                     <div class="card">
                         <span class="iconify" data-icon="simple-icons:taichigraphics"></span>
                         <h4>Graphics Design</h4>
-                        <p>Visual communication is powerful for engaging your audience. Through my expertise, I'll bring your brand to life with stunning visuals. From captivating logos to eye-catching materials, I'll deliver designs that leave a lasting impression. Let's create something extraordinary together.</p>
+                        <p>Visual communication is powerful for engaging your audience. Through my expertise, I'll bring
+                            your brand to life with stunning visuals. From captivating logos to eye-catching materials,
+                            I'll deliver designs that leave a lasting impression. Let's create something extraordinary
+                            together.</p>
                     </div>
                 </div>
 
@@ -324,19 +381,100 @@
         </div>
     </section>
 
+    <section class="testimonials" id="testimonials">
+        <h2>TESTIMOMIALS</h2>
+        <div class="container mySwiper">
+            <div class="carousel swiper-wrapper">
+                <div class="testimonial swiper-slide">
+                    <div class="head">
+                        <div class="head-profile">
+                            <div class="avatar">
+                                <img src="./img/testimonials/testimonials-1.jpg" alt="">
+                            </div>
+
+                            <div class="avatar-info">
+                                <h4>Okwir Haggai</h4>
+                                <small>Software Developer</small>
+                            </div>
+                        </div>
+
+                        <div class="quote">
+                            <span class="iconify" data-icon="fa-solid:quote-right"></span>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id laudantium distinctio, sed quas
+                        alias veniam ullam nemo minima vitae libero.
+                    </p>
+                </div>
+                <!--END OF TESTIMONIAL-->
+
+                <div class="testimonial swiper-slide">
+                    <div class="head">
+                        <div class="head-profile">
+                            <div class="avatar">
+                                <img src="./img/testimonials/testimonials-1.jpg" alt="">
+                            </div>
+
+                            <div class="avatar-info">
+                                <h4>Okwir Haggai</h4>
+                                <small>Software Developer</small>
+                            </div>
+                        </div>
+
+                        <div class="quote">
+                            <span class="iconify" data-icon="fa-solid:quote-right"></span>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id laudantium distinctio, sed quas
+                        alias veniam ullam nemo minima vitae libero.
+                    </p>
+                </div>
+                <!--END OF TESTIMONIAL-->
+
+                <div class="testimonial swiper-slide">
+                    <div class="head">
+                        <div class="head-profile">
+                            <div class="avatar">
+                                <img src="./img/testimonials/testimonials-1.jpg" alt="">
+                            </div>
+
+                            <div class="avatar-info">
+                                <h4>Okwir Haggai</h4>
+                                <small>Software Developer</small>
+                            </div>
+                        </div>
+
+                        <div class="quote">
+                            <span class="iconify" data-icon="fa-solid:quote-right"></span>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id laudantium distinctio, sed quas
+                        alias veniam ullam nemo minima vitae libero.
+                    </p>
+                </div>
+                <!--END OF TESTIMONIAL-->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
     <!--CONTACT ME-->
     <section id="contact" class="contact">
+        <h2>LET'S TALK</h2>
         <div class="container">
             <div class="contact-us">
-                <h2>LET'S TALK</h2>
                 <form action="https://formspree.io/f/xwkdplkd" method="POST">
-                    <P>Having inquiries? Want to reach out? I am an email away, always online to attend to all your queries and needs. Dont Hesitate to reach out anytime.
+                    <P>Having inquiries? Want to reach out? I am an email away, always online to attend to all your
+                        queries and needs. Dont Hesitate to reach out anytime.
                     </P>
-                    <input type="text" required name="name" value="Enter Your Name" onclick="removePlaceholder(this)" onblur="restorePlaceholder(this)">
-                    <input type="email" required name="email" value="Enter Your Email" onclick="removePlaceholder(this)" onblur="restorePlaceholder(this)">
-                    <input type="text" required name="subject" value="Subject" onclick="removePlaceholder(this)" onblur="restorePlaceholder(this)">
-                    <textarea name="comments" required rows="4" cols="36" onclick="removePlaceholder(this)" onblur="restorePlaceholder(this)">Message</textarea>
-                    <input type="submit" value="submit" class="submit-btn">
+                    <input type="text" required name="name" placeholder="Enter Your Name">
+                    <input type="email" required name="email" placeholder="Enter Your Email">
+                    <input type="text" required name="subject" placeholder="Subject">
+                    <textarea name="comments" required rows="4" cols="36" placeholder="Message"></textarea>
+                    <input type="submit" value="Send Message" class="submit-btn">
                 </form>
             </div>
         </div>
@@ -361,10 +499,14 @@
                 </div>
 
                 <div class="icons">
-                    <a href="https://www.facebook.com/profile.php?id=100075832546427"><iconify-icon  class="iconify" icon="logos:facebook"></iconify-icon></a>
-                    <a href="https://twitter.com/anganya1738"><iconify-icon class="iconify" icon="skill-icons:twitter"></iconify-icon></a>
-                    <a href="https://www.linkedin.com/in/anganya-timothy-70bb85236/"><iconify-icon class="iconify" icon="skill-icons:linkedin"></iconify-icon></a>
-                    <a href="https://github.com/Timothy1738"><iconify-icon class="iconify" icon="devicon:github"></iconify-icon></a>
+                    <a href="https://www.facebook.com/profile.php?id=100075832546427"><iconify-icon class="iconify"
+                            icon="logos:facebook"></iconify-icon></a>
+                    <a href="https://twitter.com/anganya1738"><iconify-icon class="iconify"
+                            icon="skill-icons:twitter"></iconify-icon></a>
+                    <a href="https://www.linkedin.com/in/anganya-timothy-70bb85236/"><iconify-icon class="iconify"
+                            icon="skill-icons:linkedin"></iconify-icon></a>
+                    <a href="https://github.com/Timothy1738"><iconify-icon class="iconify"
+                            icon="devicon:github"></iconify-icon></a>
                 </div>
             </div>
 
@@ -379,7 +521,7 @@
                     <p>+256 783375451 / +256 742504308</p>
                 </div>
             </div>
-            <hr class="line2"> 
+            <hr class="line2">
             <div class="rigts-reserved">
                 <p>© 2023 All Rights Reserved | Designed by Anganya Timothy</p>
             </div>
@@ -388,5 +530,26 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script src="main.js"></script>
+
+    <!--SWIPER JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
 </body>
+
 </html>

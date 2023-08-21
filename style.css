@@ -15,7 +15,7 @@
     --color-info-light4: #eaf0f8;
     --color-homeborder: rgb(218, 207, 207);
     --color-boxshadow: hsla(0, 0%, 0%, 0.12);
-    --color-info-dark: #3e524e;
+    --color-info-dark: #2f3f3c;
     --transition: all 300ms ease;
     --box-shadow: 0 1rem 3rem rgba(51, 52, 56, 0.18);
     --color-black: #141415;
@@ -30,7 +30,7 @@
     --color-black: #ffff;
     --background-color: #24282e;
     --color-white: #1c1f24;
-    --color-homeborder: rgb(32, 29, 29);
+    --color-homeborder: #eaf0f8;
 }
 
 * {
@@ -68,17 +68,34 @@ section {
     border: none;
 }
 
+section h2 {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/*=============NAV-BAR================*/
 nav {
     position: fixed;
     top: 0;
-    background: var(--color-light2);
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
     z-index: 2;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    transition: background-color 0.5s ease;
+    border-bottom: 1px solid var(--color-homeborder);
+}
+
+nav.scrolled {
+    background-color: var(--color-info-dark);
+    transition: 0.5s ease;
+    border: none;
+}
+
+nav.scrolled .container #nav-links a {
+    color: var(--color-h3);
 }
 
 nav .container {
@@ -86,7 +103,6 @@ nav .container {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 90%;
 }
 
 nav .container h2 {
@@ -102,28 +118,26 @@ nav .container #nav-links {
 }
 
 nav .container #nav-links a {
-    width: 6rem;
     height: 5rem;
     color: var(--color-black);
     transition: var(--transition);
     position: relative;
     display: flex;
     align-items: center;
-    margin-right: 1rem;
     justify-content: center;
     position: relative;
+    width: 7rem;
 }
 
 nav .container #nav-links a:hover {
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-h3);
 }
-
 
 nav .container #nav-links a.active {
     background: var(--color-primary);
-    color: var(--color-light);
+    color: var(--color-h3);
 }
-
 
 nav .container #toggle {
     display: none;
@@ -139,11 +153,12 @@ nav .container #nav-links .theme-toggler {
     justify-content: space-between;
     overflow: hidden;
     align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
+    height: 1.2rem;
+    width: 4rem;
     cursor: pointer;
     border-radius: 5px;
     position: relative;
+    margin-left: 1rem;
 }
 nav .container .theme-toggler span {
     font-size: 1.2rem;
@@ -163,47 +178,70 @@ nav .container .theme-toggler span.active {
 /*====HERO SECTION====*/
 
 .home {
-    background: var(--color-info-light3);
-    padding: 10rem 0 7rem;
-    display: grid;
     place-items: center;
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
+    background-color: var(--color-info-light);
 }
-
 
 .home .container {
     position: relative;
-    display: grid;
-    margin: 0 auto;
-    gap: 4rem;
-    justify-content: center;
-    grid-template-columns: auto auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
 .home .hero-text {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    justify-content: center;
     position: relative;
-    align-content: center;
-    position: relative;
-    padding-top: 7rem;
+    width: 50%;
 }
 
+.home .hero-text .social-links {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.home .hero-text .social-links .iconify {
+    font-size: 2rem;
+    padding: 0.8rem;
+    transition: 0.5s ease;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.home .hero-text .social-links .iconify:hover {
+    border: 1px solid var(--color-primary);
+    background: none;
+}
+
+.home .hero-text .name {
+    background-color: var(--color-primary);
+    padding: 5px;
+    margin-top: 1rem;
+    border-radius: 30px;
+    width: 65%;
+    cursor: pointer;
+}
 
 .home .hero-text p {
     color: var(--color-black);
     font-size: 1rem;
+    margin-top: 1rem;
 }
 
 .home .hero-text h3 {
-    font-size: 1.8rem;
-    color: var(--color-black);
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: center;
+    color: var(--color-h3);
 }
 
 .home .hero-text h1 {
-    font-size: 2.8rem;
+    font-size: 4.5rem;
     color: var(--color-primary);
 }
 
@@ -216,7 +254,7 @@ nav .container .theme-toggler span.active {
 .home .hero-text .btn-primary button {
     padding: 1.2rem;
     background: var(--color-primary);
-    color: var(--color-light);
+    color: var(--color-h3);
     font-size: 0.8rem;
     transition: var(--transition);
     justify-content: center;
@@ -232,74 +270,20 @@ nav .container .theme-toggler span.active {
     border: 1px solid var(--color-primary);
 }
 
+.home .hero-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.home .hero-img img {
+    border-radius: 10px;
+}
 
 .home .profile-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    display: none;
 }
-
-.home .profile-area .outer-circle {
-    width: 28rem;
-    height: 28rem;
-    border: 1px solid var(--color-primary);
-    border-radius: 50%;
-    position: relative;
-    animation: move 30s linear infinite;
-}
-
-@keyframes move {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.home .profile-area .outer-circle .iconify {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    position: absolute;
-    background: var(--color-info-light);
-    color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    box-shadow: var(--box-shadow);
-}
-
-.home .profile-area .outer-circle .iconify:nth-child(1) {
-    left: calc(50% - 2rem);
-    top: -1rem;
-}
-
-.home .profile-area .outer-circle .iconify:nth-child(2) {
-    top: calc(50% - 2rem);
-    right: -1rem;
-}
-
-.home .profile-area .outer-circle .iconify:nth-child(3) {
-    top: calc(50% - 2rem);
-    left: -1rem;
-}
-
-.home .profile-area .outer-circle .iconify:nth-child(4) {
-    left: calc(50% - 2rem);
-    bottom: -1rem;
-}
-
-
-
-.home .profile-area .inner-circle {
-    position: absolute;
-    width: 23rem;
-    height: 23rem;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-
 
 /*================END OF HOME===============*/
 
@@ -382,7 +366,7 @@ section.about {
 
 section.about h2::before {
     content: '';
-    height: 3px;
+    height: 4px;
     background: var(--color-primary);
     width: 60px;
     position: absolute;
@@ -393,27 +377,14 @@ section.about h2::after {
     content: '';
     position: absolute;
     background: var(--color-primary);
-    height: 3px;
+    height: 4px;
     width: 5px;
     margin-top: 3.8rem;
-    margin-left: -13rem;
-}
-
-
-section.about .container {
-    width: 80%;
+    margin-left: -11.5rem;
 }
 
 section.about .me {
     margin: 0 auto;
-    margin-top: -3rem;
-}
-
-section.about .me h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    color: var(--color-black)
 }
 
 section.about .me .intro-text {
@@ -475,7 +446,7 @@ section.about .me .intro-text .intro-text-left .content .download {
 section.about .me .intro-text .intro-text-left .content .download button {
     padding: 1.2rem;
     background: var(--color-primary);
-    color: var(--color-light);
+    color: var(--color-h3);
     font-size: 1rem;
     transition: var(--transition);
     border: 1px solid var(--color-primary);
@@ -488,32 +459,25 @@ section.about .me .intro-text .intro-text-left .content .download button:hover {
 }
 
 /*=====SKILLS SECTION======*/
-section.skills h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: var(--color-black);
-}
 
 section.skills h2::before {
     content: '';
-    height: 3px;
+    height: 4px;
     background: var(--color-primary);
     width: 60px;
     position: absolute;
     margin-top: 3.8rem;
 }
 
-section.skills h2::after {
+section h2::after {
     content: '';
     position: absolute;
     background: var(--color-primary);
-    height: 3px;
+    height: 4px;
     width: 5px;
     margin-top: 3.8rem;
     margin-left: -6.5rem;
 }
-
 section.skills h5 {
     color: var(--color-black);
 }
@@ -523,7 +487,6 @@ section.skills {
 }
 section.skills .container {
     width: 50%;
-    margin: 2rem auto;
 }
 
 section.skills .skill {
@@ -749,13 +712,10 @@ section.skills .item .progress-bar .progress8 {
 }
 
 /*======services=======*/
-section.services {
-    background: var(--color-info-light3);
-}
 
 section.services h2::before {
     content: '';
-    height: 3px;
+    height: 4px;
     background: var(--color-primary);
     width: 60px;
     position: absolute;
@@ -766,21 +726,16 @@ section.services h2::after {
     content: '';
     position: absolute;
     background: var(--color-primary);
-    height: 3px;
+    height: 4px;
     width: 5px;
     margin-top: 3.8rem;
-    margin-left: -11.3rem;
+    margin-left: -11rem;
 }
-
+section.services {
+    background: var(--color-info-light3);
+}
 
 section.services p, h4 {
-    color: var(--color-black);
-}
-
-section.services h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 2rem;
     color: var(--color-black);
 }
 
@@ -802,15 +757,14 @@ section.services .service .service-top .card {
     background: var(--color-info-light);
     width: 35%;
     position: relative;
-    box-shadow: inset 0 0 0 0 transparent;
-    transition: ease-out 0.5s;
+    transition: ease 0.5s;
     border-radius: 1rem;
 }
 
 section.services .service .service-top .card:hover {
-    cursor: pointer;
-    box-shadow: inset 700px 0 0 0 var(--color-primary);
+    background-color: var(--color-primary);
 }
+
 section.services .service .service-top .card:hover p
 {
     color: var(--color-h3);
@@ -828,8 +782,8 @@ section.services .service .service-top .card:hover .iconify {
 section.services .service .service-top .card .iconify {
     background: var(--color-primary);
     border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     color: var(--color-light);
     display: flex;
     margin: 2rem auto;
@@ -873,14 +827,12 @@ section.services .service .service-bottom .card {
     background: var(--color-info-light);
     width: 35%;
     position: relative;
-    box-shadow: inset 0 0 0 0 transparent;
-    transition: ease-out 0.5s;
+    transition: ease 0.5s;
     border-radius: 1rem;
 }
 
 section.services .service .service-bottom .card:hover {
-    cursor: pointer;
-    box-shadow: inset 0 800px 0 0 var(--color-primary);
+    background: var(--color-primary);
 }
 section.services .service .service-bottom .card:hover p
 {
@@ -899,9 +851,9 @@ section.services .service .service-bottom .card:nth-child(1):hover .iconify {
 section.services .service .service-bottom .card:nth-child(1) .iconify {
     background: var(--color-primary);
     border-radius: 50%;
-    width: 2.5rem;
+    width: 3rem;
     position: relative;
-    height: 2.5rem;
+    height: 3rem;
     color: var(--color-light);
     display: flex;
     margin: 2rem auto;
@@ -956,7 +908,7 @@ section.services .service .lets-talk{
 section.services .service .lets-talk button {
     padding: 1.2rem;
     background: var(--color-primary);
-    color: var(--color-light);
+    color: var(--color-h3);
     font-size: 1rem;
     transition: var(--transition);
     border: none;
@@ -969,11 +921,87 @@ section.services .service .lets-talk button:hover {
     border: 1px solid var(--color-primary);
 }
 
+
+/*==============TESTIMONIALS===========*/
+
+section.testimonials h2::before {
+    content: '';
+    height: 4px;
+    background: var(--color-primary);
+    width: 60px;
+    position: absolute;
+    margin-top: 3.8rem;
+}
+
+section.testimonials h2::after {
+    content: '';
+    position: absolute;
+    background: var(--color-primary);
+    height: 4px;
+    width: 5px;
+    margin-top: 3.8rem;
+    margin-left: -18.5rem;
+}
+section.testimonials {
+    background-color: var(--color-info-light3);
+}
+
+section.testimonials .container {
+    width: 44rem;
+    overflow: hidden;
+}
+
+section.testimonials .carousel {
+    display: flex;
+    align-items: center;
+}
+
+section.testimonials .testimonial {
+    background-color: var(--color-info-light);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--color-primary);
+}
+
+section.testimonials .testimonial .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section.testimonials .testimonial .head .quote {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+section.testimonials .testimonial .head .quote .iconify {
+    font-size: 2.5rem;
+}
+
+section.testimonials .testimonial .head .head-profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+section.testimonials .testimonial .head .head-profile .avatar {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
 /*=============CONTACT ME SECTION===============*/
 
 section.contact h2::before {
     content: '';
-    height: 3px;
+    height: 4px;
     background: var(--color-primary);
     width: 60px;
     position: absolute;
@@ -984,26 +1012,18 @@ section.contact h2::after {
     content: '';
     position: absolute;
     background: var(--color-primary);
-    height: 3px;
+    height: 4px;
     width: 5px;
     margin-top: 3.8rem;
-    margin-left: -13rem;
+    margin-left: -12.5rem;
 }
 
-                                                                      
 section.contact {
     width: 100%;
     background-image: url(./img/contact-me.jpg);
     background-size: cover;
     background-repeat: none;
     background-position: center;
-}
-
-section.contact .contact-us h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: var(--color-primary);
 }
 
 section.contact .contact-us form {
@@ -1017,6 +1037,10 @@ section.contact .contact-us form {
 section.contact .contact-us form p {
     color: var(--color-h3);
     line-height: 2;
+}
+
+section.contact .contact-us form input[type=text]::placeholder,  input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder{
+    color: var(--color-h3);
 }
 
 section.contact .contact-us form input[type=text],
@@ -1219,28 +1243,26 @@ footer .footer-section .rigts-reserved {
 /*==============================*/
 @media (max-width: 1200px) {
     .home .hero-text h1 {
-        font-size: 2rem;
+        font-size: 3.8rem;
     }
 
     .home .hero-text {
-        margin-top: -1rem;
+        padding-top: 5rem;
     }
 
-    .home .profile-area .outer-circle {
-        height: 28rem;
-        width: 28rem;
+    .home .hero-img {
+        padding-top: 5rem;
     }
 
-    .home .profile-area .inner-circle {
-        height: 20rem;
-        width: 20rem;
+    .home .hero-text .name {
+        width: 80%;
     }
-
     /*========BANNER=====*/
 
     section.banner .container .content-left .quick-message {
         padding-bottom: 1rem;
     }
+
     /*===ABOUT SECTION====*/
     section.about .container .me h2 {
         font-size: 2rem;
@@ -1283,20 +1305,6 @@ footer .footer-section .rigts-reserved {
 
     h2 {
         font-size: 2rem;
-    }
-    
-
-    /*====Hero section=====*/
-    .home .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .home .hero-text h3 {
-        font-size: 1rem;
-    }
-
-    .home .hero-text p {
-        font-size: 15px;
     }
 
     /*===ABOUT====*/
@@ -1517,43 +1525,18 @@ footer .footer-section .rigts-reserved {
         font-size: 13px;
     }
 
-    .home .container .hero-text {
-        margin-top: -4rem;
-        margin-left: -1rem;
-    }
-    
-    .home .container .hero-text h1 {
-        font-size: 45px;
+    .home .hero-text .name {
+        width: 70%;
     }
 
     .home .container .hero-text .btn-primary button {
         font-size: 12px;
     }
     
-    .home .container .hero-text h3 {
-        font-size: 25px;
-        
-    }
-
-    .home .container .profile-area {
-        margin-right: -1rem;
-    }
-
-    .home .container .profile-area .outer-circle {
-        width: 21rem;
-        height: 21rem;
-    }
-
-    .home .container .profile-area .inner-circle {
-        width: 17rem;
-        height: 17rem;
-    }
-
-    
     nav {
-        height: 5rem;
+        padding: 10px 0 10px;
         max-width: 100vw;
-        background: var(--color-info-dark);
+        box-shadow: none;
     }
 
     nav .container h2 {
@@ -1563,72 +1546,33 @@ footer .footer-section .rigts-reserved {
     nav .container #nav-links .theme-toggler {
         display: none;
     }
-
-    nav .container #theme.active {
-        border: none;
-        background: #222;
-    }
     
     nav .container #theme {
         position: absolute;
-        overflow: hidden;
         display: block;
-        width: 60px;
+        width: 50px;
         right: 6rem;
-        height: 30px;
-        border-radius: 20px;
         cursor: pointer;
-        border: 1px solid var(--color-homeborder);
         transition: var(--transition);
-    }
-
-    nav .container #theme .indicator {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 30px;
-        height: 30px;
-        align-content: center;
-        overflow-x: hidden;
-        height: 30px;
-        border-radius: 20px;
-        background: var(--color-info-light2);
-        transform: scale(0.9);
-        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0, -4px, 4px, rgba(255, 255, 255, 0.2), inset 0, -4px 4px rgba(255, 255, 255, 0.2);
-        transition: var(--transition);
-    }
-
-    nav .container #theme.active .indicator {
-        left: 30px;
-        background: linear-gradient(to bottom, #444, #222);
-        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0, -4px, 4px, rgba(255, 255, 255, 0.2), inset 0, -4px 4px rgba(255, 255, 255, 0.2);
     }
 
     nav .container #nav-links.active {
-        top: 5rem;
         transition: var(--transition);
-    }
-
-    body.active {
-        --color-light: #1b1f22;
-        --color-light2: #1b1f22;
-        --color-info-light4: #1b1f22;
-        --color-info-light: #181a1e;
-        --color-info-light3: #202528;
-        --color-black: #ffff;
-        --background-color: #24282e;
-        --color-white: #1c1f24;
-        --color-homeborder: rgb(32, 29, 29);
+        left: 0;
     }
     
     nav .container #nav-links {
         position: absolute;
+        display: flex;
+        top: 70px;
+        width: 150px;
+        left: -150px;
+        row-gap: 2px;
+        flex-direction: column;
         background: var(--color-info-dark);
-        top: -5rem;
-        width: 100%;
-        align-items: center;
+        align-self: center;
         justify-content: center;
-        box-shadow: 0 1rem 2rem var(--color-boxshadow);
+        transition: 0.5s ease;
     }
     
     /*for javascript toggle*/
@@ -1638,17 +1582,24 @@ footer .footer-section .rigts-reserved {
 
 
     nav .container #nav-links a {
-        padding: 0.5rem;
+        display: flex;
         width: 100%;
-        height: 5rem;
+        margin-right: 0;
+        align-content: center;
         justify-content: center;
         color: var(--color-h3);
-        font-size: 15px;
+        font-size: 18px;
+        transition: 0.5s ease;
+    }
+
+    nav .container #nav-links a:hover {
+        padding-left: 2rem;
     }
 
     nav .container #toggle {
         padding: 1.5rem;
-        background:  var(--color-primary);
+        border: 1px solid var(--color-primary);
+        border-radius: 10px;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -1661,7 +1612,7 @@ footer .footer-section .rigts-reserved {
         position: absolute;
         width: 28px;
         height: 2px;
-        background: var(--color-light);
+        background: var(--color-primary);
         transform: translateY(-5px);
         transition: 0.2s;
     }
@@ -1671,7 +1622,7 @@ footer .footer-section .rigts-reserved {
         position: absolute;
         width: 28px;
         height: 2px;
-        background: var(--color-light);
+        background: var(--color-primary);
         transform: translateY(5px);
         transition: 0.2s;
     }
@@ -1708,22 +1659,8 @@ footer .footer-section .rigts-reserved {
 @media screen and (max-width: 614px) {
 
     nav .container #theme {
-        transform: scale(0.8);
-        height: 25px;
+        transform: scale(0.6);
     }
-
-    nav .container #theme .indicator {
-        height: 25px;
-        width: 25px;
-        align-items: center;
-        align-content: center;
-        align-self: center;
-    }
-
-    nav .container #theme.active .indicator {
-        left: 34px;
-    }
-
 
     nav .container #nav-links a {
         font-size: 13px;
@@ -1732,12 +1669,8 @@ footer .footer-section .rigts-reserved {
         right: -15px;
     }
 
-    .home .container .hero-text {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
+    .home .container .hero-img {
+        display: none;
     }
 
 
@@ -1746,22 +1679,46 @@ footer .footer-section .rigts-reserved {
         grid-template-columns: 1fr;
         grid-template-rows: 30% 30%;
         place-items: center;
-        gap: 4rem;
+        gap: 7rem;
     }
 
     .home .container .profile-area {
         grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-top: 12rem;
     }
 
     
     .home .container .profile-area .outer-circle {
         width: 16rem;
         height: 16rem;
+        border: 1px solid var(--color-primary);
+        border-radius: 50%;
+        position: relative;
+        animation: move 30s linear infinite;
+    }
+
+    @keyframes move {
+        to {
+            transform: rotate(360deg);
+        }
     }
     
     .home .container .profile-area .outer-circle .iconify {
         width: 1.5rem;
         height: 1.5rem;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        background: var(--color-info-light);
+        color: var(--color-primary);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        box-shadow: var(--box-shadow);
     }
     
     .home .container .profile-area .outer-circle .iconify:nth-child(1) {
@@ -1787,18 +1744,23 @@ footer .footer-section .rigts-reserved {
     .home .container .profile-area .inner-circle {
         width: 12rem;
         height: 12rem;
+        position: absolute;
+        border-radius: 50%;
+        overflow: hidden;
     }
     
-
-    .home .container .hero-text p {
-        color: var(--color-black);
+    .home .hero-text {
+        width: 100%;
     }
 
-    .home .container .hero-text h3 {
-        color: var(--color-black);
-        line-height: 2;
+    .home .hero-text h1 {
+        text-align: center;
     }
-    
+
+    .home .hero-text .name {
+        width: 100%;
+    }
+
     .home .container .hero-text .btn-primary {
         display: flex;
         justify-content: center;
@@ -2053,30 +2015,26 @@ footer .footer-section .rigts-reserved {
 @media (max-width: 950.98px) and (min-width: 614px) {
 
     .home .container .hero-text p {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .home .container .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .home .container .hero-text {
-        margin-left: -3rem;
+        font-size: 3rem;
+        margin-top: 2rem;
     }
     
     .home .container .hero-text h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
-
-    .home .container .profile-area .outer-circle {
-        width: 15rem;
-        height: 15rem;
+    
+    .home .container .hero-text {
+        padding: 5rem 0 5rem;
     }
 
-    .home .container .profile-area .inner-circle {
-        width: 12rem;
-        height: 12rem;
+    
+    .home .container .hero-text .name {
+        width: 100%;
     }
 
     .home .container .hero-text .btn-primary button {
@@ -2280,24 +2238,28 @@ footer .footer-section .rigts-reserved {
 /**************************300px********************************/
 /***************************************************************/
 /***************************************************************/
-
 @media (max-width: 300px) {
     .home .container .hero-text h1 {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
-
+    
     .home .container .hero-text h3 {
         font-size: 1rem;
     }
-
+    
+    .home .container .hero-text p {
+        font-size: 15px;
+    }
+    
     .home .hero-text .btn-primary button {
         width: 7rem;
-        padding: 0.8rem;
+        padding: 1rem;
     }
 
-    .home {
+    .home .container {
         margin-bottom: -5rem;
     }
+    
 }
 
 /***************************************************************/
@@ -2308,11 +2270,15 @@ footer .footer-section .rigts-reserved {
 
 @media (max-width: 500px) and (min-width: 300px) {
     .home .container .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .home .container .hero-text h3 {
         font-size: 1.2rem;
+    }
+
+    .home .container .hero-text p {
+        font-size: 15px;
     }
 
     .home .hero-text .btn-primary button {

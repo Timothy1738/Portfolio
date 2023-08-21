@@ -29,6 +29,24 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', changeActiveLink);
 });
 
+//change nav-bar behavior on scroll
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('nav');
+    const scrollOffset = 50; // Adjust this value to control when the color change occurs
+  
+    function handleScroll() {
+      if (window.scrollY > scrollOffset) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+  
+    // Listen for scroll events and call the handleScroll function
+    window.addEventListener('scroll', handleScroll);
+  });
+  
+
 const scrollToTopButton = document.querySelector('.scroll-to-top');
 // Add click event listener to scroll-to-top button
 scrollToTopButton.addEventListener('click', function() {
@@ -71,13 +89,17 @@ themeToggler.addEventListener('click', () => {
 })
 
 //media screen theme toggler
-const body = document.querySelector('body');
-const theme = document.getElementById('theme');
-theme.onclick = function() {
-    theme.classList.toggle('active');
-    body.classList.toggle('active');
-}
+var icon = document.getElementById("icon");
 
+icon.onclick = function() {
+    document.body.classList.toggle("dark-theme-variables");
+    if(document.body.classList.contains("dark-theme-variables")){
+        icon.src="./img/dark theme icon/sun.png"
+    } 
+    else {
+        icon.src="./img/dark theme icon/moon.png"
+    }
+}
 
 //show/hide skills items
 const skillItems = document.querySelectorAll('section.skills .skill');
@@ -90,19 +112,6 @@ skillItems.forEach(skill => {
     })
 })
 
-
-//Form action
-function removePlaceholder(element) {
-    if (element.value === element.defaultValue) {
-      element.value = '';
-    }
-}
-
-function restorePlaceholder(element) {
-    if (element.value === '') {
-      element.value = element.defaultValue;
-    }
-  }
 
 //read more about
 const readMoreBtn = document.querySelector('.read-more');
@@ -117,3 +126,12 @@ readMoreBtn.addEventListener('click', () => {
         readMoreBtn.textContent = "Show More";
     }
 })
+
+
+//SWIPER JS
+var swiper = new Swiper(".mySwiper", {
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+    },
+  });
