@@ -1701,6 +1701,11 @@ section.partners .bbm-card .banner-footer h4 {
     }
 
     /*=====PARTNERS BANNER=====*/
+
+    section.partners h2 {
+        font-size: 2rem;
+    }
+
     section.partners .bbm-card .head h3 {
         font-size: 1.5rem;
         text-align: center;
@@ -2130,7 +2135,60 @@ section.partners .bbm-card .banner-footer h4 {
         width: 90%;
     }
 
-    /*FOOTER*/
+    /*=================BBM BANNER=====================*/
+    section.partners .bbm-card .head h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section.partners .bbm-card .banner-sec {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    section.partners .bbm-card .banner-sec h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    section.partners .bbm-card .banner-sec .img {
+        width: 100%;
+    }
+
+    section.partners .bbm-card .banner-sec .img img {
+        transform: scale(0.7);
+    }
+
+    section.partners .bbm-card .service-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    section.partners .bbm-card .service-cards .bbm-cards {
+        margin: 1rem auto;
+    }
+
+    section.partners .bbm-card .address-book {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    section.partners .bbm-card .address-book .contact-address, .social-media {
+        margin: 0 auto;
+    }
+
+    section.partners .bbm-card .line {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    section.partners .bbm-card .banner-footer {
+        font-size: 1.5rem;
+    }
+
+    /*===================FOOTER======================*/
     footer {
         width: 100%;
         margin: 0 auto;
