@@ -16,9 +16,11 @@
     --color-homeborder: rgb(218, 207, 207);
     --color-boxshadow: hsla(0, 0%, 0%, 0.12);
     --color-info-dark: #2f3f3c;
+    --color-text-muted: #6c757d;
     --transition: all 300ms ease;
     --box-shadow: 0 1rem 3rem rgba(51, 52, 56, 0.18);
     --color-black: #141415;
+    --bbm-primary: #FFAA17;
 }
 
 .dark-theme-variables {
@@ -1156,6 +1158,152 @@ footer .footer-section .rigts-reserved {
     text-align: center;
 }
 
+/*===============PARTNERSHIP BANNER===============*/
+
+section.partners {
+    background-color: var(--color-info-light);
+}
+
+section.partners .bbm-card {
+    width: 100%;
+    background-color: #F4F5F8;
+}
+
+section.partners .bbm-card .head {
+    padding: 1rem 1rem 1rem;
+}
+
+section.partners .bbm-card .head h3 {
+    font-size: 2.5rem;
+    color: var(--bbm-primary);
+}
+
+section.partners .bbm-card .banner-sec {
+    background-color: var(--bbm-primary);
+    display: flex;
+    padding: 2rem 2rem 0;
+    align-items: center;
+}
+
+section.partners .bbm-card .banner-sec h3 {
+    font-size: 4rem;
+    line-height: 1.5;
+    width: 50%;
+}
+
+section.partners .bbm-card .banner-sec .img {
+    width: 50%;
+}
+
+section.partners .bbm-card .banner-sec .img img {
+    transform: scale(0.8);
+}
+
+section.partners .bbm-card .service-cards {
+    padding: 2rem 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.partners .bbm-card h5 {
+    font-size: 2rem;
+    color: var(--bbm-primary);
+    padding: 2rem 2rem 0;
+    text-align: center;
+}
+
+section.partners .bbm-card .service-cards .bbm-cards {
+    background: #fff;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+section.partners .bbm-card .service-cards .bbm-cards .iconify {
+    padding: 1rem;
+    font-size: 2.5rem;
+    color: var(--bbm-primary);
+    border-radius: 50%;
+    border: 2px solid var(--bbm-primary);
+}
+
+section.partners .bbm-card .service-cards .bbm-cards:hover {
+    background-color: #343a40;
+    transform: translateY(-5px);
+}
+
+section.partners .bbm-card .service-cards .bbm-cards:hover h3 {
+    color: var(--color-h3);
+}
+
+section.partners .bbm-card .service-cards .bbm-cards h3 {
+    color: var(--color-text-muted);
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+section.partners .bbm-card .address-book {
+    display: flex;
+    padding: 2rem 0 2rem;
+    justify-content: center;
+    align-content: center;
+    gap: 5rem;
+}
+
+section.partners .bbm-card .address-book .contact-address h4, .social-media h4{
+    font-size: 1.1rem;
+    color: var(--bbm-primary);
+}
+
+section.partners .bbm-card .address-book .contact-address .find-us {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.partners .bbm-card .address-book .contact-address .find-us .iconify {
+    color: var(--bbm-primary);
+    font-size: 20px;
+}
+
+section.partners .bbm-card .address-book .social-media .follow-us {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.partners .bbm-card .address-book .social-media .follow-us .iconify {
+    color: var(--bbm-primary);
+    font-size: 20px;
+}
+
+section.partners .bbm-card .address-book .contact-address, .social-media {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+section.partners .bbm-card .address-book .line {
+    border: 1px solid var(--bbm-primary);
+}
+
+section.partners .bbm-card .banner-footer {
+    background-color: var(--bbm-primary);
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 1rem 1rem;
+}
+
+section.partners .bbm-card .banner-footer h4 {
+    color: #000;
+}
 
 
 
@@ -1550,6 +1698,59 @@ footer .footer-section .rigts-reserved {
         display: flex;
         align-content: center;
         justify-content: center;
+    }
+
+    /*=====PARTNERS BANNER=====*/
+    section.partners .bbm-card .head h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    section.partners .bbm-card .banner-sec {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    section.partners .bbm-card .banner-sec h3 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    section.partners .bbm-card .banner-sec .img {
+        width: 100%;
+    }
+
+    section.partners .bbm-card .banner-sec .img img {
+        transform: scale(0.7);
+    }
+
+    section.partners .bbm-card .service-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    section.partners .bbm-card .service-cards .bbm-cards {
+        margin: 1rem auto;
+    }
+
+    section.partners .bbm-card .address-book {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    section.partners .bbm-card .address-book .contact-address, .social-media {
+        margin: 0 auto;
+    }
+
+    section.partners .bbm-card .line {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    section.partners .bbm-card .banner-footer {
+        font-size: 1.5rem;
     }
 
     /*footer*/
