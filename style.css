@@ -298,6 +298,26 @@ nav .container .theme-toggler span.active {
 /*================END OF HOME===============*/
 
 
+/*==========JS SCROLL REVEAL=========*/
+.slide-right {
+    transform: translateX(-10%);
+    transition: all 1s;
+}
+
+.slide-right.show {
+    transform: translateX(0);
+}
+
+.slide-left {
+    transform: translateX(10%);
+    transition: all 1s;
+}
+
+.slide-left.show {
+    transform: translateX(0);
+}
+
+
 /*=======BANNER=====*/
 section.banner {
     background: var(--color-info-light3);

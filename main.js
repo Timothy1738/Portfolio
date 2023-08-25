@@ -128,10 +128,22 @@ readMoreBtn.addEventListener('click', () => {
 })
 
 
-//SWIPER JS
-var swiper = new Swiper(".mySwiper", {
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      hide: true,
-    },
-  });
+//SCROLL ANIMATIONS
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+        else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const slideRight = document.querySelectorAll('.slide-right');
+slideRight.forEach((el) => observer.observe(el));
+
+const sideLeft = document.querySelectorAll('.slide-left');
+sideLeft.forEach((el) => observer.observe(el));
+
