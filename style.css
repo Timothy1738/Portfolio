@@ -4,14 +4,15 @@
 :root {
     --color-primary: #7380ec;
     --color-light: #FCFCFC;
-    --color-light2: hsl(250, 60%, 99%);;
+    --color-light2: hsl(250, 60%, 99%);
+    ;
     --color-white: #FFFF;
     --color-h3: #ffffff;
     --body-color: hsl(250, 60%, 99%);
     --color-hero-background: #edf2fc;
     --color-info-light: #e6ebf5;
     --color-info-light2: #bfceeb;
-    --color-info-light3:  #f5f7fa;
+    --color-info-light3: #f5f7fa;
     --color-info-light4: #eaf0f8;
     --color-homeborder: rgb(218, 207, 207);
     --color-boxshadow: hsla(0, 0%, 0%, 0.12);
@@ -88,16 +89,18 @@ nav {
     z-index: 2;
     transition: background-color 0.5s ease;
     border-bottom: 1px solid var(--color-homeborder);
+    background: transparent;
 }
 
 nav.scrolled {
-    background-color: var(--color-info-dark);
+    background-color: #ffffff;
     transition: 0.5s ease;
     border: none;
+    box-shadow: 0px 10px 1rem rgba(51, 52, 56, 0.18);
 }
 
 nav.scrolled .container #nav-links a {
-    color: var(--color-h3);
+    color: #000;
 }
 
 nav .container {
@@ -125,20 +128,29 @@ nav .container #nav-links a {
     transition: var(--transition);
     position: relative;
     display: flex;
+    margin-left: 45px;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 7rem;
 }
 
-nav .container #nav-links a:hover {
+nav .container #nav-links a::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    border-radius: 3rem;
+    position: absolute;
     background-color: var(--color-primary);
-    color: var(--color-h3);
+    top: 50px;
+    transition: var(--transition);
 }
 
-nav .container #nav-links a.active {
-    background: var(--color-primary);
-    color: var(--color-h3);
+nav .container #nav-links a:hover::before {
+    width: 100%;
+}
+
+nav .container #nav-links a.active::before {
+    width: 100%;
 }
 
 nav .container #toggle {
@@ -146,35 +158,11 @@ nav .container #toggle {
 }
 
 nav .container #theme {
-    display: none;
-}
-
-nav .container #nav-links .theme-toggler {
-    background: var(--color-info-light3);
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    align-items: center;
-    height: 1.2rem;
-    width: 4rem;
+    display: block;
+    width: 40px;
+    right: 6rem;
     cursor: pointer;
-    border-radius: 5px;
-    position: relative;
-    margin-left: 1rem;
-}
-nav .container .theme-toggler span {
-    font-size: 1.2rem;
-    position: relative;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-nav .container .theme-toggler span.active {
-    background: var(--color-primary);
-    color: white;
-    border-radius: 5px;
+    transition: var(--transition);
 }
 
 /*====HERO SECTION====*/
@@ -212,20 +200,15 @@ nav .container .theme-toggler span.active {
     padding: 0.8rem;
     transition: 0.5s ease;
     border-radius: 50%;
-    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
-.home .hero-text .social-links .iconify:nth-child(1) {
-    color: var(--color-h3);
-}
-
-.home .hero-text .social-links .iconify:nth-child(1):hover {
-    color: #000;
+.home .hero-text .social-links a {
+    color: var(--color-black);
 }
 
 .home .hero-text .social-links .iconify:hover {
-    border: 1px solid var(--color-primary);
-    background: none;
+    transform: scale(1.1);
 }
 
 .home .hero-text .name {
@@ -251,7 +234,7 @@ nav .container .theme-toggler span.active {
 }
 
 .home .hero-text h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: var(--color-primary);
 }
 
@@ -404,7 +387,7 @@ section.about .me .intro-text {
     gap: 2rem;
 }
 
-section.about .me .intro-text .intro-text-right  {
+section.about .me .intro-text .intro-text-right {
     width: 50%;
     overflow: hidden;
     position: relative;
@@ -478,6 +461,7 @@ section.skills h5 {
 section.skills {
     background: var(--color-info-light3);
 }
+
 section.skills .container {
     width: 50%;
 }
@@ -519,16 +503,17 @@ section.skills .skill .head .left {
     gap: 1rem;
 }
 
-/*for sake of js*/  
+/*for sake of js*/
 section.skills .skill .items {
     display: none;
     transition: var(--transition);
-  }  
+}
 
 section.skills .container .skill .items.show-items {
     display: block;
     transition: 0.5s;
 }
+
 /* end of for js sake*/
 
 section.skills .skill .item {
@@ -572,6 +557,7 @@ section.skills .item .progress-bar .progress {
     0% {
         width: 0%;
     }
+
     100% {
         width: 80%;
     }
@@ -588,6 +574,7 @@ section.skills .item .progress-bar .progress1 {
     0% {
         width: 0%;
     }
+
     100% {
         width: 95%;
     }
@@ -604,6 +591,7 @@ section.skills .item .progress-bar .progress2 {
     0% {
         width: 0%;
     }
+
     100% {
         width: 70%;
     }
@@ -620,6 +608,7 @@ section.skills .item .progress-bar .progress3 {
     0% {
         width: 0%;
     }
+
     100% {
         width: 60%;
     }
@@ -637,10 +626,12 @@ section.skills .item .progress-bar .progress4 {
     0% {
         width: 0%;
     }
+
     100% {
         width: 50%;
     }
 }
+
 section.skills .item .progress-bar .progress5 {
     height: 100%;
     width: 35%;
@@ -652,10 +643,12 @@ section.skills .item .progress-bar .progress5 {
     0% {
         width: 0%;
     }
+
     100% {
         width: 35%;
     }
 }
+
 section.skills .item .progress-bar .progress6 {
     height: 100%;
     width: 85%;
@@ -667,6 +660,7 @@ section.skills .item .progress-bar .progress6 {
     0% {
         width: 0%;
     }
+
     100% {
         width: 85%;
     }
@@ -683,6 +677,7 @@ section.skills .item .progress-bar .progress7 {
     0% {
         width: 0%;
     }
+
     100% {
         width: 80%;
     }
@@ -699,6 +694,7 @@ section.skills .item .progress-bar .progress8 {
     0% {
         width: 0%;
     }
+
     100% {
         width: 95%;
     }
@@ -710,7 +706,8 @@ section.services {
     background: var(--color-info-light3);
 }
 
-section.services p, h4 {
+section.services p,
+h4 {
     color: var(--color-black);
 }
 
@@ -719,6 +716,7 @@ section.services .service {
     flex-direction: column;
 }
 
+/*top*/
 section.services .service .service-top {
     display: flex;
     gap: 2rem;
@@ -728,67 +726,7 @@ section.services .service .service-top {
     position: relative;
 }
 
-section.services .service .service-top .card {
-    background: var(--color-info-light);
-    width: 35%;
-    position: relative;
-    transition: ease 0.5s;
-    border-radius: 1rem;
-}
-
-section.services .service .service-top .card:hover {
-    background-color: var(--color-primary);
-}
-
-section.services .service .service-top .card:hover p
-{
-    color: var(--color-h3);
-}
-
-section.services .service .service-top .card:hover h4 {
-    color: var(--color-h3);
-}
-
-section.services .service .service-top .card:hover .iconify {
-    background: var(--color-h3);
-    color: var(--color-primary);
-}
-
-section.services .service .service-top .card .iconify {
-    background: var(--color-primary);
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    color: var(--color-light);
-    display: flex;
-    margin: 2rem auto;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-
-}
-
-section.services .service .service-top .card p {
-    margin: 0 1rem 2rem 1rem;
-    position: relative;
-    transition: var(--transition);
-}
-
-section.services .service .service-top .card h4 {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    text-align: center;
-    position: relative;
-    transition: var(--transition);
-}
-
-section.services .service .service-top .card:nth-child(3) h4 {
-    margin: 0 5px 0 5px;
-}
-
-
 /*cards-bottom*/
-
 section.services .service .service-bottom {
     display: flex;
     gap: 2rem;
@@ -798,75 +736,29 @@ section.services .service .service-bottom {
     position: relative;
 }
 
-section.services .service .service-bottom .card {
+/*cards*/
+section.services .service .service-bottom .card,
+.service-top .card {
     background: var(--color-info-light);
     width: 35%;
     position: relative;
     transition: ease 0.5s;
-    border-radius: 1rem;
-}
-
-section.services .service .service-bottom .card:hover {
-    background: var(--color-primary);
-}
-section.services .service .service-bottom .card:hover p
-{
-    color: var(--color-h3);
-}
-
-section.services .service .service-bottom .card:hover h4 {
-    color: var(--color-h3);
-}
-
-section.services .service .service-bottom .card:nth-child(1):hover .iconify {
-    background: var(--color-h3);
-    color: var(--color-primary);
-}
-
-section.services .service .service-bottom .card:nth-child(1) .iconify {
-    background: var(--color-primary);
-    border-radius: 50%;
-    width: 3rem;
-    position: relative;
-    height: 3rem;
-    color: var(--color-light);
+    padding: 1rem;
     display: flex;
-    margin: 2rem auto;
-    transition: var(--transition);
-    justify-content: center;
-    text-align: center;
-
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 10px 25px rgba(51, 52, 56, 0.5);
 }
 
-section.services .service .service-bottom .card:nth-child(2) .iconify {
-    background: var(--color-primary);
-    border-radius: 50%;
-    width: 2.5rem;
-    position: relative;
-    height: 2.5rem;
-    color: var(--color-light);
-    display: flex;
-    margin: 2rem auto;
-    transition: var(--transition);
-    justify-content: center;
-    text-align: center;
-
-}
-
-section.services .service .service-bottom .card:nth-child(2):hover .iconify {
-    background: var(--color-h3);
-    color: var(--color-primary);
+section.services .service .service-bottom .card:hover,
+.service-top .card:hover {
+    background: #343a40;
+    box-shadow: none;
 }
 
 
-
-section.services .service .service-bottom .card p {
-    margin: 0 1rem 2rem 1rem;
-    position: relative;
-    transition: var(--transition);
-}
-
-section.services .service .service-bottom .card h4 {
+section.services .service .service-bottom .card h4,
+.service-top .card h4 {
     margin-bottom: 2rem;
     transition: var(--transition);
     text-align: center;
@@ -874,7 +766,44 @@ section.services .service .service-bottom .card h4 {
     font-size: 1.5rem;
 }
 
-section.services .service .lets-talk{
+section.services .service .service-bottom .card:hover h4,
+.service-top .card:hover h4 {
+    color: var(--color-h3);
+}
+
+section.services .service .service-bottom .card p,
+.service-top .card p {
+    margin: 0 auto;
+    position: relative;
+    transition: var(--transition);
+}
+
+section.services .service .service-bottom .card:hover p,
+.service-top .card:hover p {
+    color: var(--color-h3);
+}
+
+/*cards-iconify*/
+section.services .service .service-bottom .card .iconify,
+.service-top .card .iconify {
+    border: 2px solid var(--color-text-muted);
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 2.5rem;
+    position: relative;
+    color: var(--color-text-muted);
+    display: flex;
+    margin: 2rem auto;
+    transition: var(--transition);
+}
+
+section.services .service .service-bottom .card:hover .iconify,
+.service-top .card:hover .iconify {
+    color: var(--color-h3);
+    border: 2px solid var(--color-h3);
+}
+
+section.services .service .lets-talk {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
@@ -895,7 +824,6 @@ section.services .service .lets-talk button:hover {
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
 }
-
 
 /*==============TESTIMONIALS===========*/
 
@@ -920,6 +848,7 @@ section.testimonials .testimonial {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
     font-size: 0.9rem;
     margin-bottom: 2rem;
     border-left: 5px solid var(--color-primary);
@@ -927,6 +856,7 @@ section.testimonials .testimonial {
 
 section.testimonials .testimonial .head {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -979,7 +909,10 @@ section.contact .contact-us form p {
     line-height: 2;
 }
 
-section.contact .contact-us form input[type=text]::placeholder,  input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder{
+section.contact .contact-us form input[type=text]::placeholder,
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+textarea::placeholder {
     color: var(--color-h3);
 }
 
@@ -1277,7 +1210,8 @@ section.partners .bbm-card .address-book {
     gap: 5rem;
 }
 
-section.partners .bbm-card .address-book .contact-address h4, .social-media h4{
+section.partners .bbm-card .address-book .contact-address h4,
+.social-media h4 {
     font-size: 1.1rem;
     color: var(--bbm-primary);
 }
@@ -1304,7 +1238,8 @@ section.partners .bbm-card .address-book .social-media .follow-us .iconify {
     font-size: 20px;
 }
 
-section.partners .bbm-card .address-book .contact-address, .social-media {
+section.partners .bbm-card .address-book .contact-address,
+.social-media {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
@@ -1348,6 +1283,7 @@ section.partners .bbm-card .banner-footer h4 {
     .home .hero-text .name {
         width: 80%;
     }
+
     /*========BANNER=====*/
 
     section.banner .container .content-left .quick-message {
@@ -1372,6 +1308,7 @@ section.partners .bbm-card .banner-footer h4 {
     section.services .service .service-bottom {
         gap: 1rem;
     }
+
     section.services .service .service-top {
         gap: 1rem;
     }
@@ -1384,6 +1321,11 @@ section.partners .bbm-card .banner-footer h4 {
 /**************************************************/
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 600px) {
+
+    .scroll-to-top {
+        transform: scale(0.6);
+    }
+
     nav .container #theme {
         transform: scale(0.6);
     }
@@ -1414,7 +1356,7 @@ section.partners .bbm-card .banner-footer h4 {
         padding-top: 12rem;
     }
 
-    
+
     .home .container .profile-area .outer-circle {
         width: 16rem;
         height: 16rem;
@@ -1429,7 +1371,7 @@ section.partners .bbm-card .banner-footer h4 {
             transform: rotate(360deg);
         }
     }
-    
+
     .home .container .profile-area .outer-circle .iconify {
         width: 1.5rem;
         height: 1.5rem;
@@ -1443,27 +1385,27 @@ section.partners .bbm-card .banner-footer h4 {
         align-content: center;
         box-shadow: var(--box-shadow);
     }
-    
+
     .home .container .profile-area .outer-circle .iconify:nth-child(1) {
         left: calc(50% - 2rem);
         top: -0.5rem;
     }
-    
+
     .home .container .profile-area .outer-circle .iconify:nth-child(2) {
         top: calc(50% - 2rem);
         right: -0.5rem;
     }
-    
+
     .home .container .profile-area .outer-circle .iconify:nth-child(3) {
         top: calc(50% - 2rem);
         left: -0.5rem;
     }
-    
+
     .home .container .profile-area .outer-circle .iconify:nth-child(4) {
         left: calc(50% - 2rem);
         bottom: -0.5rem;
     }
-    
+
     .home .container .profile-area .inner-circle {
         width: 12rem;
         height: 12rem;
@@ -1471,7 +1413,7 @@ section.partners .bbm-card .banner-footer h4 {
         border-radius: 50%;
         overflow: hidden;
     }
-    
+
     .home .hero-text {
         width: 100%;
         display: flex;
@@ -1522,13 +1464,18 @@ section.partners .bbm-card .banner-footer h4 {
         width: 100%;
     }
 
-    section.banner .container .content-left p{
+    section.banner .container .content-left p {
         margin: 1rem 1rem 1rem 1rem;
     }
 
     section.banner .container .content-left .quick-message {
         display: flex;
         justify-content: center;
+    }
+
+    section.banner .container .content-left .quick-message button {
+        transform: scale(0.8);
+        font-size: 1.1rem;
     }
 
     /*ABOUT*/
@@ -1643,22 +1590,6 @@ section.partners .bbm-card .banner-footer h4 {
         flex-direction: column;
     }
 
-    section.services .service .service-top .card .iconify {
-        margin-top: 2rem auto;
-        width: 1.8rem;
-        height: 1.8rem;
-        display: flex;
-        position: relative;
-    }
-
-    section.services .service .service-bottom .card .iconify {
-        margin: 2rem auto;
-        position: relative;
-        display: flex;
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-
     section.services .service .service-top .card p {
         font-size: 15px;
     }
@@ -1677,15 +1608,34 @@ section.partners .bbm-card .banner-footer h4 {
         width: 94vw;
     }
 
+    section.testimonials .testimonial .head {
+        display: grid;
+        place-items: center;
+    }
+
+    section.testimonials .testimonial .head .quote {
+        display: none;
+    }
+
+    section.testimonials .testimonial .head .head-profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    section.testimonials .testimonial .head .head-profile .avatar-info {
+        width: 100%;
+        text-align: center;
+    }
+
     section.testimonials .testimonial .head .head-profile .avatar {
         width: 5rem;
         height: 5rem;
     }
 
-    section.testimonials .testimonial .head .quote .iconify {
-        font-size: 2rem;
-    }
-    
 
     /*=====CONTACT US SECTION====*/
 
@@ -1765,7 +1715,8 @@ section.partners .bbm-card .banner-footer h4 {
         justify-content: center;
     }
 
-    section.partners .bbm-card .address-book .contact-address, .social-media {
+    section.partners .bbm-card .address-book .contact-address,
+    .social-media {
         margin: 0 auto;
     }
 
@@ -1807,7 +1758,7 @@ section.partners .bbm-card .banner-footer h4 {
         justify-content: space-between;
         margin: 1rem auto;
         width: 100%;
-        padding: 1rem;  
+        padding: 1rem;
     }
 
     footer .footer-section .quick-links .nav-links a {
@@ -1821,12 +1772,13 @@ section.partners .bbm-card .banner-footer h4 {
         gap: 10px;
         padding: 1rem;
     }
+
     footer .footer-section .quick-links .icons .iconify {
         font-size: 1rem;
     }
 
 
-    footer .footer-section .address p{
+    footer .footer-section .address p {
         font-size: 12px;
     }
 
@@ -1877,7 +1829,7 @@ section.partners .bbm-card .banner-footer h4 {
     .home .container .hero-text .btn-primary button {
         font-size: 12px;
     }
-    
+
     nav {
         padding: 10px 0 10px;
         max-width: 100vw;
@@ -1888,16 +1840,9 @@ section.partners .bbm-card .banner-footer h4 {
         margin-left: 2rem;
     }
 
-    nav .container #nav-links .theme-toggler {
-        display: none;
-    }
-    
     nav .container #theme {
         position: absolute;
-        display: block;
-        width: 50px;
         right: 6rem;
-        cursor: pointer;
         transition: var(--transition);
     }
 
@@ -1905,7 +1850,7 @@ section.partners .bbm-card .banner-footer h4 {
         transition: var(--transition);
         left: 0;
     }
-    
+
     nav .container #nav-links {
         position: absolute;
         display: flex;
@@ -1914,12 +1859,12 @@ section.partners .bbm-card .banner-footer h4 {
         left: -100%;
         row-gap: 2px;
         flex-direction: column;
-        background: var(--color-info-dark);
+        background: #ffffff;
         align-self: center;
         justify-content: center;
         transition: 0.5s ease;
     }
-    
+
     /*for javascript toggle*/
     nav .container {
         width: 100%;
@@ -1928,11 +1873,11 @@ section.partners .bbm-card .banner-footer h4 {
 
     nav .container #nav-links a {
         display: flex;
-        width: 100%;
         margin-right: 0;
+        text-align: center;
         align-content: center;
         justify-content: center;
-        color: var(--color-h3);
+        color: #000;
         font-size: 15px;
         transition: 0.5s ease;
     }
@@ -1951,7 +1896,7 @@ section.partners .bbm-card .banner-footer h4 {
         align-items: center;
         margin-right: 2rem;
     }
-    
+
     nav .container #toggle::before {
         content: '';
         position: absolute;
@@ -1961,7 +1906,7 @@ section.partners .bbm-card .banner-footer h4 {
         transform: translateY(-5px);
         transition: 0.2s;
     }
-    
+
     nav .container #toggle::after {
         content: '';
         position: absolute;
@@ -1971,11 +1916,11 @@ section.partners .bbm-card .banner-footer h4 {
         transform: translateY(5px);
         transition: 0.2s;
     }
-    
+
     nav .container #toggle.active::before {
         transform: translateY(0px) rotate(45deg);
     }
-    
+
     nav .container #toggle.active::after {
         transform: translateY(0px) rotate(-45deg);
     }
@@ -2000,20 +1945,20 @@ section.partners .bbm-card .banner-footer h4 {
     }
 
     .home .container .hero-text h1 {
-        font-size: 3rem;
+        font-size: 2.7rem;
         margin-top: 2rem;
     }
-    
+
     .home .container .hero-text h3 {
         font-size: 1rem;
     }
 
-    
+
     .home .container .hero-text {
         padding: 5rem 0 5rem;
     }
 
-    
+
     .home .container .hero-text .name {
         width: 100%;
     }
@@ -2024,7 +1969,7 @@ section.partners .bbm-card .banner-footer h4 {
     }
 
     /*======BANNER======*/
-    section.banner .container{
+    section.banner .container {
         display: grid;
     }
 
@@ -2071,7 +2016,7 @@ section.partners .bbm-card .banner-footer h4 {
     section.about .me .intro-text .intro-text-right img {
         margin-top: -1rem;
     }
-    
+
     section.about .me .intro-text .intro-text-left {
         display: flex;
         flex-direction: column;
@@ -2085,7 +2030,7 @@ section.partners .bbm-card .banner-footer h4 {
         display: flex;
     }
 
-    
+
     /*SERVICES SECTION*/
     section.services .service .service-bottom {
         display: block;
@@ -2112,20 +2057,6 @@ section.partners .bbm-card .banner-footer h4 {
         width: 50vw;
         display: flex;
         flex-direction: column;
-    }
-
-    section.services .service .service-top .card .iconify {
-        margin-top: 3rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        display: flex;
-    }
-
-    section.services .service .service-bottom .card .iconify {
-        margin-top: 3rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        display: flex;
     }
 
     section.services .service .service-top .card p {
@@ -2195,7 +2126,8 @@ section.partners .bbm-card .banner-footer h4 {
         justify-content: center;
     }
 
-    section.partners .bbm-card .address-book .contact-address, .social-media {
+    section.partners .bbm-card .address-book .contact-address,
+    .social-media {
         margin: 0 auto;
     }
 
@@ -2234,7 +2166,7 @@ section.partners .bbm-card .banner-footer h4 {
         display: flex;
         justify-content: space-between;
         margin: 1rem auto;
-        width: 100%;  
+        width: 100%;
     }
 
 
@@ -2242,11 +2174,12 @@ section.partners .bbm-card .banner-footer h4 {
         margin: 2rem auto;
         width: 100%;
     }
+
     footer .footer-section .quick-links .icons .iconify {
         font-size: 2rem;
     }
 
-    footer .footer-section .address p{
+    footer .footer-section .address p {
         font-size: 1rem;
     }
 
@@ -2262,7 +2195,7 @@ section.partners .bbm-card .banner-footer h4 {
         font-size: 12px;
     }
 
-    footer .footer-section .rigts-reserved p{
+    footer .footer-section .rigts-reserved p {
         font-size: 1rem;
     }
 
@@ -2278,7 +2211,7 @@ section.partners .bbm-card .banner-footer h4 {
     .home .container .hero-text h1 {
         font-size: 2rem;
     }
-    
+
     .home .container .hero-text h3 {
         font-size: 1rem;
     }
@@ -2286,11 +2219,11 @@ section.partners .bbm-card .banner-footer h4 {
     .home .hero-text .name {
         width: 100%;
     }
-    
+
     .home .container .hero-text p {
         font-size: 15px;
     }
-    
+
     .home .hero-text .btn-primary button {
         width: 7rem;
         padding: 1rem;
@@ -2299,7 +2232,7 @@ section.partners .bbm-card .banner-footer h4 {
     .home .container {
         margin-bottom: -5rem;
     }
-    
+
 }
 
 /***************************************************************/

@@ -80,17 +80,8 @@ toggle.onclick = function(){
     navDrop.classList.toggle('active');
 }
 
-// change theme
-const themeToggler = document.querySelector('.theme-toggler');
-themeToggler.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme-variables');
-    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
-    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
-})
-
 //media screen theme toggler
 var icon = document.getElementById("icon");
-
 icon.onclick = function() {
     document.body.classList.toggle("dark-theme-variables");
     if(document.body.classList.contains("dark-theme-variables")){
