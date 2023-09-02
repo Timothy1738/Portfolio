@@ -4,36 +4,25 @@
 :root {
     --color-primary: #7380ec;
     --color-light: #FCFCFC;
-    --color-light2: hsl(250, 60%, 99%);
-    ;
     --color-white: #FFFF;
     --color-h3: #ffffff;
-    --body-color: hsl(250, 60%, 99%);
-    --color-hero-background: #edf2fc;
     --color-info-light: #e6ebf5;
     --color-info-light2: #bfceeb;
     --color-info-light3: #f5f7fa;
-    --color-info-light4: #eaf0f8;
-    --color-homeborder: rgb(218, 207, 207);
-    --color-boxshadow: hsla(0, 0%, 0%, 0.12);
-    --color-info-dark: #2f3f3c;
     --color-text-muted: #6c757d;
     --transition: all 300ms ease;
-    --box-shadow: 0 1rem 3rem rgba(51, 52, 56, 0.18);
     --color-black: #141415;
     --bbm-primary: #FFAA17;
+    --background-color: #F4F5F8;
 }
 
 .dark-theme-variables {
     --color-light: #1b1f22;
-    --color-light2: #202528;
-    --color-info-light4: #1b1f22;
     --color-info-light: #181a1e;
     --color-info-light3: #202528;
     --color-black: #ffff;
     --background-color: #24282e;
     --color-white: #1c1f24;
-    --color-homeborder: #eaf0f8;
 }
 
 * {
@@ -92,14 +81,14 @@ nav {
 }
 
 nav.scrolled {
-    background-color: #ffffff;
+    background-color: var(--color-white);
     transition: 0.5s ease;
     border: none;
-    box-shadow: 0px 10px 1rem rgba(51, 52, 56, 0.18);
+    box-shadow: 1px 1px 10px var(--color-primary);
 }
 
 nav.scrolled .container #nav-links a {
-    color: #000;
+    color: var(--color-black);
 }
 
 nav .container {
@@ -256,7 +245,7 @@ nav .container #theme {
 }
 
 .home .hero-text .btn-primary button:hover {
-    background: var(--color-light);
+    background: transparent;
     color: var(--color-primary);
     cursor: pointer;
     border: 1px solid var(--color-primary);
@@ -895,12 +884,67 @@ section.contact {
     background-position: center;
 }
 
-section.contact .contact-us form {
+section.contact .contact-cards {
+    width: 100%;
+    margin-top: 5rem;
+    transition: var(--transition);
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+section.contact .contact-cards .card-1 {
+    background-color: var(--color-info-light);
+    padding: 1rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+section.contact .contact-cards .card-1:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-h3);
+}
+
+section.contact .contact-cards .card-1:hover .right h4 {
+    color: var(--color-h3);
+}
+
+section.contact .contact-cards .card-1:hover .right p {
+    color: var(--color-h3);
+}
+
+section.contact .contact-cards .card-1 .left .iconify {
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+section.contact .contact-cards .card-1 .right h4 {
+    font-size: 1.2rem;
+    transition: var(--transition);
+    color: var(--color-black);
+}
+
+section.contact .contact-cards .card-1 .right p {
+    margin-top: 1rem;
+    transition: var(--transition);
+    color: var(--color-black);
+}
+
+
+/*form side*/
+section.contact .contact-us {
     width: 50%;
+    margin: 0 auto;
+}
+
+section.contact .contact-us form {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 1rem auto;
 }
 
 section.contact .contact-us form p {
@@ -919,8 +963,8 @@ section.contact .contact-us form input[type=text],
 section.contact .contact-us form input[type=submit],
 section.contact .contact-us form textarea,
 section.contact .contact-us form input[type=email] {
-    width: 100%;
     background: transparent;
+    width: 100%;
     display: block;
     border: 2px solid var(--color-h3);
     padding: 1.6rem;
@@ -989,7 +1033,7 @@ section.contact .contact-us form input[type=submit]:hover {
 footer {
     width: 100%;
     margin: 0;
-    padding: 1rem 0 1rem;
+    padding: 2rem 0 2rem;
     background: var(--color-primary);
     color: var(--color-h3);
     place-content: center;
@@ -1007,22 +1051,21 @@ footer .footer-section {
 
 footer .footer-section .quick-links {
     display: flex;
-    width: 90%;
+    width: 80%;
     justify-content: space-between;
     align-content: center;
     margin: 1px auto 0 auto;
     align-items: center;
 }
 
-footer .footer-section .quick-links h4 {
-    text-decoration: underline;
+footer .footer-section .quick-links h1 {
     color: var(--color-h3);
+    font-size: 2.5rem;
 }
 
 footer .footer-section .quick-links .nav-links {
     display: flex;
-    justify-content: space-between;
-    width: 40vw;
+    gap: 3rem;
 }
 
 footer .footer-section .quick-links .nav-links a {
@@ -1033,20 +1076,24 @@ footer .footer-section .quick-links .nav-links a:hover {
     text-decoration: underline;
 }
 
-footer .footer-section .quick-links .icons {
+footer .footer-section .socials {
     display: flex;
-    justify-content: space-between;
-    width: 30vw;
-    overflow: hidden;
+    justify-content: center;
     gap: 2rem;
-    align-content: center;
+    width: 80%;
+    margin: 2rem auto;
+    align-items: center;
 }
 
-footer .footer-section .quick-links .icons .iconify {
-    font-size: 1.5rem;
+footer .footer-section .socials a {
+    color: var(--color-h3);
+}
+
+footer .footer-section .socials .iconify {
+    font-size: 2rem;
     cursor: pointer;
-    height: 2.5rem;
-    width: 2.5rem;
+    border: 1px solid var(--color-h3);
+    padding: 1rem;
     display: flex;
     border-radius: 50%;
     justify-content: center;
@@ -1054,58 +1101,14 @@ footer .footer-section .quick-links .icons .iconify {
     transition: var(--transition);
 }
 
-footer .footer-section .quick-links .icons .iconify:nth-child(1) {
-    color: var(--color-h3);
-}
-
-footer .footer-section .quick-links .icons .iconify:nth-child(1):hover {
-    color: #000;
-}
-
-footer .footer-section .quick-links .icons .iconify:hover {
-    background: var(--color-h3);
-}
-
-footer .footer-section .address {
-    display: flex;
-    flex-direction: column;
-    margin: 3rem auto;
-    align-items: center;
-    width: 60%;
-    text-align: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-
-footer .footer-section .address h4 {
-    color: var(--color-h3);
-    text-decoration: underline;
-}
-
-footer .footer-section .address p {
-    line-height: 2;
-}
-
-footer .footer-section .address .left .locate {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    width: 100%;
-}
-
-footer .footer-section .address .left .locate .iconify {
-    font-size: 2rem;
-}
-
 footer .footer-section .line2 {
     border: 1px solid var(--color-h3);
     width: 80%;
-    margin: 1px auto;
+    margin: 2rem auto;
 }
 
 footer .footer-section .rigts-reserved {
-    margin: 1rem auto;
+    margin: 0 auto;
     width: 80%;
     text-align: center;
 }
@@ -1118,7 +1121,7 @@ section.partners {
 
 section.partners .bbm-card {
     width: 100%;
-    background-color: #F4F5F8;
+    background-color: var(--background-color);
 }
 
 section.partners .bbm-card .head {
@@ -1165,7 +1168,7 @@ section.partners .bbm-card h5 {
 }
 
 section.partners .bbm-card .service-cards .bbm-cards {
-    background: #fff;
+    background: var(--color-info-light);
     width: 15rem;
     height: 15rem;
     display: flex;
@@ -1217,6 +1220,7 @@ section.partners .bbm-card .address-book .contact-address h4,
 
 section.partners .bbm-card .address-book .contact-address .find-us {
     display: flex;
+    color: var(--color-black);
     align-items: center;
     gap: 1rem;
 }
@@ -1230,6 +1234,7 @@ section.partners .bbm-card .address-book .social-media .follow-us {
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: var(--color-black);
 }
 
 section.partners .bbm-card .address-book .social-media .follow-us .iconify {
@@ -1650,6 +1655,10 @@ section.partners .bbm-card .banner-footer h4 {
         font-size: 12px;
     }
 
+    section.contact .contact-us {
+        width: 100%;
+    }
+
     section.contact .contact-us form {
         width: 100%;
     }
@@ -1659,6 +1668,7 @@ section.partners .bbm-card .banner-footer h4 {
     section.contact .contact-us form textarea,
     section.contact .contact-us form input[type=email] {
         padding: 0.8rem;
+        width: 100%;
     }
 
     section.contact .contact-us form input[type=submit] {
@@ -1667,6 +1677,16 @@ section.partners .bbm-card .banner-footer h4 {
         display: flex;
         align-content: center;
         justify-content: center;
+    }
+
+    section.contact .contact-cards {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    section.contact .contact-cards .card-1 .left .iconify {
+        font-size: 2rem;
     }
 
     /*=====PARTNERS BANNER=====*/
@@ -1743,63 +1763,42 @@ section.partners .bbm-card .banner-footer h4 {
 
 
     footer .footer-section .quick-links {
-        display: block;
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
-    footer .footer-section .quick-links h4 {
-        font-size: 15px;
+    footer .footer-section .quick-links h1 {
+        font-size: 2rem;
         text-align: center;
     }
 
     footer .footer-section .quick-links .nav-links {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        place-items: center;
         margin: 1rem auto;
+        row-gap: 1rem;
         width: 100%;
-        padding: 1rem;
     }
 
     footer .footer-section .quick-links .nav-links a {
         font-size: 12px;
     }
 
-    footer .footer-section .quick-links .icons {
+    footer .footer-section .socials {
         margin: 1rem auto;
         width: 100%;
         display: flex;
         gap: 10px;
-        padding: 1rem;
     }
 
-    footer .footer-section .quick-links .icons .iconify {
+    footer .footer-section .socials .iconify {
         font-size: 1rem;
-    }
-
-
-    footer .footer-section .address p {
-        font-size: 12px;
-    }
-
-    footer .footer-section .address {
-        margin-top: 1rem;
-    }
-
-    footer .footer-section .address {
-        width: 100%;
-    }
-
-    footer .footer-section .address .left .locate .iconify {
-        font-size: 12px;
+        padding: 0.8rem;
     }
 
     footer .footer-section .rigts-reserved {
-        font-size: 10px;
-    }
-
-    footer .footer-section .line2 {
-        width: 60%;
-        border: 0.2px solid var(--color-h3);
+        font-size: 12px;
     }
 
 }
@@ -1858,7 +1857,7 @@ section.partners .bbm-card .banner-footer h4 {
         left: -100%;
         row-gap: 2px;
         flex-direction: column;
-        background: #ffffff;
+        background: var(--color-white);
         align-self: center;
         justify-content: center;
         transition: 0.5s ease;
@@ -1876,7 +1875,7 @@ section.partners .bbm-card .banner-footer h4 {
         text-align: center;
         align-content: center;
         justify-content: center;
-        color: #000;
+        color: var(--color-black);
         font-size: 15px;
         transition: 0.5s ease;
     }
@@ -1940,11 +1939,11 @@ section.partners .bbm-card .banner-footer h4 {
 @media (max-width: 950.98px) and (min-width: 600px) {
 
     .home .container .hero-text p {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .home .container .hero-text h1 {
-        font-size: 2.7rem;
+        font-size: 2.4rem;
         margin-top: 2rem;
     }
 
@@ -1955,6 +1954,10 @@ section.partners .bbm-card .banner-footer h4 {
 
     .home .container .hero-text {
         padding: 5rem 0 5rem;
+    }
+
+    .home .container .hero-text .social-links .iconify {
+        font-size: 1.2rem;
     }
 
 
@@ -2081,8 +2084,15 @@ section.partners .bbm-card .banner-footer h4 {
     }
 
     /*contact us*/
-    section.contact .contact-us form {
-        width: 90%;
+    section.contact .contact-us {
+        width: 100%;
+    }
+
+    section.contact .contact-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        width: 100%;
     }
 
     /*=================BBM BANNER=====================*/
@@ -2154,7 +2164,10 @@ section.partners .bbm-card .banner-footer h4 {
 
 
     footer .footer-section .quick-links {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     footer .footer-section .quick-links h4 {
@@ -2168,30 +2181,8 @@ section.partners .bbm-card .banner-footer h4 {
         width: 100%;
     }
 
-
-    footer .footer-section .quick-links .icons {
-        margin: 2rem auto;
-        width: 100%;
-    }
-
-    footer .footer-section .quick-links .icons .iconify {
+    footer .footer-section .socials .iconify {
         font-size: 2rem;
-    }
-
-    footer .footer-section .address p {
-        font-size: 1rem;
-    }
-
-    footer .footer-section .address {
-        margin-top: 1rem;
-    }
-
-    footer .footer-section .address {
-        width: 100%;
-    }
-
-    footer .footer-section .address .left .locate .iconify {
-        font-size: 12px;
     }
 
     footer .footer-section .rigts-reserved p {

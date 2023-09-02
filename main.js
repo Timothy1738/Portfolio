@@ -137,4 +137,3 @@ slideRight.forEach((el) => observer.observe(el));
 
 const sideLeft = document.querySelectorAll('.slide-left');
 sideLeft.forEach((el) => observer.observe(el));
-
